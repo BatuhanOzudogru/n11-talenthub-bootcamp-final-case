@@ -1,6 +1,7 @@
 package com.batuhanozudogru.userservice.entity;
 
 import com.batuhanozudogru.userservice.general.enums.ReviewRate;
+import com.batuhanozudogru.userservice.general.enums.Status;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,7 +10,7 @@ import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Entity
 @NoArgsConstructor
@@ -38,11 +39,12 @@ public class UserReview {
     private User user;
 
     @Column(name = "created_at", nullable = false, updatable = false)
-    @CreationTimestamp
-    private LocalDate createdAt;
+    @Temporal(TemporalType.TIMESTAMP)
+    private LocalDateTime createdAt;
 
     @Column(name = "updated_at")
-    @UpdateTimestamp
-    private LocalDate updatedAt;
+    @Temporal(TemporalType.TIMESTAMP)
+    private LocalDateTime updatedAt;
+
 }
 

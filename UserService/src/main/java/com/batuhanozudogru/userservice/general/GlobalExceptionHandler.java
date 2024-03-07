@@ -47,5 +47,10 @@ public class GlobalExceptionHandler {
         return new ResponseEntity<>(ResultHelper.error(ex.getMessage()), HttpStatus.BAD_REQUEST);
     }
 
+    @ExceptionHandler(UserReviewNotFoundException.class)
+    public ResponseEntity<Result> handleUserReviewNotFoundException(FieldLengthExceededException ex) {
+
+        return new ResponseEntity<>(ResultHelper.error(ex.getMessage()), HttpStatus.NOT_FOUND);
+    }
 
 }

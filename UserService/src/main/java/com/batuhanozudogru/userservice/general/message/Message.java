@@ -19,6 +19,12 @@ public class Message {
         return "User with Turkish Republic ID number '" + turkishRepublicIdNumber + "' not found";
     }
 
+    public static final String USER_REVIEW_NOT_FOUND_BY_ID(Long id) {
+        return "User review with id '" + id + "' not found";
+    }
+
+
+
     public static final String FIELD_LENGTH_EXCEEDED(String fieldName, int maxLength) {
         return fieldName + " field length can not exceed " + maxLength + " characters";
     }
