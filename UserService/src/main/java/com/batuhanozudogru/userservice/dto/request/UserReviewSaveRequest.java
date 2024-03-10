@@ -7,5 +7,5 @@ import com.batuhanozudogru.userservice.general.enums.ReviewRate;
 public record UserReviewSaveRequest(String review,
                                     Long restaurantId,
                                     ReviewRate rate,
-                                    User user) {
+                                    Long userId) {
 }

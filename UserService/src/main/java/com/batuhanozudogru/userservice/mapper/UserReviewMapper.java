@@ -16,7 +16,7 @@ import java.util.List;
 @Mapper(unmappedTargetPolicy = ReportingPolicy.IGNORE ,componentModel = "spring")
 public interface UserReviewMapper {
 
-
+    @Mapping(target = "user.id", source = "userId")
     UserReview convertToUserReview(UserReviewSaveRequest userReviewSaveRequest);
 
     @Mapping(target = "username", source = "user.username")

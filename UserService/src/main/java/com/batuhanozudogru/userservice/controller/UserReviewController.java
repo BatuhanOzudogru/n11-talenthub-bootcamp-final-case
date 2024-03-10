@@ -1,5 +1,6 @@
 package com.batuhanozudogru.userservice.controller;
 
+import com.batuhanozudogru.userservice.controller.contract.UserReviewControllerContract;
 import com.batuhanozudogru.userservice.controller.contract.impl.UserReviewControllerContractImpl;
 import com.batuhanozudogru.userservice.dto.request.UserReviewSaveRequest;
 import com.batuhanozudogru.userservice.dto.response.UserReviewResponse;
@@ -16,7 +17,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class UserReviewController {
 
-    private final UserReviewControllerContractImpl userReviewControllerContract;
+    private final UserReviewControllerContract userReviewControllerContract;
 
     @GetMapping("/getById/{id}")
     public UserReviewResponse getUserReviewById(@PathVariable Long id) {

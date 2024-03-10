@@ -1,5 +1,6 @@
 package com.batuhanozudogru.userservice.controller;
 
+import com.batuhanozudogru.userservice.controller.contract.UserControllerContract;
 import com.batuhanozudogru.userservice.controller.contract.impl.UserControllerContractImpl;
 import com.batuhanozudogru.userservice.dto.request.UserSaveRequest;
 import com.batuhanozudogru.userservice.dto.response.UserResponse;
@@ -13,7 +14,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class UserController {
 
-    private final UserControllerContractImpl userControllerContract;
+    private final UserControllerContract userControllerContract;
 
     @PostMapping("/save")
     public UserResponse saveUser(UserSaveRequest userSaveRequest) {
