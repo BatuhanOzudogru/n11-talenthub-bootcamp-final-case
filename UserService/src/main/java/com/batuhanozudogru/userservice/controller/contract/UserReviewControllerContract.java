@@ -22,7 +22,7 @@ public interface UserReviewControllerContract {
 
     List<UserReviewResponse> getUserReviewByRestaurantId(String restaurantId);
 
-    List<UserReviewResponse> getUserReviewByUserUsername(String username);
+    UserReviewResponse getUserReviewByUserUsername(String username);
 
 
 }

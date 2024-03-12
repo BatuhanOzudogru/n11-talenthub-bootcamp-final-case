@@ -9,6 +9,7 @@ import com.batuhanozudogru.userservice.dto.response.RestaurantResponse;
 import com.batuhanozudogru.userservice.dto.response.UserReviewResponse;
 import com.batuhanozudogru.userservice.entity.User;
 import com.batuhanozudogru.userservice.entity.UserReview;
+import com.batuhanozudogru.userservice.general.enums.ReviewRate;
 import com.batuhanozudogru.userservice.general.exception.*;
 import com.batuhanozudogru.userservice.general.message.Message;
 import com.batuhanozudogru.userservice.mapper.UserReviewMapper;
@@ -60,8 +61,9 @@ public class UserReviewService {
         userReviewRepository.deleteById(id);
     }
 
-    public List<UserReview> findByUserUserName(String userName) {
-        return userReviewRepository.findByUser_Username(userName).stream().toList();
+    public UserReview findByUserUserName(String username) {
+        return userReviewRepository.findByUser_Username(username).orElseThrow(
+                () -> new UserNotFoundException(Message.USER_NOT_FOUND_BY_USERNAME(username)));
     }
 
     public List<UserReview> findByUserId(Long userId) {

@@ -8,10 +8,6 @@ import com.batuhanozudogru.userservice.entity.User;
 
 import com.batuhanozudogru.userservice.entity.UserReview;
 import com.batuhanozudogru.userservice.general.enums.Status;
-import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
-import org.mapstruct.MappingTarget;
-import org.mapstruct.ReportingPolicy;
 import org.springframework.stereotype.Service;
 
 

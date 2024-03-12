@@ -66,9 +66,9 @@ public class UserReviewControllerContractImpl implements UserReviewControllerCon
     }
 
     @Override
-    public List<UserReviewResponse> getUserReviewByUserUsername(String username) {
+    public UserReviewResponse getUserReviewByUserUsername(String username) {
 
-        List<UserReview> userReviews = userReviewService.findByUserUserName(username);
-        return userReviewMapper.convertToUserReviewResponseList(userReviews);
+        UserReview userReview = userReviewService.findByUserUserName(username);
+        return userReviewMapper.convertToUserReviewResponse(userReview);
     }
 }

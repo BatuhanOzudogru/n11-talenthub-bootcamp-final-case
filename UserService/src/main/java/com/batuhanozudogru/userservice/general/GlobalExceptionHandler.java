@@ -59,7 +59,7 @@ public class GlobalExceptionHandler {
 
 
     @ExceptionHandler(TurkishRepublicIdNoCanNotBeVerifiedException.class)
-    public ResponseEntity<Result> handleturkishRepublicIdNoCanNotBeVerified() {
+    public ResponseEntity<Result> handleTurkishRepublicIdNoCanNotBeVerified() {
 
         return new ResponseEntity<>(ResultHelper.turkishRepublicIdNoCanNotBeVerified(), HttpStatus.BAD_REQUEST);
 
@@ -78,7 +78,7 @@ public class GlobalExceptionHandler {
     }
 
     @ExceptionHandler(UserReviewNotFoundException.class)
-    public ResponseEntity<Result> handleUserReviewNotFoundException(FieldLengthExceededException ex) {
+    public ResponseEntity<Result> handleUserReviewNotFoundException(UserReviewNotFoundException ex) {
 
         return new ResponseEntity<>(ResultHelper.error(ex.getMessage()), HttpStatus.NOT_FOUND);
     }
