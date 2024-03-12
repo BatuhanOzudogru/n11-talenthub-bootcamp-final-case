@@ -29,17 +29,17 @@ public class UserController {
         return userControllerContract.getAllUsers();
     }
 
-    @GetMapping("/getById/{id}")
+    @GetMapping("/get-by-id/{id}")
     public UserResponse getUserById(@PathVariable Long id) {
         return userControllerContract.getUserById(id);
     }
 
-    @GetMapping("/getByTurkishRepublicIdNo/{turkishRepublicIdNo}")
+    @GetMapping("/get-by-turkish-republic-id/{turkishRepublicIdNo}")
     public UserResponse getUserByTurkishRepublicIdNo(@PathVariable String turkishRepublicIdNo) {
         return userControllerContract.getUserByTurkishRepublicIdNo(turkishRepublicIdNo);
     }
 
-    @GetMapping("/getByUsername/{username}")
+    @GetMapping("/get-by-username/{username}")
     public UserResponse getUserByUsername(@PathVariable String username) {
         return userControllerContract.getUserByUsername(username);
     }

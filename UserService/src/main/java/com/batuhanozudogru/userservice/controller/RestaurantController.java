@@ -45,7 +45,7 @@ public class RestaurantController {
         return recommendList;
     }
 
-    @DeleteMapping("/deleteAll")
+    @DeleteMapping("/delete-all")
     public void deleteAllRestaurants() {
 
         restaurantClient.deleteAllRestaurants();

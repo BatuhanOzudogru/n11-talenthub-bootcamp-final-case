@@ -25,17 +25,17 @@ public class UserReviewController {
         return userReviewControllerContract.getUserReviewById(id);
     }
 
-    @GetMapping("/getByUserId/{userId}")
+    @GetMapping("/get-by-user-id/{userId}")
     public List<UserReviewResponse> getUserReviewListByUserId(@PathVariable Long userId) {
         return userReviewControllerContract.getUserReviewListByUserId(userId);
     }
 
-    @GetMapping("/getByRestaurantId/{restaurantId}")
+    @GetMapping("/get-by-restaurant-id/{restaurantId}")
     public List<UserReviewResponse> getUserReviewByRestaurantId(@PathVariable String restaurantId) {
         return userReviewControllerContract.getUserReviewByRestaurantId(restaurantId);
     }
 
-    @GetMapping("/getByUserUsername/{username}")
+    @GetMapping("/get-by-username/{username}")
     public UserReviewResponse getUserReviewByUserUsername(@PathVariable String username) {
         return userReviewControllerContract.getUserReviewByUserUsername(username);
     }
