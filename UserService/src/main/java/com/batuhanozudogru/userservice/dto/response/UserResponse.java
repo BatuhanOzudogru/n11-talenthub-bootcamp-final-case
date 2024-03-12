@@ -1,8 +1,11 @@
 package com.batuhanozudogru.userservice.dto.response;
 
+import com.batuhanozudogru.userservice.entity.UserReview;
+
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.List;
 
 public record UserResponse(String firstName,
                            String lastName,
@@ -12,5 +15,7 @@ public record UserResponse(String firstName,
                            BigDecimal latitude,
                            BigDecimal longitude,
                            LocalDateTime createdAt,
-                           LocalDateTime updatedAt) {
+                           LocalDateTime updatedAt,
+                           List<UserReview> reviews
+                          ) {
 }

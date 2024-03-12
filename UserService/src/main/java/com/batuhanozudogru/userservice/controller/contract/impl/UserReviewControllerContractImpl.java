@@ -57,7 +57,7 @@ public class UserReviewControllerContractImpl implements UserReviewControllerCon
     }
 
     @Override
-    public List<UserReviewResponse> getUserReviewByRestaurantId(Long restaurantId) {
+    public List<UserReviewResponse> getUserReviewByRestaurantId(String restaurantId) {
 
         List<UserReview> userReviews = userReviewService.findByRestaurantId(restaurantId);
         return userReviewMapper.convertToUserReviewResponseList(userReviews);

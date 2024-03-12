@@ -19,7 +19,7 @@ public interface UserReviewControllerContract {
 
     List<UserReviewResponse> getUserReviewListByUserId(Long userId);
 
-    List<UserReviewResponse> getUserReviewByRestaurantId(Long restaurantId);
+    List<UserReviewResponse> getUserReviewByRestaurantId(String restaurantId);
 
     List<UserReviewResponse> getUserReviewByUserUsername(String username);
 

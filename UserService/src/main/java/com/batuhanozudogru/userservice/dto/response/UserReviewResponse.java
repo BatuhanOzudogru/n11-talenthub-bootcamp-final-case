@@ -4,7 +4,7 @@ import com.batuhanozudogru.userservice.general.enums.ReviewRate;
 
 import java.time.LocalDateTime;
 
-public record UserReviewResponse(Long restaurantId,
+public record UserReviewResponse(String restaurantId,
                                  String review,
                                  String username,
                                  ReviewRate rate,

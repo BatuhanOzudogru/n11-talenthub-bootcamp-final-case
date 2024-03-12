@@ -1,8 +1,11 @@
 package com.batuhanozudogru.userservice.service;
 
+import com.batuhanozudogru.userservice.client.RestaurantClient;
 import com.batuhanozudogru.userservice.dao.UserRepository;
 import com.batuhanozudogru.userservice.dao.UserReviewRepository;
+import com.batuhanozudogru.userservice.dto.request.RestaurantSaveRequest;
 import com.batuhanozudogru.userservice.dto.request.UserReviewSaveRequest;
+import com.batuhanozudogru.userservice.dto.response.RestaurantResponse;
 import com.batuhanozudogru.userservice.dto.response.UserReviewResponse;
 import com.batuhanozudogru.userservice.entity.User;
 import com.batuhanozudogru.userservice.entity.UserReview;
@@ -22,7 +25,6 @@ public class UserReviewService {
 
     private final UserReviewRepository userReviewRepository;
     private final UserRepository userRepository;
-    private final UserReviewMapper userReviewMapper;
 
     public UserReview save(UserReview userReview) {
 
@@ -66,7 +68,7 @@ public class UserReviewService {
         return userReviewRepository.findByUser_Id(userId).stream().toList();
     }
 
-    public List<UserReview> findByRestaurantId(Long restaurantId) {
+    public List<UserReview> findByRestaurantId(String restaurantId) {
         return userReviewRepository.findByRestaurantId(restaurantId).stream().toList();
     }
 

@@ -28,7 +28,7 @@ public class UserControllerContractImpl implements UserControllerContract {
     @Override
     public UserResponse saveUser(UserSaveRequest userSaveRequest) {
 
-        User user = userMapper.converToUser(userSaveRequest);
+        User user = userMapper.convertToUser(userSaveRequest);
 
         return userMapper.convertToUserResponse(userService.save(user));
     }

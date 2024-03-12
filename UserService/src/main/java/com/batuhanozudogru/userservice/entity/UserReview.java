@@ -2,6 +2,7 @@ package com.batuhanozudogru.userservice.entity;
 
 import com.batuhanozudogru.userservice.general.enums.ReviewRate;
 import com.batuhanozudogru.userservice.general.enums.Status;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -28,14 +29,15 @@ public class UserReview {
     private String review;
 
     @Column(name = "restaurant_id")
-    private Long restaurantId;
+    private String restaurantId;
 
     @Enumerated(EnumType.STRING)
     @Column(name = "rate")
     private ReviewRate rate;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "user_id", nullable = false)
+    @JsonIgnore
     private User user;
 
     @Column(name = "created_at", nullable = false, updatable = false)

@@ -30,7 +30,7 @@ public class UserReviewController {
     }
 
     @GetMapping("/getByRestaurantId/{restaurantId}")
-    public List<UserReviewResponse> getUserReviewByRestaurantId(@PathVariable Long restaurantId) {
+    public List<UserReviewResponse> getUserReviewByRestaurantId(@PathVariable String restaurantId) {
         return userReviewControllerContract.getUserReviewByRestaurantId(restaurantId);
     }
 
