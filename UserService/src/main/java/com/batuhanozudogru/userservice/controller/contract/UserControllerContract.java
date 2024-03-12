@@ -14,7 +14,11 @@ public interface UserControllerContract {
 
     UserResponse updateUser(Long id, UserSaveRequest userSaveRequest);
 
-    void deleteUser(Long id);
+    void activeUser(Long id);
+
+    void softDeleteUser(Long id);
+
+    void hardDeleteUser(Long id);
 
     UserResponse getUserByTurkishRepublicIdNo(String turkishRepublicIdNo);
 

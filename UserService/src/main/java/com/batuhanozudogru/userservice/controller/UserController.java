@@ -43,6 +43,21 @@ public class UserController {
         return userControllerContract.getUserByUsername(username);
     }
 
+    @DeleteMapping("/hard-delete-by-id/{id}")
+    public void deleteUserById(@PathVariable Long id) {
+        userControllerContract.hardDeleteUser(id);
+    }
+
+    @DeleteMapping("/soft-delete-by-id/{id}")
+    public void softDeleteUserById(@PathVariable Long id) {
+        userControllerContract.softDeleteUser(id);
+    }
+
+    @PatchMapping("/active-user-by-id/{id}")
+    public void activeUserById(@PathVariable Long id) {
+        userControllerContract.activeUser(id);
+    }
+
 
 
 }

@@ -46,10 +46,24 @@ public class UserControllerContractImpl implements UserControllerContract {
     }
 
     @Override
-    public void deleteUser(Long id) {
-
-
+    public void activeUser(Long id) {
+        userService.activeUser(id);
     }
+
+    @Override
+    public void softDeleteUser(Long id) {
+        userService.passiveUser(id);
+    }
+
+    @Override
+    public void hardDeleteUser(Long id) {
+        userService.deleteById(id);
+    }
+
+
+
+
+
 
     @Override
     public UserResponse getUserByTurkishRepublicIdNo(String turkishRepublicIdNo) {

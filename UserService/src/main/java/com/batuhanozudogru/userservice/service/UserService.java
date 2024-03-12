@@ -86,4 +86,20 @@ public class UserService  {
                 () -> new UserNotFoundException(Message.USER_NOT_FOUND_BY_USERNAME(username)));
     }
 
+    public void activeUser(Long id) {
+        User user = findById(id);
+        user.setStatus(Status.ACTIVE);
+        userRepository.save(user);
+    }
+
+    public void deleteById(Long id) {
+        userRepository.deleteById(id);
+    }
+
+    public void passiveUser(Long id) {
+        User user = findById(id);
+        user.setStatus(Status.PASSIVE);
+        userRepository.save(user);
+    }
+
 }
