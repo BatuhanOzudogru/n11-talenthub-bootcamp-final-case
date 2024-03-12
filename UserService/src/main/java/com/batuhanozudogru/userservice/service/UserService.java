@@ -6,6 +6,7 @@ import com.batuhanozudogru.userservice.general.enums.Status;
 import com.batuhanozudogru.userservice.general.exception.*;
 import com.batuhanozudogru.userservice.general.message.Message;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
 import java.util.List;
@@ -13,6 +14,7 @@ import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
+@Slf4j
 public class UserService  {
 
     private final UserRepository userRepository;
@@ -81,8 +83,15 @@ public class UserService  {
     }
 
     public User findById(Long id) {
-        return userRepository.findById(id).orElseThrow(
-                () -> new UserNotFoundException(Message.USER_NOT_FOUND_BY_ID(id)));
+        User user = userRepository.findById(id).orElseThrow(
+                () -> {
+                    log.error("User not found with ID: {}", id);
+                    return new UserNotFoundException(Message.USER_NOT_FOUND_BY_ID(id));
+                });
+
+        log.info("User found by ID: {}", id);
+
+        return user;
     }
 
     public User findByTurkishRepublicIdNo(String turkishRepublicIdNumber) {

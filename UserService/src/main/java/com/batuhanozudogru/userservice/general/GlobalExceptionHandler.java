@@ -3,6 +3,7 @@ package com.batuhanozudogru.userservice.general;
 import com.batuhanozudogru.userservice.general.exception.*;
 import com.batuhanozudogru.userservice.general.result.Result;
 import com.batuhanozudogru.userservice.general.result.ResultHelper;
+import feign.FeignException;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -58,6 +59,13 @@ public class GlobalExceptionHandler {
     }
 
 
+
+    @ExceptionHandler(FeignException.class)
+    public ResponseEntity<Result> handleFeignException(FeignException ex) {
+
+        return new ResponseEntity<>(ResultHelper.error(ex.getMessage()), HttpStatus.BAD_REQUEST);
+
+    }
     @ExceptionHandler(TurkishRepublicIdNoCanNotBeVerifiedException.class)
     public ResponseEntity<Result> handleTurkishRepublicIdNoCanNotBeVerified() {
 
