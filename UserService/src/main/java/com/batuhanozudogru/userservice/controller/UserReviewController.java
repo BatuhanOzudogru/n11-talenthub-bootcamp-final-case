@@ -3,6 +3,7 @@ package com.batuhanozudogru.userservice.controller;
 import com.batuhanozudogru.userservice.controller.contract.UserReviewControllerContract;
 import com.batuhanozudogru.userservice.controller.contract.impl.UserReviewControllerContractImpl;
 import com.batuhanozudogru.userservice.dto.request.UserReviewSaveRequest;
+import com.batuhanozudogru.userservice.dto.request.UserReviewUpdateRequest;
 import com.batuhanozudogru.userservice.dto.response.UserReviewResponse;
 import com.batuhanozudogru.userservice.entity.UserReview;
 import com.batuhanozudogru.userservice.mapper.UserReviewMapper;
@@ -45,8 +46,8 @@ public class UserReviewController {
     }
 
     @PutMapping("/update/{id}")
-    public UserReviewResponse updateUserReview(@PathVariable Long id, @RequestBody UserReviewSaveRequest userReviewSaveRequest) {
-        return userReviewControllerContract.updateUserReview(id, userReviewSaveRequest);
+    public UserReviewResponse updateUserReview(@PathVariable Long id, @RequestBody UserReviewUpdateRequest request) {
+        return userReviewControllerContract.updateUserReview(id, request);
     }
 
     @DeleteMapping("/delete/{id}")

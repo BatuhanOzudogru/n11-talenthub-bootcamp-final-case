@@ -2,6 +2,7 @@ package com.batuhanozudogru.userservice.mapper;
 
 
 import com.batuhanozudogru.userservice.dto.request.UserReviewSaveRequest;
+import com.batuhanozudogru.userservice.dto.request.UserReviewUpdateRequest;
 import com.batuhanozudogru.userservice.dto.response.UserReviewResponse;
 import com.batuhanozudogru.userservice.entity.UserReview;
 import org.mapstruct.Mapper;
@@ -24,6 +25,8 @@ public interface UserReviewMapper {
     List<UserReviewResponse> convertToUserReviewResponseList(List<UserReview> userReviews);
 
     @Mapping(target="id",ignore = true)
-    void updateUserReview(@MappingTarget UserReview userReview, UserReviewSaveRequest userReviewSaveRequest);
+    void updateUserReview(@MappingTarget UserReview userReview, UserReviewUpdateRequest request);
+
+
 
 }

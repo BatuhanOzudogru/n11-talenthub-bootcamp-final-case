@@ -2,6 +2,7 @@ package com.batuhanozudogru.userservice.controller.contract.impl;
 
 import com.batuhanozudogru.userservice.controller.contract.UserReviewControllerContract;
 import com.batuhanozudogru.userservice.dto.request.UserReviewSaveRequest;
+import com.batuhanozudogru.userservice.dto.request.UserReviewUpdateRequest;
 import com.batuhanozudogru.userservice.dto.response.UserReviewResponse;
 import com.batuhanozudogru.userservice.entity.UserReview;
 import com.batuhanozudogru.userservice.mapper.UserReviewMapper;
@@ -36,10 +37,11 @@ public class UserReviewControllerContractImpl implements UserReviewControllerCon
     }
 
     @Override
-    public UserReviewResponse updateUserReview(Long id, UserReviewSaveRequest userReviewSaveRequest) {
+    public UserReviewResponse updateUserReview(Long id, UserReviewUpdateRequest request) {
 
        UserReview userReview = userReviewService.findById(id);
-       userReviewMapper.updateUserReview(userReview, userReviewSaveRequest);
+       userReviewMapper.updateUserReview(userReview, request);
+
        userReviewService.save(userReview);
        return userReviewMapper.convertToUserReviewResponse(userReview);
     }
