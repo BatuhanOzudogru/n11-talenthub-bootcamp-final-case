@@ -3,6 +3,7 @@ package com.batuhanozudogru.userservice.controller;
 import com.batuhanozudogru.userservice.controller.contract.UserControllerContract;
 import com.batuhanozudogru.userservice.controller.contract.impl.UserControllerContractImpl;
 import com.batuhanozudogru.userservice.dto.request.UserSaveRequest;
+import com.batuhanozudogru.userservice.dto.request.UserUpdateRequest;
 import com.batuhanozudogru.userservice.dto.response.UserResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -56,6 +57,11 @@ public class UserController {
     @PatchMapping("/active-user-by-id/{id}")
     public void activeUserById(@PathVariable Long id) {
         userControllerContract.activeUser(id);
+    }
+
+    @PutMapping("/update-user-by-id/{id}")
+    public UserResponse updateUserById(@PathVariable Long id, @RequestBody UserUpdateRequest request) {
+        return userControllerContract.updateUser(id, request);
     }
 
 

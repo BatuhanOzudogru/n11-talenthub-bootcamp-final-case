@@ -1,6 +1,7 @@
 package com.batuhanozudogru.userservice.mapper;
 
 import com.batuhanozudogru.userservice.dto.request.UserSaveRequest;
+import com.batuhanozudogru.userservice.dto.request.UserUpdateRequest;
 import com.batuhanozudogru.userservice.dto.response.UserResponse;
 
 import com.batuhanozudogru.userservice.entity.User;
@@ -53,6 +54,17 @@ public class UserMapper {
         UserResponse userResponse = new UserResponse( firstName, lastName, turkishRepublicIdNumber, username, birthDate, latitude, longitude, createdAt, updatedAt, reviews );
 
         return userResponse;
+    }
+
+    public void updateUser (User user,UserUpdateRequest request){
+
+        if ( request == null ) {
+            return ;
+        }
+
+        user.setUsername( request.username() );
+        user.setLatitude( request.latitude() );
+        user.setLongitude( request.longitude() );
     }
 
     public List<UserResponse> convertToUserResponseList(List<User> users) {

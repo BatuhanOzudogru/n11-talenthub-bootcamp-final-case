@@ -3,6 +3,7 @@ package com.batuhanozudogru.userservice.general;
 import com.batuhanozudogru.userservice.general.exception.*;
 import com.batuhanozudogru.userservice.general.result.Result;
 import com.batuhanozudogru.userservice.general.result.ResultHelper;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -23,6 +24,13 @@ public class GlobalExceptionHandler {
 
 
         return new ResponseEntity<>(ResultHelper.error(fieldName+" "+errorMessage), HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler ResponseEntity<Result> handleDataIntegrityViolationException(DataIntegrityViolationException e) {
+
+        String errorMessage=e.getMostSpecificCause().getMessage();
+
+        return new ResponseEntity<>(ResultHelper.error(errorMessage), HttpStatus.BAD_REQUEST);
     }
 
     @ExceptionHandler(UsernameTakenException.class)

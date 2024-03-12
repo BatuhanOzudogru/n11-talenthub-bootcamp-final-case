@@ -2,6 +2,7 @@ package com.batuhanozudogru.userservice.controller.contract.impl;
 
 import com.batuhanozudogru.userservice.controller.contract.UserControllerContract;
 import com.batuhanozudogru.userservice.dto.request.UserSaveRequest;
+import com.batuhanozudogru.userservice.dto.request.UserUpdateRequest;
 import com.batuhanozudogru.userservice.dto.response.UserResponse;
 import com.batuhanozudogru.userservice.entity.User;
 import com.batuhanozudogru.userservice.mapper.UserMapper;
@@ -41,8 +42,11 @@ public class UserControllerContractImpl implements UserControllerContract {
     }
 
     @Override
-    public UserResponse updateUser(Long id, UserSaveRequest userSaveRequest) {
-        return null;
+    public UserResponse updateUser(Long id, UserUpdateRequest request) {
+
+        User user = userService.findById(id);
+        userMapper.updateUser(user, request);
+        return userMapper.convertToUserResponse(userService.update(user));
     }
 
     @Override

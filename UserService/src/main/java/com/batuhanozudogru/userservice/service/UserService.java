@@ -33,6 +33,16 @@ public class UserService  {
         return userRepository.save(user);
     }
 
+    public User update(User user) {
+
+        LocalDateTime now = LocalDateTime.now();
+
+
+
+        user.setUpdatedAt(now);
+
+        return userRepository.save(user);
+    }
     private void validateUser(User user) {
 
         validateStringLength("First Name", user.getFirstName(), 50);
@@ -67,7 +77,7 @@ public class UserService  {
     }
 
     public List<User> findAllActiveUsers(){
-        return userRepository.findByStatus(Status.ACTIVE).stream().toList();
+        return userRepository.findByStatus(Status.ACTIVE);
     }
 
     public User findById(Long id) {
@@ -87,18 +97,27 @@ public class UserService  {
     }
 
     public void activeUser(Long id) {
+
         User user = findById(id);
+
         user.setStatus(Status.ACTIVE);
+
         userRepository.save(user);
     }
 
     public void deleteById(Long id) {
+
+        User user = findById(id);
+
         userRepository.deleteById(id);
     }
 
     public void passiveUser(Long id) {
+
         User user = findById(id);
+
         user.setStatus(Status.PASSIVE);
+
         userRepository.save(user);
     }
 
