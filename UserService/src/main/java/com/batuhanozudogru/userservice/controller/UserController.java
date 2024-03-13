@@ -5,6 +5,9 @@ import com.batuhanozudogru.userservice.controller.contract.impl.UserControllerCo
 import com.batuhanozudogru.userservice.dto.request.UserSaveRequest;
 import com.batuhanozudogru.userservice.dto.request.UserUpdateRequest;
 import com.batuhanozudogru.userservice.dto.response.UserResponse;
+import com.batuhanozudogru.userservice.general.result.Result;
+import com.batuhanozudogru.userservice.general.result.ResultData;
+import com.batuhanozudogru.userservice.general.result.ResultHelper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,50 +21,64 @@ public class UserController {
     private final UserControllerContract userControllerContract;
 
     @PostMapping("/save")
-    public UserResponse saveUser(UserSaveRequest userSaveRequest) {
+    public ResultData<UserResponse> saveUser(UserSaveRequest userSaveRequest) {
 
-        return userControllerContract.saveUser(userSaveRequest);
+        return ResultHelper.created(userControllerContract.saveUser(userSaveRequest));
 
     }
 
     @GetMapping
-    public List<UserResponse> getUsers() {
-        return userControllerContract.getAllUsers();
+    public ResultData<List<UserResponse>> getUsers() {
+
+        return ResultHelper.success(userControllerContract.getAllUsers());
     }
 
     @GetMapping("/get-by-id/{id}")
-    public UserResponse getUserById(@PathVariable Long id) {
-        return userControllerContract.getUserById(id);
+    public ResultData<UserResponse> getUserById(@PathVariable Long id) {
+
+        return ResultHelper.success(userControllerContract.getUserById(id));
     }
 
     @GetMapping("/get-by-turkish-republic-id/{turkishRepublicIdNo}")
-    public UserResponse getUserByTurkishRepublicIdNo(@PathVariable String turkishRepublicIdNo) {
-        return userControllerContract.getUserByTurkishRepublicIdNo(turkishRepublicIdNo);
+    public ResultData<UserResponse> getUserByTurkishRepublicIdNo(@PathVariable String turkishRepublicIdNo) {
+
+        return ResultHelper.success(userControllerContract.getUserByTurkishRepublicIdNo(turkishRepublicIdNo));
     }
 
     @GetMapping("/get-by-username/{username}")
-    public UserResponse getUserByUsername(@PathVariable String username) {
-        return userControllerContract.getUserByUsername(username);
+    public ResultData<UserResponse> getUserByUsername(@PathVariable String username) {
+
+        return ResultHelper.success(userControllerContract.getUserByUsername(username));
     }
 
     @DeleteMapping("/hard-delete-by-id/{id}")
-    public void deleteUserById(@PathVariable Long id) {
+    public Result deleteUserById(@PathVariable Long id) {
+
         userControllerContract.hardDeleteUser(id);
+
+        return ResultHelper.hardDeleted();
     }
 
     @DeleteMapping("/soft-delete-by-id/{id}")
-    public void softDeleteUserById(@PathVariable Long id) {
+    public Result softDeleteUserById(@PathVariable Long id) {
+
         userControllerContract.softDeleteUser(id);
+
+        return ResultHelper.softDeleted();
     }
 
     @PatchMapping("/active-user-by-id/{id}")
-    public void activeUserById(@PathVariable Long id) {
+    public Result activeUserById(@PathVariable Long id) {
+
         userControllerContract.activeUser(id);
+
+        return ResultHelper.activated();
     }
 
     @PutMapping("/update-user-by-id/{id}")
-    public UserResponse updateUserById(@PathVariable Long id, @RequestBody UserUpdateRequest request) {
-        return userControllerContract.updateUser(id, request);
+    public ResultData<UserResponse> updateUserById(@PathVariable Long id, @RequestBody UserUpdateRequest request) {
+
+        return ResultHelper.updated(userControllerContract.updateUser(id, request));
     }
 
 

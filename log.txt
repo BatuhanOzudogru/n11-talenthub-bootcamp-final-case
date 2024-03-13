@@ -33,3 +33,39 @@
 2024-03-13T13:30:34.300+03:00  INFO 14896 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-03-13T13:30:34.427+03:00  INFO 14896 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2024-03-13T13:30:34.460+03:00  INFO 14896 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-03-13T18:57:48.978+03:00  INFO 10664 --- [restartedMain] c.b.userservice.UserServiceApplication   : Starting UserServiceApplication using Java 21.0.2 with PID 10664 (C:\Users\batuh\OneDrive\Masaüstü\n11-talenthub-bootcamp-final-case\UserService\target\classes started by batuh in C:\Users\batuh\OneDrive\Masaüstü\n11-talenthub-bootcamp-final-case)
+2024-03-13T18:57:48.983+03:00 DEBUG 10664 --- [restartedMain] c.b.userservice.UserServiceApplication   : Running with Spring Boot v3.2.3, Spring v6.1.4
+2024-03-13T18:57:48.988+03:00  INFO 10664 --- [restartedMain] c.b.userservice.UserServiceApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-03-13T18:57:49.108+03:00  INFO 10664 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-03-13T18:57:49.109+03:00  INFO 10664 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-03-13T18:57:50.623+03:00  INFO 10664 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-13T18:57:50.686+03:00  INFO 10664 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 2 JPA repository interfaces.
+2024-03-13T18:57:50.992+03:00  INFO 10664 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=9bf379b7-9c99-36d6-b96e-a9f24600fc56
+2024-03-13T18:57:51.950+03:00  INFO 10664 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-03-13T18:57:51.976+03:00  INFO 10664 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-13T18:57:51.977+03:00  INFO 10664 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-03-13T18:57:52.145+03:00  INFO 10664 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-13T18:57:52.147+03:00  INFO 10664 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3036 ms
+2024-03-13T18:57:52.514+03:00  INFO 10664 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-13T18:57:52.660+03:00  INFO 10664 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-03-13T18:57:52.811+03:00  INFO 10664 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-03-13T18:57:53.449+03:00  INFO 10664 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-13T18:57:53.547+03:00  INFO 10664 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-03-13T18:57:53.983+03:00  INFO 10664 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@437045d8
+2024-03-13T18:57:53.985+03:00  INFO 10664 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-03-13T18:57:54.115+03:00  WARN 10664 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-03-13T18:57:55.680+03:00  INFO 10664 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-13T18:57:55.875+03:00  INFO 10664 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-13T18:57:56.658+03:00  WARN 10664 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-13T18:57:56.708+03:00  INFO 10664 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-03-13T18:57:57.645+03:00  INFO 10664 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-03-13T18:57:57.656+03:00  INFO 10664 --- [restartedMain] c.b.userservice.UserServiceApplication   : Started UserServiceApplication in 9.364 seconds (process running for 10.826)
+2024-03-13T18:58:00.325+03:00  INFO 10664 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-13T18:58:00.325+03:00  INFO 10664 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-13T18:58:00.326+03:00  INFO 10664 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-03-13T18:58:19.018+03:00 ERROR 10664 --- [http-nio-8080-exec-7] c.b.userservice.service.UserService      : User not found with ID : 24545455
+2024-03-13T18:58:19.025+03:00  WARN 10664 --- [http-nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.batuhanozudogru.userservice.general.exception.UserNotFoundException: User with id '24545455' not found]
+2024-03-13T18:58:23.870+03:00  INFO 10664 --- [http-nio-8080-exec-9] c.b.userservice.service.UserService      : User found by ID : 2
+2024-03-13T18:58:42.672+03:00  INFO 10664 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-13T18:58:42.675+03:00  INFO 10664 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-03-13T18:58:42.680+03:00  INFO 10664 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
