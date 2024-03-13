@@ -1,4 +1,0 @@
-172.24.0.1 - - [13/Mar/2024:19:50:23 +0000] "GET /solr/n11_restaurants/select?q=*%3A*&start=0&rows=0&wt=javabin&version=2 HTTP/1.1" 200 114
-172.24.0.1 - - [13/Mar/2024:19:50:24 +0000] "GET /solr/n11_restaurants/select?q=*%3A*&start=0&rows=7&wt=javabin&version=2 HTTP/1.1" 200 810
-172.24.0.1 - - [13/Mar/2024:19:50:50 +0000] "POST /solr/n11_restaurants/update?wt=javabin&version=2 HTTP/1.1" 200 41
-172.24.0.1 - - [13/Mar/2024:19:50:50 +0000] "POST /solr/n11_restaurants/update HTTP/1.1" 200 41
