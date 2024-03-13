@@ -1,0 +1,35 @@
+2024-03-13T13:02:20.544+03:00  INFO 14896 --- [restartedMain] c.b.userservice.UserServiceApplication   : Starting UserServiceApplication using Java 21.0.2 with PID 14896 (C:\Users\batuh\OneDrive\Masaüstü\n11-talenthub-bootcamp-final-case\UserService\target\classes started by batuh in C:\Users\batuh\OneDrive\Masaüstü\n11-talenthub-bootcamp-final-case)
+2024-03-13T13:02:20.546+03:00 DEBUG 14896 --- [restartedMain] c.b.userservice.UserServiceApplication   : Running with Spring Boot v3.2.3, Spring v6.1.4
+2024-03-13T13:02:20.547+03:00  INFO 14896 --- [restartedMain] c.b.userservice.UserServiceApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-03-13T13:02:20.617+03:00  INFO 14896 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-03-13T13:02:20.618+03:00  INFO 14896 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-03-13T13:02:21.841+03:00  INFO 14896 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-13T13:02:21.904+03:00  INFO 14896 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 2 JPA repository interfaces.
+2024-03-13T13:02:22.119+03:00  INFO 14896 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=9bf379b7-9c99-36d6-b96e-a9f24600fc56
+2024-03-13T13:02:22.661+03:00  INFO 14896 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-03-13T13:02:22.674+03:00  INFO 14896 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-13T13:02:22.674+03:00  INFO 14896 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-03-13T13:02:22.741+03:00  INFO 14896 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-13T13:02:22.741+03:00  INFO 14896 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2123 ms
+2024-03-13T13:02:22.904+03:00  INFO 14896 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-13T13:02:22.993+03:00  INFO 14896 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-03-13T13:02:23.032+03:00  INFO 14896 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-03-13T13:02:23.312+03:00  INFO 14896 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-13T13:02:23.342+03:00  INFO 14896 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-03-13T13:02:23.592+03:00  INFO 14896 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@bb9ceaf
+2024-03-13T13:02:23.593+03:00  INFO 14896 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-03-13T13:02:23.651+03:00  WARN 14896 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-03-13T13:02:24.777+03:00  INFO 14896 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-13T13:02:24.930+03:00  INFO 14896 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-13T13:02:25.509+03:00  WARN 14896 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-13T13:02:25.545+03:00  INFO 14896 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-03-13T13:02:26.070+03:00  INFO 14896 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-03-13T13:02:26.079+03:00  INFO 14896 --- [restartedMain] c.b.userservice.UserServiceApplication   : Started UserServiceApplication in 6.448 seconds (process running for 9.011)
+2024-03-13T13:27:21.936+03:00  INFO 14896 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-13T13:27:21.942+03:00  INFO 14896 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-13T13:27:21.948+03:00  INFO 14896 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-03-13T13:27:48.845+03:00  WARN 14896 --- [http-nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.batuhanozudogru.userservice.general.exception.TurkishRepublicIdNoCanNotBeVerifiedException]
+2024-03-13T13:27:56.960+03:00  INFO 14896 --- [http-nio-8080-exec-9] c.b.userservice.service.UserService      : User validated successfully: com.batuhanozudogru.userservice.entity.User@6c132a1
+2024-03-13T13:30:34.300+03:00  INFO 14896 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-13T13:30:34.427+03:00  INFO 14896 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-03-13T13:30:34.460+03:00  INFO 14896 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

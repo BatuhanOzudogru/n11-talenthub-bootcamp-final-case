@@ -46,7 +46,7 @@ public class UserControllerContractImpl implements UserControllerContract {
 
         User user = userService.findById(id);
         userMapper.updateUser(user, request);
-        return userMapper.convertToUserResponse(userService.update(user));
+        return userMapper.convertToUserResponse(userService.save(user));
     }
 
     @Override

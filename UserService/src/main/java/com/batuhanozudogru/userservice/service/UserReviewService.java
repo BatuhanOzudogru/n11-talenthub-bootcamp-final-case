@@ -14,6 +14,7 @@ import com.batuhanozudogru.userservice.general.exception.*;
 import com.batuhanozudogru.userservice.general.message.Message;
 import com.batuhanozudogru.userservice.mapper.UserReviewMapper;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
@@ -22,6 +23,7 @@ import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
+@Slf4j
 public class UserReviewService {
 
     private final UserReviewRepository userReviewRepository;
@@ -42,23 +44,32 @@ public class UserReviewService {
 
         userReview.setUpdatedAt(now);
 
+        log.info("User review saved successfully: {}", "Review"+" "+userReview.getReview()+" "+"Rate"+" "+userReview.getRate()+" "+"User"+" "+userReview.getUser().getUsername()+" "+"Restaurant"+" "+userReview.getRestaurantId()+" "+"Username"+" "+userReview.getUser().getUsername());
+
         return userReviewRepository.save(userReview);
     }
 
 
     public List<UserReview> getAllUserReviews() {
+
         return userReviewRepository.findAll();
     }
 
     public UserReview findById(Long id) {
 
         return userReviewRepository.findById(id).orElseThrow(
-                () -> new UserReviewNotFoundException(Message.USER_REVIEW_NOT_FOUND_BY_ID(id)));
+                () -> {
+                    log.error("User review not found with ID: {}", id);
 
+                    return new UserReviewNotFoundException(Message.USER_REVIEW_NOT_FOUND_BY_ID(id));
+                });
     }
 
     public void deleteById(Long id) {
+
         userReviewRepository.deleteById(id);
+
+        log.info("User review deleted successfully: {}", id);
     }
 
     public UserReview findByUserUserName(String username) {

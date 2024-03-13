@@ -35,16 +35,7 @@ public class UserService  {
         return userRepository.save(user);
     }
 
-    public User update(User user) {
 
-        LocalDateTime now = LocalDateTime.now();
-
-
-
-        user.setUpdatedAt(now);
-
-        return userRepository.save(user);
-    }
     private void validateUser(User user) {
 
         validateStringLength("First Name", user.getFirstName(), 50);
@@ -70,6 +61,8 @@ public class UserService  {
         if (!mernisService.verifyUser(user.getTurkishRepublicIdNumber(), user.getFirstName(), user.getLastName(), String.valueOf(user.getBirthDate().getYear()))) {
             throw new TurkishRepublicIdNoCanNotBeVerifiedException();
         }
+
+        log.info("User validated successfully: {}", user.getFirstName()+" "+user.getLastName());
     }
 
     private void validateStringLength(String fieldName, String value, int maxLength) {
@@ -85,11 +78,12 @@ public class UserService  {
     public User findById(Long id) {
         User user = userRepository.findById(id).orElseThrow(
                 () -> {
-                    log.error("User not found with ID: {}", id);
+                    log.error("User not found with ID : {}", id);
+
                     return new UserNotFoundException(Message.USER_NOT_FOUND_BY_ID(id));
                 });
 
-        log.info("User found by ID: {}", id);
+        log.info("User found by ID : {}", id);
 
         return user;
     }
@@ -97,12 +91,20 @@ public class UserService  {
     public User findByTurkishRepublicIdNo(String turkishRepublicIdNumber) {
 
         return userRepository.findByTurkishRepublicIdNumber(turkishRepublicIdNumber).orElseThrow(
-                () -> new UserNotFoundException(Message.USER_NOT_FOUND_BY_TURKISH_REPUBLIC_ID_NUMBER(turkishRepublicIdNumber)));
+                () -> {
+                    log.error("User not found with Turkish Republic ID : {}", turkishRepublicIdNumber);
+
+                    return new UserNotFoundException(Message.USER_NOT_FOUND_BY_TURKISH_REPUBLIC_ID_NUMBER(turkishRepublicIdNumber));
+                });
     }
 
     public User findByUsername(String username) {
         return userRepository.findByUsername(username).orElseThrow(
-                () -> new UserNotFoundException(Message.USER_NOT_FOUND_BY_USERNAME(username)));
+                () -> {
+                    log.error("User not found with username : {}", username);
+
+                    return new UserNotFoundException(Message.USER_NOT_FOUND_BY_USERNAME(username));
+                });
     }
 
     public void activeUser(Long id) {
@@ -112,6 +114,8 @@ public class UserService  {
         user.setStatus(Status.ACTIVE);
 
         userRepository.save(user);
+
+        log.info("User activated successfully : {}", id);
     }
 
     public void deleteById(Long id) {
@@ -119,6 +123,8 @@ public class UserService  {
         User user = findById(id);
 
         userRepository.deleteById(id);
+
+        log.info("User deleted successfully : {}", id);
     }
 
     public void passiveUser(Long id) {
@@ -128,6 +134,8 @@ public class UserService  {
         user.setStatus(Status.PASSIVE);
 
         userRepository.save(user);
+
+        log.info("User set to passive successfully : {}", id);
     }
 
 }
