@@ -20,7 +20,7 @@ import java.util.List;
 @Service
 public class UserMapper {
 
-    public UserResponse convertToUserResponse(User user) {
+    public static UserResponse convertToUserResponse(User user) {
         if ( user == null ) {
             return null;
         }
@@ -52,7 +52,7 @@ public class UserMapper {
         return userResponse;
     }
 
-    public void updateUser (User user,UserUpdateRequest request){
+    public static void updateUser (User user,UserUpdateRequest request){
 
         if ( request == null ) {
             return ;
@@ -63,7 +63,7 @@ public class UserMapper {
         user.setLongitude( request.longitude() );
     }
 
-    public List<UserResponse> convertToUserResponseList(List<User> users) {
+    public static List<UserResponse> convertToUserResponseList(List<User> users) {
         if ( users == null ) {
             return null;
         }
@@ -77,7 +77,7 @@ public class UserMapper {
         return list;
     }
 
-    public User convertToUser (UserSaveRequest request){
+    public static User convertToUser (UserSaveRequest request){
         if ( request == null ) {
             return null;
         }

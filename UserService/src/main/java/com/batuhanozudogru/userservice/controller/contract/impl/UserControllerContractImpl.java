@@ -17,36 +17,38 @@ import java.util.List;
 public class UserControllerContractImpl implements UserControllerContract {
 
     private final UserService userService;
-    private final UserMapper userMapper;
     @Override
     public List<UserResponse> getAllUsers() {
 
         List<User> userList =  userService.findAllActiveUsers();
 
-        return userMapper.convertToUserResponseList(userList);
+        List<UserResponse> userResponseList = UserMapper.convertToUserResponseList(userList);
+        return userResponseList;
     }
 
     @Override
+
     public UserResponse saveUser(UserSaveRequest userSaveRequest) {
 
-        User user = userMapper.convertToUser(userSaveRequest);
+        User user = UserMapper.convertToUser(userSaveRequest);
 
-        return userMapper.convertToUserResponse(userService.save(user));
+        return UserMapper.convertToUserResponse(userService.save(user));
     }
 
     @Override
     public UserResponse getUserById(Long id) {
 
         User user = userService.findById(id);
-        return userMapper.convertToUserResponse(user);
+        return UserMapper.convertToUserResponse(user);
     }
 
     @Override
     public UserResponse updateUser(Long id, UserUpdateRequest request) {
 
         User user = userService.findById(id);
-        userMapper.updateUser(user, request);
-        return userMapper.convertToUserResponse(userService.save(user));
+        UserMapper.updateUser(user, request);
+        userService.save(user);
+        return UserMapper.convertToUserResponse(user);
     }
 
     @Override
@@ -74,7 +76,7 @@ public class UserControllerContractImpl implements UserControllerContract {
 
         User user = userService.findByTurkishRepublicIdNo(turkishRepublicIdNo);
 
-        return userMapper.convertToUserResponse(user);
+        return UserMapper.convertToUserResponse(user);
     }
 
     @Override
@@ -82,6 +84,6 @@ public class UserControllerContractImpl implements UserControllerContract {
 
         User user = userService.findByUsername(username);
 
-        return userMapper.convertToUserResponse(user);
+        return UserMapper.convertToUserResponse(user);
     }
 }
