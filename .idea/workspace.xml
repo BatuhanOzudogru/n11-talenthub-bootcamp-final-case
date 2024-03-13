@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="edda31c5-845f-4e52-8455-c5d1261cc89a" name="Changes" comment="" />
+    <list default="true" id="edda31c5-845f-4e52-8455-c5d1261cc89a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -91,7 +93,7 @@
       <recent name="com.batuhanozudogru.userservice.controller.contract.impl" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.UserServiceApplication">
+  <component name="RunManager" selected="Spring Boot.RestaurantServiceApplication">
     <configuration name="UserServiceTest.shouldNotSaveUserWhenFirstNameIsNull" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="UserService" />
       <extension name="coverage">
@@ -221,7 +223,8 @@
       <workItem from="1710327058377" duration="16949000" />
       <workItem from="1710356361982" duration="133000" />
       <workItem from="1710362294169" duration="182000" />
-      <workItem from="1710362498877" duration="746000" />
+      <workItem from="1710362498877" duration="2124000" />
+      <workItem from="1710364665765" duration="940000" />
     </task>
     <servers />
   </component>
