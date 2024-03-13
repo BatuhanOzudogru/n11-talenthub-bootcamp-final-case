@@ -6,6 +6,9 @@ import com.batuhanozudogru.userservice.dto.request.UserReviewSaveRequest;
 import com.batuhanozudogru.userservice.dto.request.UserReviewUpdateRequest;
 import com.batuhanozudogru.userservice.dto.response.UserReviewResponse;
 import com.batuhanozudogru.userservice.entity.UserReview;
+import com.batuhanozudogru.userservice.general.result.Result;
+import com.batuhanozudogru.userservice.general.result.ResultData;
+import com.batuhanozudogru.userservice.general.result.ResultHelper;
 import com.batuhanozudogru.userservice.mapper.UserReviewMapper;
 import com.batuhanozudogru.userservice.service.UserReviewService;
 import lombok.RequiredArgsConstructor;
@@ -21,56 +24,54 @@ public class UserReviewController {
     private final UserReviewControllerContract userReviewControllerContract;
 
     @GetMapping("/getById/{id}")
-    public UserReviewResponse getUserReviewById(@PathVariable Long id) {
-        return userReviewControllerContract.getUserReviewById(id);
+    public ResultData<UserReviewResponse> getUserReviewById(@PathVariable Long id) {
+        return ResultHelper.success(userReviewControllerContract.getUserReviewById(id));
     }
 
     @GetMapping("/get-by-user-id/{userId}")
-    public List<UserReviewResponse> getUserReviewListByUserId(@PathVariable Long userId) {
-        return userReviewControllerContract.getUserReviewListByUserId(userId);
+    public ResultData<List<UserReviewResponse>> getUserReviewListByUserId(@PathVariable Long userId) {
+
+        return ResultHelper.success(userReviewControllerContract.getUserReviewListByUserId(userId));
     }
 
     @GetMapping("/get-by-restaurant-id/{restaurantId}")
-    public List<UserReviewResponse> getUserReviewByRestaurantId(@PathVariable String restaurantId) {
-        return userReviewControllerContract.getUserReviewByRestaurantId(restaurantId);
+    public ResultData<List<UserReviewResponse>> getUserReviewByRestaurantId(@PathVariable String restaurantId) {
+
+        return ResultHelper.success(userReviewControllerContract.getUserReviewByRestaurantId(restaurantId));
     }
 
     @GetMapping("/get-by-username/{username}")
-    public UserReviewResponse getUserReviewByUserUsername(@PathVariable String username) {
-        return userReviewControllerContract.getUserReviewByUserUsername(username);
+    public ResultData<UserReviewResponse> getUserReviewByUserUsername(@PathVariable String username) {
+
+        return ResultHelper.success(userReviewControllerContract.getUserReviewByUserUsername(username));
     }
 
     @PostMapping("/save")
-    public UserReviewResponse saveUserReview(@RequestBody UserReviewSaveRequest userReviewSaveRequest) {
-        return userReviewControllerContract.saveUserReview(userReviewSaveRequest);
+    public ResultData<UserReviewResponse> saveUserReview(@RequestBody UserReviewSaveRequest userReviewSaveRequest) {
+
+        return ResultHelper.created(userReviewControllerContract.saveUserReview(userReviewSaveRequest));
     }
 
     @PutMapping("/update/{id}")
-    public UserReviewResponse updateUserReview(@PathVariable Long id, @RequestBody UserReviewUpdateRequest request) {
-        return userReviewControllerContract.updateUserReview(id, request);
+    public ResultData<UserReviewResponse> updateUserReview(@PathVariable Long id, @RequestBody UserReviewUpdateRequest request) {
+
+        return ResultHelper.updated(userReviewControllerContract.updateUserReview(id, request));
     }
 
     @DeleteMapping("/delete/{id}")
-    public void deleteUserReview(@PathVariable Long id) {
+    public Result deleteUserReview(@PathVariable Long id) {
+
         userReviewControllerContract.deleteUserReview(id);
+
+        return ResultHelper.hardDeleted();
     }
 
     @GetMapping
-    public List<UserReviewResponse> getUserReviews() {
-        return userReviewControllerContract.getAllUserReviews();
+    public ResultData<List<UserReviewResponse>> getUserReviews() {
+
+        return ResultHelper.success(userReviewControllerContract.getAllUserReviews());
     }
 
-//    @GetMapping
-//    public List<UserReviewResponse> getUserReviews() {
-//        List<UserReview> userReviews = userReviewService.getAllUserReviews();
-//        return userReviewMapper.convertToUserReviewResponseList(userReviews);
-//
-//    }
-//
-//    @PostMapping("/save")
-//    public UserReviewResponse saveUserReview(@RequestBody UserReviewSaveRequest userReviewSaveRequest) {
-//        return userReviewService.saveUserReview(userReviewSaveRequest);
-//    }
 
 
 }
