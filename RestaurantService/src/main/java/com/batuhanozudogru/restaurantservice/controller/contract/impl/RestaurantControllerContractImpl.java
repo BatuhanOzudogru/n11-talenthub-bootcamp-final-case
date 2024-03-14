@@ -3,6 +3,7 @@ package com.batuhanozudogru.restaurantservice.controller.contract.impl;
 
 import com.batuhanozudogru.restaurantservice.controller.contract.RestaurantControllerContract;
 import com.batuhanozudogru.restaurantservice.dto.ReviewDTO;
+import com.batuhanozudogru.restaurantservice.dto.UpdateReviewDTO;
 import com.batuhanozudogru.restaurantservice.entity.Restaurant;
 import com.batuhanozudogru.restaurantservice.mapper.RestaurantMapper;
 import com.batuhanozudogru.restaurantservice.dto.request.RestaurantRequest;
@@ -70,6 +71,12 @@ public class RestaurantControllerContractImpl implements RestaurantControllerCon
     public void addReviewToRestaurant(ReviewDTO reviewDTO) {
 
         restaurantService.addReviewToRestaurant(reviewDTO);
+    }
+
+    @Override
+    public void updateReviewToRestaurant(UpdateReviewDTO reviewDTO) {
+
+        restaurantService.updateReviewToRestaurant(reviewDTO);
     }
 
     @Override

@@ -1,5 +1,6 @@
 package com.batuhanozudogru.userservice.client;
 
+import com.batuhanozudogru.userservice.dto.UpdateReviewForRestaurantDTO;
 import com.batuhanozudogru.userservice.dto.request.RestaurantSaveRequest;
 import com.batuhanozudogru.userservice.dto.request.UserReviewForRestaurantRequest;
 import com.batuhanozudogru.userservice.dto.request.UserReviewSaveRequest;
@@ -28,6 +29,9 @@ public interface RestaurantClient {
 
     @PostMapping("/add-review")
     void addReviewToRestaurant(@RequestBody UserReviewForRestaurantRequest reviewDTO);
+
+    @PutMapping("/update-review")
+    void updateReviewToRestaurant(@RequestBody UpdateReviewForRestaurantDTO reviewDTOs);
 
     @DeleteMapping("/delete-review")
     void deleteReviewToRestaurant(@RequestBody UserReviewForRestaurantRequest reviewDTO);

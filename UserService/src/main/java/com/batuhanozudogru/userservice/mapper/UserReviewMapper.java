@@ -1,6 +1,7 @@
 package com.batuhanozudogru.userservice.mapper;
 
 
+import com.batuhanozudogru.userservice.dto.UpdateReviewForRestaurantDTO;
 import com.batuhanozudogru.userservice.dto.request.UserReviewForRestaurantRequest;
 import com.batuhanozudogru.userservice.dto.request.UserReviewSaveRequest;
 import com.batuhanozudogru.userservice.dto.request.UserReviewUpdateRequest;
@@ -25,6 +26,8 @@ public interface UserReviewMapper {
     UserReviewResponse convertToUserReviewResponse(UserReview userReview);
 
     List<UserReviewResponse> convertToUserReviewResponseList(List<UserReview> userReviews);
+
+    UpdateReviewForRestaurantDTO convertToUpdateReviewForRestaurantDTO(UserReviewForRestaurantRequest oldReview, UserReviewForRestaurantRequest newReview);
 
     @Mapping(target = "username", source = "user.username")
     UserReviewForRestaurantRequest convertToUserReviewForRestaurantRequest(UserReview userReview);

@@ -4,6 +4,7 @@ package com.batuhanozudogru.restaurantservice.service;
 
 import com.batuhanozudogru.restaurantservice.dao.RestaurantRepository;
 import com.batuhanozudogru.restaurantservice.dto.ReviewDTO;
+import com.batuhanozudogru.restaurantservice.dto.UpdateReviewDTO;
 import com.batuhanozudogru.restaurantservice.entity.Restaurant;
 import com.batuhanozudogru.restaurantservice.general.exception.RestaurantNotFoundException;
 import org.springframework.stereotype.Service;
@@ -55,6 +56,22 @@ public class RestaurantService {
         restaurantRepository.save(restaurant);
     }
 
+    public void updateReviewToRestaurant(UpdateReviewDTO updateReviewDTO) {
+
+        Restaurant restaurant = getRestaurantById(updateReviewDTO.oldReview().restaurantId());
+
+        List<String> comments = restaurant.getComments();
+
+        comments.remove("User: " + updateReviewDTO.oldReview().username()+ " Comment: " + updateReviewDTO.oldReview().review() + " Rating: " + updateReviewDTO.oldReview().rate() + " Restaurant: " + restaurant.getName() + " RestaurantId: " + restaurant.getId());
+
+        comments.add("User: " + updateReviewDTO.newReview().username() + " Comment: " + updateReviewDTO.newReview().review() + " Rating: " + updateReviewDTO.newReview().rate() + " Restaurant: " + restaurant.getName() + " RestaurantId: " + restaurant.getId());
+
+        restaurant.setComments(comments);
+
+        restaurantRepository.save(restaurant);
+
+    }
+
     public void deleteReviewToRestaurant(ReviewDTO reviewDTO){
 
         Restaurant restaurant = getRestaurantById(reviewDTO.restaurantId());
@@ -73,8 +90,4 @@ public class RestaurantService {
 
         restaurantRepository.deleteById(id);
     }
-
-
-
-
 }

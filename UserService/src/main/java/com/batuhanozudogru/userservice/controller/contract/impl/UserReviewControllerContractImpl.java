@@ -2,6 +2,7 @@ package com.batuhanozudogru.userservice.controller.contract.impl;
 
 import com.batuhanozudogru.userservice.client.RestaurantClient;
 import com.batuhanozudogru.userservice.controller.contract.UserReviewControllerContract;
+import com.batuhanozudogru.userservice.dto.UpdateReviewForRestaurantDTO;
 import com.batuhanozudogru.userservice.dto.request.UserReviewForRestaurantRequest;
 import com.batuhanozudogru.userservice.dto.request.UserReviewSaveRequest;
 import com.batuhanozudogru.userservice.dto.request.UserReviewUpdateRequest;
@@ -60,13 +61,21 @@ public class UserReviewControllerContractImpl implements UserReviewControllerCon
     @Override
     public UserReviewResponse updateUserReview(Long id, UserReviewUpdateRequest request) {
 
-       UserReview userReview = userReviewService.findById(id);
+       UserReview oldUserReview = userReviewService.findById(id);
 
-       userReviewMapper.updateUserReview(userReview, request);
+       UserReviewForRestaurantRequest oldDTO = userReviewMapper.convertToUserReviewForRestaurantRequest(oldUserReview);
 
-       userReviewService.save(userReview);
+       userReviewMapper.updateUserReview(oldUserReview, request);
 
-       return userReviewMapper.convertToUserReviewResponse(userReview);
+       UserReview newUserReview = userReviewService.save(oldUserReview);
+
+       UserReviewForRestaurantRequest newDTO = userReviewMapper.convertToUserReviewForRestaurantRequest(newUserReview);
+
+       UpdateReviewForRestaurantDTO updateReviewForRestaurantDTO = userReviewMapper.convertToUpdateReviewForRestaurantDTO(oldDTO, newDTO);
+
+       restaurantClient.updateReviewToRestaurant(updateReviewForRestaurantDTO);
+
+       return userReviewMapper.convertToUserReviewResponse(newUserReview);
     }
 
     @Override

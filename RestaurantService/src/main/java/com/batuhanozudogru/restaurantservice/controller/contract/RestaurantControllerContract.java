@@ -3,6 +3,7 @@ package com.batuhanozudogru.restaurantservice.controller.contract;
 
 
 import com.batuhanozudogru.restaurantservice.dto.ReviewDTO;
+import com.batuhanozudogru.restaurantservice.dto.UpdateReviewDTO;
 import com.batuhanozudogru.restaurantservice.dto.request.RestaurantRequest;
 import com.batuhanozudogru.restaurantservice.dto.response.RestaurantResponse;
 
@@ -19,6 +20,8 @@ public interface RestaurantControllerContract {
     RestaurantResponse updateRestaurant(String id, RestaurantRequest request);
 
     void addReviewToRestaurant(ReviewDTO reviewDTO);
+
+    void updateReviewToRestaurant(UpdateReviewDTO reviewDTO);
 
     void deleteReviewToRestaurant(ReviewDTO reviewDTO);
 

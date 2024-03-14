@@ -3,6 +3,7 @@ package com.batuhanozudogru.restaurantservice.controller;
 
 import com.batuhanozudogru.restaurantservice.controller.contract.RestaurantControllerContract;
 import com.batuhanozudogru.restaurantservice.dto.ReviewDTO;
+import com.batuhanozudogru.restaurantservice.dto.UpdateReviewDTO;
 import com.batuhanozudogru.restaurantservice.dto.request.RestaurantRequest;
 import com.batuhanozudogru.restaurantservice.dto.response.RestaurantResponse;
 import org.springframework.web.bind.annotation.*;
@@ -59,6 +60,12 @@ public class RestaurantController {
     public void addReviewToRestaurant(@RequestBody ReviewDTO reviewDTO) {
 
         contract.addReviewToRestaurant(reviewDTO);
+    }
+
+    @PutMapping("/update-review")
+    public void updateReviewToRestaurant(@RequestBody UpdateReviewDTO reviewDTOS) {
+
+        contract.updateReviewToRestaurant(reviewDTOS);
     }
 
     @DeleteMapping("/delete-review")
