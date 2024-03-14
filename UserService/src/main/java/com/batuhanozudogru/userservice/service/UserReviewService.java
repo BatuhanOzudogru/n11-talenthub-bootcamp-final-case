@@ -28,6 +28,7 @@ public class UserReviewService {
 
     private final UserReviewRepository userReviewRepository;
     private final UserRepository userRepository;
+    private final RestaurantClient restaurantClient;
 
     public UserReview save(UserReview userReview) {
 
@@ -96,6 +97,9 @@ public class UserReviewService {
     private void validateUserReview(UserReview userReview) {
 
         validateStringLength("Review", userReview.getReview(), 500);
+
+        restaurantClient.getRestaurantById(userReview.getRestaurantId());
+
 
 
     }

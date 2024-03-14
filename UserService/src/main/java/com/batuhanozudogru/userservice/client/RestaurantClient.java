@@ -21,7 +21,7 @@ public interface RestaurantClient {
     RestaurantResponse saveRestaurant(@RequestBody RestaurantSaveRequest restaurant);
 
     @PutMapping("/update/{id}")
-    RestaurantResponse updateRestaurant(@RequestParam String id,@RequestBody RestaurantSaveRequest request);
+    RestaurantResponse updateRestaurant(@PathVariable String id,@RequestBody RestaurantSaveRequest request);
 
     @GetMapping("/get-by-id/{id}")
     RestaurantResponse getRestaurantById(@PathVariable("id") String id);

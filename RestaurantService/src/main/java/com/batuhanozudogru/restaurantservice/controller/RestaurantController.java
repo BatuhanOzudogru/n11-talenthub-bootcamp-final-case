@@ -50,7 +50,7 @@ public class RestaurantController {
     }
 
     @PutMapping("/update/{id}")
-    public RestaurantResponse updateRestaurant(@RequestParam String id,@RequestBody RestaurantRequest request) {
+    public RestaurantResponse updateRestaurant(@PathVariable String id,@RequestBody RestaurantRequest request) {
 
         return contract.updateRestaurant(id, request);
     }
