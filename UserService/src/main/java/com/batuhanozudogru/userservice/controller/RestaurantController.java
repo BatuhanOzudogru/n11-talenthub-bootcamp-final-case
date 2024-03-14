@@ -3,6 +3,8 @@ package com.batuhanozudogru.userservice.controller;
 import com.batuhanozudogru.userservice.client.RestaurantClient;
 import com.batuhanozudogru.userservice.dao.UserRepository;
 import com.batuhanozudogru.userservice.dto.request.RestaurantSaveRequest;
+import com.batuhanozudogru.userservice.dto.request.UserReviewForRestaurantRequest;
+import com.batuhanozudogru.userservice.dto.request.UserReviewSaveRequest;
 import com.batuhanozudogru.userservice.dto.response.RestaurantResponse;
 import com.batuhanozudogru.userservice.entity.User;
 
@@ -67,5 +69,17 @@ public class RestaurantController {
     public RestaurantResponse getById(@PathVariable("id") String id) {
 
         return restaurantClient.getRestaurantById(id);
+    }
+
+    @PostMapping("/add-review")
+    public void addReviewToRestaurant(@RequestBody UserReviewForRestaurantRequest reviewDTO) {
+
+        restaurantClient.addReviewToRestaurant(reviewDTO);
+    }
+
+    @DeleteMapping("/delete-review")
+    public void deleteReviewToRestaurant(@RequestBody UserReviewForRestaurantRequest reviewDTO) {
+
+        restaurantClient.deleteReviewToRestaurant(reviewDTO);
     }
 }

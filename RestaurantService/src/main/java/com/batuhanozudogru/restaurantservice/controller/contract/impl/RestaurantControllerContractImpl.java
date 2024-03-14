@@ -2,6 +2,7 @@ package com.batuhanozudogru.restaurantservice.controller.contract.impl;
 
 
 import com.batuhanozudogru.restaurantservice.controller.contract.RestaurantControllerContract;
+import com.batuhanozudogru.restaurantservice.dto.ReviewDTO;
 import com.batuhanozudogru.restaurantservice.entity.Restaurant;
 import com.batuhanozudogru.restaurantservice.mapper.RestaurantMapper;
 import com.batuhanozudogru.restaurantservice.dto.request.RestaurantRequest;
@@ -49,6 +50,7 @@ public class RestaurantControllerContractImpl implements RestaurantControllerCon
     public RestaurantResponse saveRestaurant(RestaurantRequest request) {
 
 
+
         Restaurant restaurant = restaurantMapper.convertToRestaurant(request);
         Restaurant savedRestaurant = restaurantService.saveRestaurant(restaurant);
         return restaurantMapper.convertToRestaurantResponse(savedRestaurant);
@@ -62,6 +64,18 @@ public class RestaurantControllerContractImpl implements RestaurantControllerCon
         Restaurant updatedRestaurant = restaurantService.saveRestaurant(restaurant);
         return restaurantMapper.convertToRestaurantResponse(updatedRestaurant);
 
+    }
+
+    @Override
+    public void addReviewToRestaurant(ReviewDTO reviewDTO) {
+
+        restaurantService.addReviewToRestaurant(reviewDTO);
+    }
+
+    @Override
+    public void deleteReviewToRestaurant(ReviewDTO reviewDTO) {
+
+        restaurantService.deleteReviewToRestaurant(reviewDTO);
     }
 
     @Override

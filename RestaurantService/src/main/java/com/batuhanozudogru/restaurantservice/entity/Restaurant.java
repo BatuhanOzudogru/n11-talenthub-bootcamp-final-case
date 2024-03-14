@@ -1,10 +1,12 @@
 package com.batuhanozudogru.restaurantservice.entity;
 
 
+import com.batuhanozudogru.restaurantservice.dto.ReviewDTO;
 import nonapi.io.github.classgraph.json.Id;
 import org.springframework.data.solr.core.mapping.Indexed;
 import org.springframework.data.solr.core.mapping.SolrDocument;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @SolrDocument(collection = "n11_restaurants")
@@ -88,13 +90,13 @@ public class Restaurant {
         this.rate = rate;
     }
 
-    public Restaurant(String id, String name, String address, String latitude, String longitude, List<String> comments, String rate) {
+    public Restaurant(String id, String name, String address, String latitude, String longitude, String rate) {
         this.id = id;
         this.name = name;
         this.address = address;
         this.latitude = latitude;
         this.longitude = longitude;
-        this.comments = comments;
+        this.comments = new ArrayList<>();
         this.rate = rate;
     }
 

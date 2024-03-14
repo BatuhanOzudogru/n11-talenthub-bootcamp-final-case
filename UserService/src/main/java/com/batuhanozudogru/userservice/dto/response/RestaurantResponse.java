@@ -8,5 +8,5 @@ public record RestaurantResponse(String id,
                                  String latitude,
                                  String longitude,
                                  String rate,
-                                 List<String> comments) {
+                                 List<UserReviewResponse> comments) {
 }

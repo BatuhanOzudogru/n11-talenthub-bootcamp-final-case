@@ -3,9 +3,12 @@ package com.batuhanozudogru.restaurantservice.service;
 
 
 import com.batuhanozudogru.restaurantservice.dao.RestaurantRepository;
+import com.batuhanozudogru.restaurantservice.dto.ReviewDTO;
 import com.batuhanozudogru.restaurantservice.entity.Restaurant;
 import com.batuhanozudogru.restaurantservice.general.exception.RestaurantNotFoundException;
 import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
 
 @Service
 
@@ -32,6 +35,24 @@ public class RestaurantService {
 
     public Restaurant getRestaurantById(String id) {
         return restaurantRepository.findById(id).orElseThrow(() -> new RestaurantNotFoundException(id));
+    }
+
+    public void addReviewToRestaurant(ReviewDTO reviewDTO) {
+
+        Restaurant restaurant = getRestaurantById(reviewDTO.restaurantId());
+        if(restaurant.getComments() == null) {
+            restaurant.setComments(new ArrayList<>());
+        }
+        restaurant.getComments().add("User: " + reviewDTO.username() + " Comment: " + reviewDTO.review() + " Rating: " + reviewDTO.rate()+ " Restaurant: " + restaurant.getName() + " RestaurantId: " + restaurant.getId());
+        restaurantRepository.save(restaurant);
+    }
+
+    public void deleteReviewToRestaurant(ReviewDTO reviewDTO){
+
+        Restaurant restaurant = getRestaurantById(reviewDTO.restaurantId());
+        restaurant.getComments().remove("User: " + reviewDTO.username() + " Comment: " + reviewDTO.review() + " Rating: " + reviewDTO.rate()+ " Restaurant: " + restaurant.getName() + " RestaurantId: " + restaurant.getId());
+
+
     }
 
     public void deleteRestaurantById(String id) {
