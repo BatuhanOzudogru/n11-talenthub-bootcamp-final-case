@@ -6,6 +6,9 @@ import com.batuhanozudogru.restaurantservice.dto.ReviewDTO;
 import com.batuhanozudogru.restaurantservice.dto.UpdateReviewDTO;
 import com.batuhanozudogru.restaurantservice.dto.request.RestaurantRequest;
 import com.batuhanozudogru.restaurantservice.dto.response.RestaurantResponse;
+import com.batuhanozudogru.restaurantservice.general.result.Result;
+import com.batuhanozudogru.restaurantservice.general.result.ResultData;
+import com.batuhanozudogru.restaurantservice.general.result.ResultHelper;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -21,57 +24,67 @@ public class RestaurantController {
     }
 
     @GetMapping
-    public Iterable<RestaurantResponse> getAllRestaurants() {
+    public ResultData<Iterable<RestaurantResponse>> getAllRestaurants() {
 
-        return contract.getRestaurants();
+        return ResultHelper.success(contract.getRestaurants());
     }
 
     @PostMapping("/save")
-    public RestaurantResponse saveRestaurant(@RequestBody RestaurantRequest restaurant) {
+    public ResultData<RestaurantResponse> saveRestaurant(@RequestBody RestaurantRequest restaurant) {
 
-        return contract.saveRestaurant(restaurant);
+        return ResultHelper.created(contract.saveRestaurant(restaurant));
     }
 
     @GetMapping("/get-by-id/{id}")
-    public RestaurantResponse getRestaurantById(@PathVariable String id) {
+    public ResultData<RestaurantResponse> getRestaurantById(@PathVariable String id) {
 
-        return contract.getRestaurantById(id);
+        return ResultHelper.success(contract.getRestaurantById(id));
     }
 
     @DeleteMapping("/delete/{id}")
-    public void deleteRestaurantById(@PathVariable String id) {
+    public Result deleteRestaurantById(@PathVariable String id) {
 
         contract.deleteRestaurant(id);
+
+        return ResultHelper.deleted();
     }
 
     @DeleteMapping("/deleteAll")
-    public void deleteAllRestaurants() {
+    public Result deleteAllRestaurants() {
 
         contract.deleteAllRestaurants();
+
+        return ResultHelper.allDeleted();
     }
 
     @PutMapping("/update/{id}")
-    public RestaurantResponse updateRestaurant(@PathVariable String id,@RequestBody RestaurantRequest request) {
+    public ResultData<RestaurantResponse> updateRestaurant(@PathVariable String id,@RequestBody RestaurantRequest request) {
 
-        return contract.updateRestaurant(id, request);
+        return ResultHelper.success(contract.updateRestaurant(id, request));
     }
 
     @PostMapping("/add-review")
-    public void addReviewToRestaurant(@RequestBody ReviewDTO reviewDTO) {
+    public Result addReviewToRestaurant(@RequestBody ReviewDTO reviewDTO) {
 
         contract.addReviewToRestaurant(reviewDTO);
+
+        return ResultHelper.success();
     }
 
     @PutMapping("/update-review")
-    public void updateReviewToRestaurant(@RequestBody UpdateReviewDTO reviewDTOS) {
+    public Result updateReviewToRestaurant(@RequestBody UpdateReviewDTO reviewDTOS) {
 
         contract.updateReviewToRestaurant(reviewDTOS);
+
+        return ResultHelper.success();
     }
 
     @DeleteMapping("/delete-review")
-    public void deleteReviewToRestaurant(@RequestBody ReviewDTO reviewDTO) {
+    public Result deleteReviewToRestaurant(@RequestBody ReviewDTO reviewDTO) {
 
         contract.deleteReviewToRestaurant(reviewDTO);
+
+        return ResultHelper.success();
     }
 
 

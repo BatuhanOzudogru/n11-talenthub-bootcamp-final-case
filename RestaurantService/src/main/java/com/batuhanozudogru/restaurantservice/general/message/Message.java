@@ -13,5 +13,17 @@ public class Message {
 
     public static final String NOT_NULL = "Fields cannot be null";
 
+    public static final String CREATED = "Data successfully saved";
+
+    public static final String UPDATED = "Data successfully updated";
+
+    public static final String OK = "Process successfully executed";
+
+    public static final String DELETED = "Data successfully deleted";
+
+    public static final String ALL_DELETED = "All data successfully deleted";
+
+
+
 
 }
