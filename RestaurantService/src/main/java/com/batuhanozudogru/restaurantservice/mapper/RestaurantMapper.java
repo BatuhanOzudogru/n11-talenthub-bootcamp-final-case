@@ -5,6 +5,7 @@ import com.batuhanozudogru.restaurantservice.dto.ReviewDTO;
 import com.batuhanozudogru.restaurantservice.dto.request.RestaurantRequest;
 import com.batuhanozudogru.restaurantservice.dto.response.RestaurantResponse;
 import com.batuhanozudogru.restaurantservice.entity.Restaurant;
+import com.batuhanozudogru.restaurantservice.general.exception.RateException;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -46,10 +47,38 @@ public class RestaurantMapper {
     }
 
     public void updateRestaurant(Restaurant restaurant, RestaurantRequest restaurantRequest) {
-        restaurant.setName(restaurantRequest.name());
-        restaurant.setAddress(restaurantRequest.address());
-        restaurant.setLatitude(String.valueOf(restaurantRequest.latitude()));
-        restaurant.setLongitude(String.valueOf(restaurantRequest.longitude()));
+
+        if(restaurantRequest.name() != null){
+            restaurant.setName(restaurantRequest.name());
+        }
+
+        if(restaurantRequest.address() != null){
+            restaurant.setAddress(restaurantRequest.address());
+        }
+
+        if(restaurantRequest.latitude() != null){
+            restaurant.setLatitude(String.valueOf(restaurantRequest.latitude()));
+        }
+
+        if(restaurantRequest.longitude() != null){
+            restaurant.setLongitude(String.valueOf(restaurantRequest.longitude()));
+        }
+
+        String rate = String.valueOf(restaurantRequest.rate());
+        if(restaurantRequest.rate() != null){
+
+            if (!rate.equals("1") && !rate.equals("2") && !rate.equals("3") && !rate.equals("4") && !rate.equals("5")) {
+                throw new RateException();
+            }
+
         restaurant.setRate(restaurantRequest.rate());
+        }
+
+
+
+
+
+
+
     }
 }

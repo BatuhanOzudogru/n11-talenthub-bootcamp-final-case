@@ -61,8 +61,11 @@ public class RestaurantControllerContractImpl implements RestaurantControllerCon
     public RestaurantResponse updateRestaurant(String id, RestaurantRequest request) {
 
         Restaurant restaurant = restaurantService.getRestaurantById(id);
+
         restaurantMapper.updateRestaurant(restaurant, request);
+
         Restaurant updatedRestaurant = restaurantService.saveRestaurant(restaurant);
+
         return restaurantMapper.convertToRestaurantResponse(updatedRestaurant);
 
     }

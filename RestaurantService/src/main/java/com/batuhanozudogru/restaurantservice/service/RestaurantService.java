@@ -6,6 +6,8 @@ import com.batuhanozudogru.restaurantservice.dao.RestaurantRepository;
 import com.batuhanozudogru.restaurantservice.dto.ReviewDTO;
 import com.batuhanozudogru.restaurantservice.dto.UpdateReviewDTO;
 import com.batuhanozudogru.restaurantservice.entity.Restaurant;
+import com.batuhanozudogru.restaurantservice.general.exception.NullException;
+import com.batuhanozudogru.restaurantservice.general.exception.RateException;
 import com.batuhanozudogru.restaurantservice.general.exception.RestaurantNotFoundException;
 import org.springframework.stereotype.Service;
 
@@ -37,8 +39,13 @@ public class RestaurantService {
     }
     public Restaurant saveRestaurant(Restaurant restaurant) {
 
+        if(restaurant.getId()==null){
+            validateRestaurant(restaurant);
+        }
         return restaurantRepository.save(restaurant);
     }
+
+
 
     public Restaurant getRestaurantById(String id) {
 
@@ -89,5 +96,13 @@ public class RestaurantService {
     public void deleteRestaurantById(String id) {
 
         restaurantRepository.deleteById(id);
+    }
+
+    public void validateRestaurant(Restaurant restaurant) {
+
+        if(restaurant.getName() == null || restaurant.getAddress() == null || restaurant.getLatitude() == null || restaurant.getLongitude() == null || restaurant.getRate() == null){
+            throw new NullException();
+        }
+
     }
 }
