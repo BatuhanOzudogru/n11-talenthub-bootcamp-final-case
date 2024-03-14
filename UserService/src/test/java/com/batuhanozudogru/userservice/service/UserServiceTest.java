@@ -14,6 +14,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -170,6 +171,25 @@ class UserServiceTest {
 
         //then
         assertEquals(id, result.getId());
+    }
+
+    @Test
+    void shouldNotUpdateUserWhenUsernameWasTaken(){
+
+        //given
+        Long id = 1L;
+        User user = new User();
+        user.setId(id);
+        user.setUsername("batuhanozudogru");
+
+        User user2 = new User();
+        user2.setUsername("batuhanozudogru");
+
+        //when
+        Mockito.when(userRepository.findByUsername(user2.getUsername())).thenReturn(Optional.of(user2));
+
+        //then
+        assertThrows(UsernameTakenException.class, () -> userService.save(user2));
     }
 
     @Test

@@ -21,7 +21,7 @@ public class UserController {
     private final UserControllerContract userControllerContract;
 
     @PostMapping("/save")
-    public ResultData<UserResponse> saveUser(UserSaveRequest userSaveRequest) {
+    public ResultData<UserResponse> saveUser(@RequestBody UserSaveRequest userSaveRequest) {
 
         return ResultHelper.created(userControllerContract.saveUser(userSaveRequest));
 
