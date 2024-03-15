@@ -31,8 +31,6 @@ public class RestaurantController {
 
         List<RestaurantResponse> restaurants = contract.getRestaurants();
 
-//        List<RestaurantResponse> result = StreamSupport.stream(restaurants.spliterator(), false)
-//                .toList();
 
         return ResultHelper.success(restaurants);
 
@@ -51,19 +49,19 @@ public class RestaurantController {
     }
 
     @DeleteMapping("/delete/{id}")
-    public Result deleteRestaurantById(@PathVariable String id) {
+    public void deleteRestaurantById(@PathVariable String id) {
 
         contract.deleteRestaurant(id);
 
-        return ResultHelper.deleted();
+       // return ResultHelper.deleted();
     }
 
-    @DeleteMapping("/deleteAll")
-    public Result deleteAllRestaurants() {
+    @DeleteMapping("/delete-all")
+    public void deleteAllRestaurants() {
 
         contract.deleteAllRestaurants();
 
-        return ResultHelper.allDeleted();
+      //  return ResultHelper.allDeleted();
     }
 
     @PutMapping("/update/{id}")
@@ -73,27 +71,35 @@ public class RestaurantController {
     }
 
     @PostMapping("/add-review")
-    public Result addReviewToRestaurant(@RequestBody ReviewDTO reviewDTO) {
+    public void addReviewToRestaurant(@RequestBody ReviewDTO reviewDTO) {
 
         contract.addReviewToRestaurant(reviewDTO);
 
-        return ResultHelper.success();
+      //  return ResultHelper.success();
     }
 
     @PutMapping("/update-review")
-    public Result updateReviewToRestaurant(@RequestBody UpdateReviewDTO reviewDTOS) {
+    public void updateReviewToRestaurant(@RequestBody UpdateReviewDTO reviewDTOS) {
 
         contract.updateReviewToRestaurant(reviewDTOS);
 
-        return ResultHelper.success();
+       // return ResultHelper.success();
     }
 
     @DeleteMapping("/delete-review")
-    public Result deleteReviewToRestaurant(@RequestBody ReviewDTO reviewDTO) {
+    public void deleteReviewToRestaurant(@RequestBody ReviewDTO reviewDTO) {
 
         contract.deleteReviewToRestaurant(reviewDTO);
 
-        return ResultHelper.success();
+      //  return ResultHelper.success();
+    }
+
+    @DeleteMapping("/delete-restaurant/{id}")
+    public void deleteById(@PathVariable String id) {
+
+        contract.deleteById(id);
+
+
     }
 
 

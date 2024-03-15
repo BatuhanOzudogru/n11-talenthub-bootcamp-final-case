@@ -19,8 +19,8 @@ public interface RestaurantClient {
     @GetMapping
     ResultData<List<RestaurantResponse>> getRestaurants();
 
-    @DeleteMapping("/deleteAll")
-    Result deleteAllRestaurants();
+    @DeleteMapping("/delete-all")
+    void deleteAllRestaurants();
 
     @PostMapping("/save")
     ResultData<RestaurantResponse> saveRestaurant(@RequestBody RestaurantSaveRequest restaurant);
@@ -32,12 +32,15 @@ public interface RestaurantClient {
     ResultData<RestaurantResponse> getRestaurantById(@PathVariable("id") String id);
 
     @PostMapping("/add-review")
-    Result addReviewToRestaurant(@RequestBody UserReviewForRestaurantRequest reviewDTO);
+    void addReviewToRestaurant(@RequestBody UserReviewForRestaurantRequest reviewDTO);
 
     @PutMapping("/update-review")
-    Result updateReviewToRestaurant(@RequestBody UpdateReviewForRestaurantDTO reviewDTOs);
+    void updateReviewToRestaurant(@RequestBody UpdateReviewForRestaurantDTO reviewDTOs);
 
     @DeleteMapping("/delete-review")
-    Result deleteReviewToRestaurant(@RequestBody UserReviewForRestaurantRequest reviewDTO);
+    void deleteReviewToRestaurant(@RequestBody UserReviewForRestaurantRequest reviewDTO);
+
+    @DeleteMapping("/delete-restaurant/{id}")
+    void deleteRestaurant(@PathVariable String id);
 
 }

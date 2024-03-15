@@ -72,6 +72,14 @@ public class RestaurantControllerContractImpl implements RestaurantControllerCon
     }
 
     @Override
+    public void deleteById(String id) {
+
+            restaurantService.getRestaurantById(id);
+
+            restaurantService.deleteRestaurantById(id);
+    }
+
+    @Override
     public void addReviewToRestaurant(ReviewDTO reviewDTO) {
 
         restaurantService.addReviewToRestaurant(reviewDTO);

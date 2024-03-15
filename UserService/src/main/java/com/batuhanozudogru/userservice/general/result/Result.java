@@ -20,5 +20,6 @@ public class Result {
         this.message = message;
         this.responseDate = LocalDateTime.now();
     }
+
 }
 

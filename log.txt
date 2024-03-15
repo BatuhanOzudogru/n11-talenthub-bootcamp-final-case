@@ -1,0 +1,345 @@
+2024-03-15T14:05:22.803+03:00  INFO 21524 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-15T14:05:22.810+03:00  INFO 21524 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-03-15T14:05:22.815+03:00  INFO 21524 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-03-15T14:11:03.325+03:00  INFO 11032 --- [restartedMain] c.b.userservice.UserServiceApplication   : Starting UserServiceApplication using Java 21.0.2 with PID 11032 (C:\Users\batuh\OneDrive\Masaüstü\n11-talenthub-bootcamp-final-case\UserService\target\classes started by batuh in C:\Users\batuh\OneDrive\Masaüstü\n11-talenthub-bootcamp-final-case)
+2024-03-15T14:11:03.327+03:00 DEBUG 11032 --- [restartedMain] c.b.userservice.UserServiceApplication   : Running with Spring Boot v3.2.3, Spring v6.1.4
+2024-03-15T14:11:03.328+03:00  INFO 11032 --- [restartedMain] c.b.userservice.UserServiceApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-03-15T14:11:03.393+03:00  INFO 11032 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-03-15T14:11:03.393+03:00  INFO 11032 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-03-15T14:11:04.489+03:00  INFO 11032 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-15T14:11:04.553+03:00  INFO 11032 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 53 ms. Found 2 JPA repository interfaces.
+2024-03-15T14:11:04.753+03:00  INFO 11032 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=9bf379b7-9c99-36d6-b96e-a9f24600fc56
+2024-03-15T14:11:05.420+03:00  INFO 11032 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-03-15T14:11:05.439+03:00  INFO 11032 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-15T14:11:05.439+03:00  INFO 11032 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-03-15T14:11:05.534+03:00  INFO 11032 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-15T14:11:05.534+03:00  INFO 11032 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2141 ms
+2024-03-15T14:11:05.780+03:00  INFO 11032 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-15T14:11:05.934+03:00  INFO 11032 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-03-15T14:11:06.005+03:00  INFO 11032 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-03-15T14:11:06.311+03:00  INFO 11032 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-15T14:11:06.352+03:00  INFO 11032 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-03-15T14:11:06.551+03:00  INFO 11032 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@44d78ac9
+2024-03-15T14:11:06.553+03:00  INFO 11032 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-03-15T14:11:06.613+03:00  WARN 11032 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-03-15T14:11:07.800+03:00  INFO 11032 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-15T14:11:07.905+03:00  INFO 11032 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-15T14:11:08.595+03:00  WARN 11032 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-15T14:11:08.649+03:00  INFO 11032 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-03-15T14:11:09.449+03:00  INFO 11032 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-03-15T14:11:09.462+03:00  INFO 11032 --- [restartedMain] c.b.userservice.UserServiceApplication   : Started UserServiceApplication in 6.728 seconds (process running for 7.827)
+2024-03-15T14:11:17.598+03:00  INFO 11032 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-15T14:11:17.598+03:00  INFO 11032 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-15T14:11:17.600+03:00  INFO 11032 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-03-15T14:11:18.665+03:00  INFO 11032 --- [http-nio-8080-exec-9] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 617 ms
+2024-03-15T14:11:41.456+03:00  WARN 11032 --- [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [feign.codec.DecodeException: Type definition error: [simple type, class com.batuhanozudogru.userservice.general.result.Result]]
+2024-03-15T14:13:03.457+03:00  INFO 11032 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2024-03-15T14:13:03.472+03:00  INFO 11032 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-15T14:13:03.476+03:00  INFO 11032 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-03-15T14:13:03.480+03:00  INFO 11032 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-03-15T14:13:03.616+03:00  INFO 11032 --- [restartedMain] c.b.userservice.UserServiceApplication   : Starting UserServiceApplication using Java 21.0.2 with PID 11032 (C:\Users\batuh\OneDrive\Masaüstü\n11-talenthub-bootcamp-final-case\UserService\target\classes started by batuh in C:\Users\batuh\OneDrive\Masaüstü\n11-talenthub-bootcamp-final-case)
+2024-03-15T14:13:03.617+03:00 DEBUG 11032 --- [restartedMain] c.b.userservice.UserServiceApplication   : Running with Spring Boot v3.2.3, Spring v6.1.4
+2024-03-15T14:13:03.617+03:00  INFO 11032 --- [restartedMain] c.b.userservice.UserServiceApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-03-15T14:13:03.947+03:00  INFO 11032 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-15T14:13:03.971+03:00  INFO 11032 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 2 JPA repository interfaces.
+2024-03-15T14:13:04.045+03:00  INFO 11032 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=58bb9212-e9e4-3d02-9ecb-5daaf9c26b23
+2024-03-15T14:13:04.125+03:00  INFO 11032 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-03-15T14:13:04.128+03:00  INFO 11032 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-15T14:13:04.129+03:00  INFO 11032 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-03-15T14:13:04.178+03:00  INFO 11032 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-15T14:13:04.179+03:00  INFO 11032 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 560 ms
+2024-03-15T14:13:04.238+03:00  INFO 11032 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-15T14:13:04.244+03:00  INFO 11032 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-03-15T14:13:04.252+03:00  INFO 11032 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-15T14:13:04.254+03:00  INFO 11032 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2024-03-15T14:13:04.438+03:00  INFO 11032 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@25178c36
+2024-03-15T14:13:04.438+03:00  INFO 11032 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2024-03-15T14:13:04.449+03:00  WARN 11032 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-03-15T14:13:04.537+03:00  INFO 11032 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-15T14:13:04.593+03:00  INFO 11032 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-15T14:13:04.796+03:00  WARN 11032 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-15T14:13:04.813+03:00  INFO 11032 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-03-15T14:13:05.193+03:00  INFO 11032 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-03-15T14:13:05.208+03:00  INFO 11032 --- [restartedMain] c.b.userservice.UserServiceApplication   : Started UserServiceApplication in 1.643 seconds (process running for 123.573)
+2024-03-15T14:13:05.212+03:00  INFO 11032 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-03-15T14:13:06.599+03:00  INFO 11032 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2024-03-15T14:13:06.610+03:00  INFO 11032 --- [Thread-9] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-15T14:13:06.611+03:00  INFO 11032 --- [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2024-03-15T14:13:06.615+03:00  INFO 11032 --- [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2024-03-15T14:13:06.805+03:00  INFO 11032 --- [restartedMain] c.b.userservice.UserServiceApplication   : Starting UserServiceApplication using Java 21.0.2 with PID 11032 (C:\Users\batuh\OneDrive\Masaüstü\n11-talenthub-bootcamp-final-case\UserService\target\classes started by batuh in C:\Users\batuh\OneDrive\Masaüstü\n11-talenthub-bootcamp-final-case)
+2024-03-15T14:13:06.806+03:00 DEBUG 11032 --- [restartedMain] c.b.userservice.UserServiceApplication   : Running with Spring Boot v3.2.3, Spring v6.1.4
+2024-03-15T14:13:06.807+03:00  INFO 11032 --- [restartedMain] c.b.userservice.UserServiceApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-03-15T14:13:07.152+03:00  INFO 11032 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-15T14:13:07.170+03:00  INFO 11032 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 2 JPA repository interfaces.
+2024-03-15T14:13:07.237+03:00  INFO 11032 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=9bf379b7-9c99-36d6-b96e-a9f24600fc56
+2024-03-15T14:13:07.315+03:00  INFO 11032 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-03-15T14:13:07.316+03:00  INFO 11032 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-15T14:13:07.316+03:00  INFO 11032 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-03-15T14:13:07.357+03:00  INFO 11032 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-15T14:13:07.357+03:00  INFO 11032 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 548 ms
+2024-03-15T14:13:07.441+03:00  INFO 11032 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-15T14:13:07.448+03:00  INFO 11032 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-03-15T14:13:07.454+03:00  INFO 11032 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-15T14:13:07.456+03:00  INFO 11032 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2024-03-15T14:13:07.550+03:00  INFO 11032 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection org.postgresql.jdbc.PgConnection@32fe6499
+2024-03-15T14:13:07.550+03:00  INFO 11032 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2024-03-15T14:13:07.564+03:00  WARN 11032 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-03-15T14:13:07.693+03:00  INFO 11032 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-15T14:13:07.784+03:00  INFO 11032 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-15T14:13:07.957+03:00  WARN 11032 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-15T14:13:07.979+03:00  INFO 11032 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-03-15T14:13:08.232+03:00  INFO 11032 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-03-15T14:13:08.242+03:00  INFO 11032 --- [restartedMain] c.b.userservice.UserServiceApplication   : Started UserServiceApplication in 1.511 seconds (process running for 126.607)
+2024-03-15T14:13:08.246+03:00  INFO 11032 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-03-15T14:13:16.304+03:00  INFO 11032 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-15T14:13:16.304+03:00  INFO 11032 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-15T14:13:16.305+03:00  INFO 11032 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-03-15T14:13:36.141+03:00  WARN 11032 --- [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [feign.codec.DecodeException: Type definition error: [simple type, class com.batuhanozudogru.userservice.general.result.Result]]
+2024-03-15T14:14:43.924+03:00  WARN 11032 --- [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [feign.codec.DecodeException: Type definition error: [simple type, class com.batuhanozudogru.userservice.general.result.Result]]
+2024-03-15T14:14:59.510+03:00  WARN 11032 --- [http-nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [feign.codec.DecodeException: Type definition error: [simple type, class com.batuhanozudogru.userservice.general.result.Result]]
+2024-03-15T14:19:44.873+03:00  INFO 11032 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-15T14:19:44.875+03:00  INFO 11032 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2024-03-15T14:19:44.878+03:00  INFO 11032 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2024-03-15T14:19:52.237+03:00  INFO 14328 --- [restartedMain] c.b.userservice.UserServiceApplication   : Starting UserServiceApplication using Java 21.0.2 with PID 14328 (C:\Users\batuh\OneDrive\Masaüstü\n11-talenthub-bootcamp-final-case\UserService\target\classes started by batuh in C:\Users\batuh\OneDrive\Masaüstü\n11-talenthub-bootcamp-final-case)
+2024-03-15T14:19:52.239+03:00 DEBUG 14328 --- [restartedMain] c.b.userservice.UserServiceApplication   : Running with Spring Boot v3.2.3, Spring v6.1.4
+2024-03-15T14:19:52.240+03:00  INFO 14328 --- [restartedMain] c.b.userservice.UserServiceApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-03-15T14:19:52.306+03:00  INFO 14328 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-03-15T14:19:52.307+03:00  INFO 14328 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-03-15T14:19:53.355+03:00  INFO 14328 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-15T14:19:53.428+03:00  INFO 14328 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 63 ms. Found 2 JPA repository interfaces.
+2024-03-15T14:19:53.698+03:00  INFO 14328 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=9bf379b7-9c99-36d6-b96e-a9f24600fc56
+2024-03-15T14:19:54.435+03:00  INFO 14328 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-03-15T14:19:54.453+03:00  INFO 14328 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-15T14:19:54.453+03:00  INFO 14328 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-03-15T14:19:54.545+03:00  INFO 14328 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-15T14:19:54.547+03:00  INFO 14328 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2239 ms
+2024-03-15T14:19:54.814+03:00  INFO 14328 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-15T14:19:54.952+03:00  INFO 14328 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-03-15T14:19:55.005+03:00  INFO 14328 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-03-15T14:19:55.291+03:00  INFO 14328 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-15T14:19:55.324+03:00  INFO 14328 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-03-15T14:19:55.571+03:00  INFO 14328 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@283f44a5
+2024-03-15T14:19:55.573+03:00  INFO 14328 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-03-15T14:19:55.622+03:00  WARN 14328 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-03-15T14:19:56.946+03:00  INFO 14328 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-15T14:19:57.053+03:00  INFO 14328 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-15T14:19:57.932+03:00  WARN 14328 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-15T14:19:57.992+03:00  INFO 14328 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-03-15T14:19:58.923+03:00  INFO 14328 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-03-15T14:19:58.937+03:00  INFO 14328 --- [restartedMain] c.b.userservice.UserServiceApplication   : Started UserServiceApplication in 7.311 seconds (process running for 8.306)
+2024-03-15T14:19:59.193+03:00  INFO 14328 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-15T14:19:59.194+03:00  INFO 14328 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-15T14:19:59.197+03:00  INFO 14328 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-03-15T14:20:20.463+03:00  WARN 14328 --- [http-nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [feign.codec.DecodeException: Type definition error: [simple type, class com.batuhanozudogru.userservice.general.result.Result]]
+2024-03-15T14:20:31.346+03:00  INFO 14328 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-15T14:20:31.350+03:00  INFO 14328 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-03-15T14:20:31.354+03:00  INFO 14328 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-03-15T14:20:37.252+03:00  INFO 2352 --- [restartedMain] c.b.userservice.UserServiceApplication   : Starting UserServiceApplication using Java 21.0.2 with PID 2352 (C:\Users\batuh\OneDrive\Masaüstü\n11-talenthub-bootcamp-final-case\UserService\target\classes started by batuh in C:\Users\batuh\OneDrive\Masaüstü\n11-talenthub-bootcamp-final-case)
+2024-03-15T14:20:37.255+03:00 DEBUG 2352 --- [restartedMain] c.b.userservice.UserServiceApplication   : Running with Spring Boot v3.2.3, Spring v6.1.4
+2024-03-15T14:20:37.256+03:00  INFO 2352 --- [restartedMain] c.b.userservice.UserServiceApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-03-15T14:20:37.329+03:00  INFO 2352 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-03-15T14:20:37.329+03:00  INFO 2352 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-03-15T14:20:38.515+03:00  INFO 2352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-15T14:20:38.600+03:00  INFO 2352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 76 ms. Found 2 JPA repository interfaces.
+2024-03-15T14:20:38.920+03:00  INFO 2352 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=9bf379b7-9c99-36d6-b96e-a9f24600fc56
+2024-03-15T14:20:39.753+03:00  INFO 2352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-03-15T14:20:39.776+03:00  INFO 2352 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-15T14:20:39.777+03:00  INFO 2352 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-03-15T14:20:39.871+03:00  INFO 2352 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-15T14:20:39.872+03:00  INFO 2352 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2542 ms
+2024-03-15T14:20:40.203+03:00  INFO 2352 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-15T14:20:40.308+03:00  INFO 2352 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-03-15T14:20:40.357+03:00  INFO 2352 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-03-15T14:20:40.724+03:00  INFO 2352 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-15T14:20:40.760+03:00  INFO 2352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-03-15T14:20:41.003+03:00  INFO 2352 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@163d0db1
+2024-03-15T14:20:41.006+03:00  INFO 2352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-03-15T14:20:41.060+03:00  WARN 2352 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-03-15T14:20:42.618+03:00  INFO 2352 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-15T14:20:42.732+03:00  INFO 2352 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-15T14:20:44.716+03:00  WARN 2352 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-15T14:20:44.784+03:00  INFO 2352 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-03-15T14:20:46.302+03:00  INFO 2352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-03-15T14:20:46.326+03:00  INFO 2352 --- [restartedMain] c.b.userservice.UserServiceApplication   : Started UserServiceApplication in 9.68 seconds (process running for 11.399)
+2024-03-15T14:21:05.704+03:00  INFO 2352 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-15T14:21:05.705+03:00  INFO 2352 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-15T14:21:05.708+03:00  INFO 2352 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-03-15T14:21:40.687+03:00  WARN 2352 --- [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [feign.codec.DecodeException: Type definition error: [simple type, class com.batuhanozudogru.userservice.general.result.Result]]
+2024-03-15T14:25:06.317+03:00  WARN 2352 --- [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [feign.codec.DecodeException: Type definition error: [simple type, class com.batuhanozudogru.userservice.general.result.Result]]
+2024-03-15T14:26:28.657+03:00  WARN 2352 --- [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [feign.FeignException$InternalServerError: [500] during [DELETE] to [http://localhost:8086/api/v1/restaurants/delete-restaurant/71683d83-cd8f-421c-978d-d8dc9d0d8429] [RestaurantClient#deleteRestaurant(String)]: [{"timestamp":"2024-03-15T11:26:28.404+00:00","status":500,"error":"Internal Server Error","path":"/api/v1/restaurants/delete-restaurant/71683d83-cd8f-421c-978d-d8dc9d0d8429"}]]
+2024-03-15T14:28:58.034+03:00  WARN 2352 --- [http-nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [feign.codec.DecodeException: Type definition error: [simple type, class com.batuhanozudogru.userservice.general.result.Result]]
+2024-03-15T14:29:25.182+03:00  WARN 2352 --- [http-nio-8080-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [feign.FeignException$InternalServerError: [500] during [DELETE] to [http://localhost:8086/api/v1/restaurants/delete-restaurant/ee4b625b-c34d-4aab-85e8-3053f9112da5] [RestaurantClient#deleteRestaurant(String)]: [{"timestamp":"2024-03-15T11:29:24.910+00:00","status":500,"error":"Internal Server Error","path":"/api/v1/restaurants/delete-restaurant/ee4b625b-c34d-4aab-85e8-3053f9112da5"}]]
+2024-03-15T14:30:51.060+03:00  WARN 2352 --- [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [feign.codec.DecodeException: Type definition error: [simple type, class com.batuhanozudogru.userservice.general.result.Result]]
+2024-03-15T14:32:43.722+03:00  INFO 2352 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-15T14:32:43.739+03:00  INFO 2352 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-03-15T14:32:43.752+03:00  INFO 2352 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-03-15T14:33:01.072+03:00  INFO 19132 --- [restartedMain] c.b.userservice.UserServiceApplication   : Starting UserServiceApplication using Java 21.0.2 with PID 19132 (C:\Users\batuh\OneDrive\Masaüstü\n11-talenthub-bootcamp-final-case\UserService\target\classes started by batuh in C:\Users\batuh\OneDrive\Masaüstü\n11-talenthub-bootcamp-final-case)
+2024-03-15T14:33:01.074+03:00 DEBUG 19132 --- [restartedMain] c.b.userservice.UserServiceApplication   : Running with Spring Boot v3.2.3, Spring v6.1.4
+2024-03-15T14:33:01.074+03:00  INFO 19132 --- [restartedMain] c.b.userservice.UserServiceApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-03-15T14:33:01.175+03:00  INFO 19132 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-03-15T14:33:01.176+03:00  INFO 19132 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-03-15T14:33:02.618+03:00  INFO 19132 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-15T14:33:02.712+03:00  INFO 19132 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 83 ms. Found 2 JPA repository interfaces.
+2024-03-15T14:33:03.085+03:00  INFO 19132 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=9bf379b7-9c99-36d6-b96e-a9f24600fc56
+2024-03-15T14:33:03.764+03:00  INFO 19132 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-03-15T14:33:03.777+03:00  INFO 19132 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-15T14:33:03.777+03:00  INFO 19132 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-03-15T14:33:03.862+03:00  INFO 19132 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-15T14:33:03.863+03:00  INFO 19132 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2686 ms
+2024-03-15T14:33:04.180+03:00  INFO 19132 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-15T14:33:04.260+03:00  INFO 19132 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-03-15T14:33:04.326+03:00  INFO 19132 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-03-15T14:33:04.732+03:00  INFO 19132 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-15T14:33:04.793+03:00  INFO 19132 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-03-15T14:33:05.039+03:00  INFO 19132 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@107f1eb
+2024-03-15T14:33:05.042+03:00  INFO 19132 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-03-15T14:33:05.099+03:00  WARN 19132 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-03-15T14:33:07.032+03:00  INFO 19132 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-15T14:33:07.199+03:00  INFO 19132 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-15T14:33:09.587+03:00  WARN 19132 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-15T14:33:09.663+03:00  INFO 19132 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-03-15T14:33:11.316+03:00  INFO 19132 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-03-15T14:33:11.340+03:00  INFO 19132 --- [restartedMain] c.b.userservice.UserServiceApplication   : Started UserServiceApplication in 10.937 seconds (process running for 12.065)
+2024-03-15T14:33:12.849+03:00  INFO 19132 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-15T14:33:12.849+03:00  INFO 19132 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-15T14:33:12.851+03:00  INFO 19132 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-03-15T14:33:52.974+03:00  WARN 19132 --- [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [feign.codec.DecodeException: Type definition error: [simple type, class com.batuhanozudogru.userservice.general.result.Result]]
+2024-03-15T14:34:39.493+03:00  INFO 19132 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2024-03-15T14:34:39.513+03:00  INFO 19132 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-15T14:34:39.522+03:00  INFO 19132 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-03-15T14:34:39.527+03:00  INFO 19132 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-03-15T14:34:39.677+03:00  INFO 19132 --- [restartedMain] c.b.userservice.UserServiceApplication   : Starting UserServiceApplication using Java 21.0.2 with PID 19132 (C:\Users\batuh\OneDrive\Masaüstü\n11-talenthub-bootcamp-final-case\UserService\target\classes started by batuh in C:\Users\batuh\OneDrive\Masaüstü\n11-talenthub-bootcamp-final-case)
+2024-03-15T14:34:39.678+03:00 DEBUG 19132 --- [restartedMain] c.b.userservice.UserServiceApplication   : Running with Spring Boot v3.2.3, Spring v6.1.4
+2024-03-15T14:34:39.678+03:00  INFO 19132 --- [restartedMain] c.b.userservice.UserServiceApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-03-15T14:34:40.230+03:00  INFO 19132 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-15T14:34:40.256+03:00  INFO 19132 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 2 JPA repository interfaces.
+2024-03-15T14:34:40.335+03:00  INFO 19132 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=9bf379b7-9c99-36d6-b96e-a9f24600fc56
+2024-03-15T14:34:40.427+03:00  INFO 19132 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-03-15T14:34:40.431+03:00  INFO 19132 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-15T14:34:40.432+03:00  INFO 19132 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-03-15T14:34:40.476+03:00  INFO 19132 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-15T14:34:40.476+03:00  INFO 19132 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 795 ms
+2024-03-15T14:34:40.534+03:00  INFO 19132 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-15T14:34:40.537+03:00  INFO 19132 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-03-15T14:34:40.544+03:00  INFO 19132 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-15T14:34:40.545+03:00  INFO 19132 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2024-03-15T14:34:40.622+03:00  INFO 19132 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@24e13464
+2024-03-15T14:34:40.622+03:00  INFO 19132 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2024-03-15T14:34:40.632+03:00  WARN 19132 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-03-15T14:34:40.743+03:00  INFO 19132 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-15T14:34:40.794+03:00  INFO 19132 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-15T14:34:41.213+03:00  WARN 19132 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-15T14:34:41.237+03:00  INFO 19132 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-03-15T14:34:41.683+03:00  INFO 19132 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-03-15T14:34:41.690+03:00  INFO 19132 --- [restartedMain] c.b.userservice.UserServiceApplication   : Started UserServiceApplication in 2.072 seconds (process running for 102.415)
+2024-03-15T14:34:41.694+03:00  INFO 19132 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-03-15T14:34:43.164+03:00  INFO 19132 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2024-03-15T14:34:43.171+03:00  INFO 19132 --- [Thread-9] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-15T14:34:43.172+03:00  INFO 19132 --- [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2024-03-15T14:34:43.176+03:00  INFO 19132 --- [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2024-03-15T14:34:43.417+03:00  INFO 19132 --- [restartedMain] c.b.userservice.UserServiceApplication   : Starting UserServiceApplication using Java 21.0.2 with PID 19132 (C:\Users\batuh\OneDrive\Masaüstü\n11-talenthub-bootcamp-final-case\UserService\target\classes started by batuh in C:\Users\batuh\OneDrive\Masaüstü\n11-talenthub-bootcamp-final-case)
+2024-03-15T14:34:43.417+03:00 DEBUG 19132 --- [restartedMain] c.b.userservice.UserServiceApplication   : Running with Spring Boot v3.2.3, Spring v6.1.4
+2024-03-15T14:34:43.417+03:00  INFO 19132 --- [restartedMain] c.b.userservice.UserServiceApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-03-15T14:34:43.714+03:00  INFO 19132 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-15T14:34:43.743+03:00  INFO 19132 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 2 JPA repository interfaces.
+2024-03-15T14:34:43.788+03:00  INFO 19132 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=9bf379b7-9c99-36d6-b96e-a9f24600fc56
+2024-03-15T14:34:43.841+03:00  INFO 19132 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-03-15T14:34:43.842+03:00  INFO 19132 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-15T14:34:43.842+03:00  INFO 19132 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-03-15T14:34:43.869+03:00  INFO 19132 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-15T14:34:43.869+03:00  INFO 19132 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 449 ms
+2024-03-15T14:34:43.898+03:00  INFO 19132 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-15T14:34:43.901+03:00  INFO 19132 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-03-15T14:34:43.906+03:00  INFO 19132 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-15T14:34:43.906+03:00  INFO 19132 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2024-03-15T14:34:43.964+03:00  INFO 19132 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection org.postgresql.jdbc.PgConnection@204f1072
+2024-03-15T14:34:43.964+03:00  INFO 19132 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2024-03-15T14:34:43.972+03:00  WARN 19132 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-03-15T14:34:44.048+03:00  INFO 19132 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-15T14:34:44.091+03:00  INFO 19132 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-15T14:34:44.322+03:00  WARN 19132 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-15T14:34:44.331+03:00  INFO 19132 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-03-15T14:34:44.638+03:00  INFO 19132 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-03-15T14:34:44.649+03:00  INFO 19132 --- [restartedMain] c.b.userservice.UserServiceApplication   : Started UserServiceApplication in 1.271 seconds (process running for 105.375)
+2024-03-15T14:34:44.651+03:00  INFO 19132 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-03-15T14:35:12.152+03:00  INFO 19132 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-15T14:35:12.153+03:00  INFO 19132 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-15T14:35:12.154+03:00  INFO 19132 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-03-15T14:35:59.674+03:00  INFO 19132 --- [http-nio-8080-exec-5] c.b.userservice.service.UserService      : User found by ID : 11
+2024-03-15T14:36:03.176+03:00  WARN 19132 --- [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [feign.FeignException$InternalServerError: [500] during [GET] to [http://localhost:8086/api/v1/restaurants/get-by-id/13ebf17f-cbc2-4803-8457-ea0d772ca9a] [RestaurantClient#getRestaurantById(String)]: [{"timestamp":"2024-03-15T11:36:03.161+00:00","status":500,"error":"Internal Server Error","path":"/api/v1/restaurants/get-by-id/13ebf17f-cbc2-4803-8457-ea0d772ca9a"}]]
+2024-03-15T14:36:41.100+03:00  INFO 19132 --- [http-nio-8080-exec-4] c.b.userservice.service.UserService      : User found by ID : 11
+2024-03-15T14:36:50.693+03:00  WARN 19132 --- [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [feign.FeignException$InternalServerError: [500] during [GET] to [http://localhost:8086/api/v1/restaurants/get-by-id/13ebf17f-cbc2-4803-8457-ea0d772ca9a] [RestaurantClient#getRestaurantById(String)]: [{"timestamp":"2024-03-15T11:36:50.691+00:00","status":500,"error":"Internal Server Error","path":"/api/v1/restaurants/get-by-id/13ebf17f-cbc2-4803-8457-ea0d772ca9a"}]]
+2024-03-15T14:37:38.128+03:00  INFO 19132 --- [http-nio-8080-exec-3] c.b.userservice.service.UserService      : User found by ID : 11
+2024-03-15T14:37:51.698+03:00  WARN 19132 --- [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [feign.FeignException$InternalServerError: [500] during [GET] to [http://localhost:8086/api/v1/restaurants/get-by-id/13ebf17f-cbc2-4803-8457-ea0d772ca9a] [RestaurantClient#getRestaurantById(String)]: [{"timestamp":"2024-03-15T11:37:51.692+00:00","status":500,"error":"Internal Server Error","path":"/api/v1/restaurants/get-by-id/13ebf17f-cbc2-4803-8457-ea0d772ca9a"}]]
+2024-03-15T14:37:54.967+03:00  INFO 19132 --- [http-nio-8080-exec-8] c.b.userservice.service.UserService      : User found by ID : 11
+2024-03-15T14:39:44.217+03:00  WARN 19132 --- [HikariPool-3 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=1m51s451ms42µs401ns).
+2024-03-15T14:39:45.737+03:00  WARN 19132 --- [http-nio-8080-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [feign.FeignException$InternalServerError: [500] during [GET] to [http://localhost:8086/api/v1/restaurants/get-by-id/13ebf17f-cbc2-4803-8457-ea0d772ca9a] [RestaurantClient#getRestaurantById(String)]: [{"timestamp":"2024-03-15T11:39:45.733+00:00","status":500,"error":"Internal Server Error","path":"/api/v1/restaurants/get-by-id/13ebf17f-cbc2-4803-8457-ea0d772ca9a"}]]
+2024-03-15T14:42:50.064+03:00  WARN 19132 --- [http-nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [feign.FeignException$InternalServerError: [500] during [GET] to [http://localhost:8086/api/v1/restaurants/get-by-id/13ebf17f-cbc2-4803-8457-ea0d772ca9a] [RestaurantClient#getRestaurantById(String)]: [{"timestamp":"2024-03-15T11:42:50.058+00:00","status":500,"error":"Internal Server Error","path":"/api/v1/restaurants/get-by-id/13ebf17f-cbc2-4803-8457-ea0d772ca9a"}]]
+2024-03-15T14:43:47.400+03:00  INFO 19132 --- [http-nio-8080-exec-9] c.b.userservice.service.UserService      : User found by ID : 11
+2024-03-15T14:43:53.126+03:00  INFO 19132 --- [http-nio-8080-exec-9] c.b.u.service.UserReviewService          : User review saved successfully: Review Çok lezzetliydi tekrar geleceğiz Rate FIVE User asfdfdfhgkj Restaurant 13ebf17f-cbc2-4803-8457-ea0d772ca9aa Username asfdfdfhgkj
+2024-03-15T14:43:57.891+03:00  WARN 19132 --- [http-nio-8080-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [feign.codec.DecodeException: Type definition error: [simple type, class com.batuhanozudogru.userservice.general.result.Result]]
+2024-03-15T14:52:21.189+03:00  INFO 19132 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-15T14:52:21.193+03:00  INFO 19132 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2024-03-15T14:52:21.196+03:00  INFO 19132 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2024-03-15T14:52:31.549+03:00  INFO 14140 --- [restartedMain] c.b.userservice.UserServiceApplication   : Starting UserServiceApplication using Java 21.0.2 with PID 14140 (C:\Users\batuh\OneDrive\Masaüstü\n11-talenthub-bootcamp-final-case\UserService\target\classes started by batuh in C:\Users\batuh\OneDrive\Masaüstü\n11-talenthub-bootcamp-final-case)
+2024-03-15T14:52:31.552+03:00 DEBUG 14140 --- [restartedMain] c.b.userservice.UserServiceApplication   : Running with Spring Boot v3.2.3, Spring v6.1.4
+2024-03-15T14:52:31.553+03:00  INFO 14140 --- [restartedMain] c.b.userservice.UserServiceApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-03-15T14:52:31.636+03:00  INFO 14140 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-03-15T14:52:31.636+03:00  INFO 14140 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-03-15T14:52:32.920+03:00  INFO 14140 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-15T14:52:32.998+03:00  INFO 14140 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 69 ms. Found 2 JPA repository interfaces.
+2024-03-15T14:52:33.265+03:00  INFO 14140 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=9bf379b7-9c99-36d6-b96e-a9f24600fc56
+2024-03-15T14:52:33.950+03:00  INFO 14140 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-03-15T14:52:33.968+03:00  INFO 14140 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-15T14:52:33.968+03:00  INFO 14140 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-03-15T14:52:34.057+03:00  INFO 14140 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-15T14:52:34.057+03:00  INFO 14140 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2420 ms
+2024-03-15T14:52:34.267+03:00  INFO 14140 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-15T14:52:34.364+03:00  INFO 14140 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-03-15T14:52:34.429+03:00  INFO 14140 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-03-15T14:52:34.800+03:00  INFO 14140 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-15T14:52:34.841+03:00  INFO 14140 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-03-15T14:52:35.059+03:00  INFO 14140 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@27cf29b8
+2024-03-15T14:52:35.061+03:00  INFO 14140 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-03-15T14:52:35.109+03:00  WARN 14140 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-03-15T14:52:36.444+03:00  INFO 14140 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-15T14:52:36.542+03:00  INFO 14140 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-15T14:52:38.344+03:00  WARN 14140 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-15T14:52:38.440+03:00  INFO 14140 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-03-15T14:52:40.021+03:00  INFO 14140 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-03-15T14:52:40.049+03:00  INFO 14140 --- [restartedMain] c.b.userservice.UserServiceApplication   : Started UserServiceApplication in 9.184 seconds (process running for 10.447)
+2024-03-15T14:52:40.061+03:00  INFO 14140 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-15T14:52:40.065+03:00  INFO 14140 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-03-15T14:52:40.068+03:00  INFO 14140 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-03-15T14:52:42.946+03:00  INFO 9332 --- [restartedMain] c.b.userservice.UserServiceApplication   : Starting UserServiceApplication using Java 21.0.2 with PID 9332 (C:\Users\batuh\OneDrive\Masaüstü\n11-talenthub-bootcamp-final-case\UserService\target\classes started by batuh in C:\Users\batuh\OneDrive\Masaüstü\n11-talenthub-bootcamp-final-case)
+2024-03-15T14:52:42.948+03:00 DEBUG 9332 --- [restartedMain] c.b.userservice.UserServiceApplication   : Running with Spring Boot v3.2.3, Spring v6.1.4
+2024-03-15T14:52:42.948+03:00  INFO 9332 --- [restartedMain] c.b.userservice.UserServiceApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-03-15T14:52:43.012+03:00  INFO 9332 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-03-15T14:52:43.012+03:00  INFO 9332 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-03-15T14:52:44.131+03:00  INFO 9332 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-15T14:52:44.196+03:00  INFO 9332 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52 ms. Found 2 JPA repository interfaces.
+2024-03-15T14:52:44.418+03:00  INFO 9332 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=9bf379b7-9c99-36d6-b96e-a9f24600fc56
+2024-03-15T14:52:44.961+03:00  INFO 9332 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-03-15T14:52:44.974+03:00  INFO 9332 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-15T14:52:44.975+03:00  INFO 9332 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-03-15T14:52:45.034+03:00  INFO 9332 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-15T14:52:45.034+03:00  INFO 9332 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2022 ms
+2024-03-15T14:52:45.206+03:00  INFO 9332 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-15T14:52:45.313+03:00  INFO 9332 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-03-15T14:52:45.345+03:00  INFO 9332 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-03-15T14:52:45.564+03:00  INFO 9332 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-15T14:52:45.589+03:00  INFO 9332 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-03-15T14:52:45.827+03:00  INFO 9332 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@74e47af5
+2024-03-15T14:52:45.829+03:00  INFO 9332 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-03-15T14:52:45.879+03:00  WARN 9332 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-03-15T14:52:47.070+03:00  INFO 9332 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-15T14:52:47.178+03:00  INFO 9332 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-15T14:52:47.850+03:00  WARN 9332 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-15T14:52:47.893+03:00  INFO 9332 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-03-15T14:52:48.610+03:00  INFO 9332 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-03-15T14:52:48.622+03:00  INFO 9332 --- [restartedMain] c.b.userservice.UserServiceApplication   : Started UserServiceApplication in 6.248 seconds (process running for 7.206)
+2024-03-15T14:53:45.858+03:00  INFO 9332 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-15T14:53:45.858+03:00  INFO 9332 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-15T14:53:45.860+03:00  INFO 9332 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-03-15T14:53:46.125+03:00  INFO 9332 --- [http-nio-8080-exec-1] c.b.userservice.service.UserService      : User found by ID : 3
+2024-03-15T14:53:47.713+03:00  INFO 9332 --- [http-nio-8080-exec-1] c.b.u.service.UserReviewService          : User review saved successfully: Review Çok sıra vardı ama çok lezzetliydi Rate FIVE User asdasd Restaurant 13ebf17f-cbc2-4803-8457-ea0d772ca9aa Username asdasd

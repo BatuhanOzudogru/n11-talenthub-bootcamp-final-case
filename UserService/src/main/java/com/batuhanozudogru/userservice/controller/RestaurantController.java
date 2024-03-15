@@ -81,4 +81,12 @@ public class RestaurantController {
 
         return ResultHelper.success(restaurantResponse);
     }
+
+    @DeleteMapping("/delete-restaurant/{id}")
+    public Result deleteById(@PathVariable String id) {
+
+        restaurantClient.deleteRestaurant(id);
+
+        return ResultHelper.hardDeleted();
+    }
 }
