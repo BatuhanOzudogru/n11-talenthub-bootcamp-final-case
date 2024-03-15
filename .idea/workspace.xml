@@ -5,14 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="edda31c5-845f-4e52-8455-c5d1261cc89a" name="Changes" comment="Add UserController integration tests">
+      <change afterPath="$PROJECT_DIR$/UserService/src/test/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserService/src/test/resources/schema.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestaurantService/src/main/java/com/batuhanozudogru/restaurantservice/controller/RestaurantController.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantService/src/main/java/com/batuhanozudogru/restaurantservice/controller/RestaurantController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestaurantService/src/main/java/com/batuhanozudogru/restaurantservice/controller/contract/RestaurantControllerContract.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantService/src/main/java/com/batuhanozudogru/restaurantservice/controller/contract/RestaurantControllerContract.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestaurantService/src/main/java/com/batuhanozudogru/restaurantservice/controller/contract/impl/RestaurantControllerContractImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantService/src/main/java/com/batuhanozudogru/restaurantservice/controller/contract/impl/RestaurantControllerContractImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestaurantService/src/main/java/com/batuhanozudogru/restaurantservice/dao/RestaurantRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantService/src/main/java/com/batuhanozudogru/restaurantservice/dao/RestaurantRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/client/RestaurantClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/client/RestaurantClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/controller/RestaurantController.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/controller/RestaurantController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/general/result/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/general/result/Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserService/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserService/src/test/java/com/batuhanozudogru/userservice/controller/UserControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/src/test/java/com/batuhanozudogru/userservice/controller/UserControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,6 +53,7 @@
     "JUnit.UserControllerContractImplTest.shouldHardDeleteUser.executor": "Run",
     "JUnit.UserControllerContractImplTest.shouldSaveUser.executor": "Run",
     "JUnit.UserControllerContractImplTest.shouldUpdateUser.executor": "Run",
+    "JUnit.UserControllerTest.executor": "Run",
     "JUnit.UserControllerTest.shouldDeleteUserById.executor": "Run",
     "JUnit.UserControllerTest.shouldGetUserById.executor": "Run",
     "JUnit.UserControllerTest.shouldGetUserByTurkishRepublicIdNo.executor": "Run",
@@ -63,6 +61,7 @@
     "JUnit.UserControllerTest.shouldGetUsers.executor": "Run",
     "JUnit.UserControllerTest.shouldSaveCustomer.executor": "Run",
     "JUnit.UserControllerTest.shouldSoftDeleteUserById.executor": "Run",
+    "JUnit.UserControllerTest.shouldUpdateUser.executor": "Run",
     "JUnit.UserServiceTest.executor": "Run",
     "JUnit.UserServiceTest.shouldNotSaveUserWhenFirstNameIsNull.executor": "Run",
     "JUnit.UserServiceTest.shouldNotSaveUserWhenTurkishRepublicIdIsTaken.executor": "Run",
@@ -83,13 +82,13 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.RestaurantServiceApplication.executor": "Debug",
-    "Spring Boot.UserServiceApplication.executor": "Debug",
+    "Spring Boot.RestaurantServiceApplication.executor": "Run",
+    "Spring Boot.UserServiceApplication.executor": "Run",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/batuh/OneDrive/Masaüstü/final/RestaurantService",
+    "last_opened_file_path": "C:/Users/batuh/OneDrive/Masaüstü/n11-talenthub-bootcamp-final-case/UserService/src/test/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -105,6 +104,9 @@
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.batuhanozudogru.userservice.controller.contract" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\batuh\OneDrive\Masaüstü\n11-talenthub-bootcamp-final-case\UserService\src\test\resources" />
+    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
@@ -117,8 +119,8 @@
       <recent name="com.batuhanozudogru.userservice.controller.contract.impl" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.RestaurantServiceApplication">
-    <configuration name="UserControllerTest.shouldDeleteUserById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.UserControllerTest.shouldGetUsers">
+    <configuration name="UserControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="UserService" />
       <extension name="coverage">
         <pattern>
@@ -128,40 +130,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.batuhanozudogru.userservice.controller" />
       <option name="MAIN_CLASS_NAME" value="com.batuhanozudogru.userservice.controller.UserControllerTest" />
-      <option name="METHOD_NAME" value="shouldDeleteUserById" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserControllerTest.shouldGetUserById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="UserService" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.batuhanozudogru.userservice.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.batuhanozudogru.userservice.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.batuhanozudogru.userservice.controller.UserControllerTest" />
-      <option name="METHOD_NAME" value="shouldGetUserById" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserControllerTest.shouldGetUserByTurkishRepublicIdNo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="UserService" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.batuhanozudogru.userservice.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.batuhanozudogru.userservice.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.batuhanozudogru.userservice.controller.UserControllerTest" />
-      <option name="METHOD_NAME" value="shouldGetUserByTurkishRepublicIdNo" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -182,6 +151,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UserControllerTest.shouldGetUsers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="UserService" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.batuhanozudogru.userservice.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.batuhanozudogru.userservice.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.batuhanozudogru.userservice.controller.UserControllerTest" />
+      <option name="METHOD_NAME" value="shouldGetUsers" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UserControllerTest.shouldSaveCustomer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="UserService" />
       <extension name="coverage">
@@ -193,6 +178,22 @@
       <option name="PACKAGE_NAME" value="com.batuhanozudogru.userservice.controller" />
       <option name="MAIN_CLASS_NAME" value="com.batuhanozudogru.userservice.controller.UserControllerTest" />
       <option name="METHOD_NAME" value="shouldSaveCustomer" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserControllerTest.shouldUpdateUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="UserService" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.batuhanozudogru.userservice.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.batuhanozudogru.userservice.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.batuhanozudogru.userservice.controller.UserControllerTest" />
+      <option name="METHOD_NAME" value="shouldUpdateUser" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -215,11 +216,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UserControllerTest.shouldGetUsers" />
+        <item itemvalue="JUnit.UserControllerTest" />
         <item itemvalue="JUnit.UserControllerTest.shouldSaveCustomer" />
-        <item itemvalue="JUnit.UserControllerTest.shouldGetUserById" />
-        <item itemvalue="JUnit.UserControllerTest.shouldGetUserByTurkishRepublicIdNo" />
+        <item itemvalue="JUnit.UserControllerTest.shouldUpdateUser" />
         <item itemvalue="JUnit.UserControllerTest.shouldGetUserByUsername" />
-        <item itemvalue="JUnit.UserControllerTest.shouldDeleteUserById" />
       </list>
     </recent_temporary>
   </component>
@@ -250,7 +251,7 @@
       <workItem from="1710362498877" duration="2124000" />
       <workItem from="1710364665765" duration="8288000" />
       <workItem from="1710403868658" duration="43749000" />
-      <workItem from="1710499052471" duration="4474000" />
+      <workItem from="1710499052471" duration="18780000" />
     </task>
     <task id="LOCAL-00001" summary="Add UserController integration tests">
       <option name="closed" value="true" />
@@ -458,6 +459,56 @@
           <line>47</line>
           <option name="timeStamp" value="204" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/UserService/src/test/java/com/batuhanozudogru/userservice/controller/UserControllerTest.java</url>
+          <line>145</line>
+          <option name="timeStamp" value="205" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/UserService/src/test/java/com/batuhanozudogru/userservice/controller/UserControllerTest.java</url>
+          <line>53</line>
+          <option name="timeStamp" value="207" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/UserService/src/test/java/com/batuhanozudogru/userservice/controller/UserControllerTest.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="209" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/UserService/src/test/java/com/batuhanozudogru/userservice/controller/UserControllerTest.java</url>
+          <line>198</line>
+          <option name="timeStamp" value="210" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/UserService/src/test/java/com/batuhanozudogru/userservice/controller/UserControllerTest.java</url>
+          <line>190</line>
+          <option name="timeStamp" value="211" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/UserService/src/test/java/com/batuhanozudogru/userservice/controller/UserControllerTest.java</url>
+          <line>192</line>
+          <option name="timeStamp" value="212" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/UserService/src/test/java/com/batuhanozudogru/userservice/controller/UserControllerTest.java</url>
+          <line>193</line>
+          <option name="timeStamp" value="213" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/UserService/src/test/java/com/batuhanozudogru/userservice/controller/UserControllerTest.java</url>
+          <line>194</line>
+          <option name="timeStamp" value="214" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/UserService/src/test/java/com/batuhanozudogru/userservice/controller/UserControllerTest.java</url>
+          <line>195</line>
+          <option name="timeStamp" value="215" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/UserService/src/test/java/com/batuhanozudogru/userservice/controller/UserControllerTest.java</url>
+          <line>196</line>
+          <option name="timeStamp" value="216" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/service/UserReviewService.java</url>
           <line>32</line>
@@ -610,6 +661,24 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="198" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/UserService/src/test/java/com/batuhanozudogru/userservice/controller/UserControllerTest.java</url>
+          <line>63</line>
+          <properties class="com.batuhanozudogru.userservice.controller.UserControllerTest" method="shouldSaveCustomer">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="206" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/UserService/src/test/java/com/batuhanozudogru/userservice/controller/UserControllerTest.java</url>
+          <line>51</line>
+          <properties class="com.batuhanozudogru.userservice.controller.UserControllerTest" method="shouldGetUsers">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="208" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

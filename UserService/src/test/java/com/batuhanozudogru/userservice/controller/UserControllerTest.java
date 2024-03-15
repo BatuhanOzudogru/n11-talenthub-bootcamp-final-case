@@ -2,8 +2,10 @@ package com.batuhanozudogru.userservice.controller;
 
 import com.batuhanozudogru.userservice.UserServiceApplication;
 import com.batuhanozudogru.userservice.dto.request.UserSaveRequest;
+import com.batuhanozudogru.userservice.dto.request.UserUpdateRequest;
 import com.batuhanozudogru.userservice.entity.User;
 import com.batuhanozudogru.userservice.general.result.ResultData;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import org.junit.jupiter.api.BeforeEach;
@@ -22,6 +24,7 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
+import java.io.UnsupportedEncodingException;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
@@ -29,14 +32,14 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @ExtendWith(MockitoExtension.class)
 @SpringBootTest(classes = {UserServiceApplication.class})
-class UserControllerTest {
+class UserControllerTest extends BaseControllerTest{
 
     @Autowired
     private WebApplicationContext context;
 
     private MockMvc mockMvc;
 
-    private ObjectMapper objectMapper;
+
 
 
     @BeforeEach
@@ -52,13 +55,8 @@ class UserControllerTest {
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andReturn();
 
-        MockHttpServletResponse response = mvcResult.getResponse();
-        String content = response.getContentAsString();
-
-        ResultData resultData = objectMapper.readValue(content, ResultData.class);
-
-        boolean status = resultData.isStatus();
-        assertTrue(status);
+        boolean isStatus = isStatus(mvcResult);
+        assertTrue(isStatus);
 
     }
 
@@ -66,10 +64,10 @@ class UserControllerTest {
     void shouldSaveCustomer() throws Exception {
 
         UserSaveRequest userSaveRequest = new UserSaveRequest(
-                "Atacan",
-                "Erdoğan",
-                "49408587140",
-                "batuhanozudogru2",
+                "Sinan",
+                "Karabulut",
+                "12181780008",
+                "Sinan",
                 LocalDate.of(1997, 1, 1),
                 BigDecimal.valueOf(0.50),
                 BigDecimal.valueOf(0.40)
@@ -84,13 +82,33 @@ class UserControllerTest {
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andReturn();
 
-        MockHttpServletResponse response = mvcResult.getResponse();
+        boolean status = isStatus(mvcResult);
+        assertTrue(status);
+    }
 
-        String content = response.getContentAsString();
+    @Test
+    void shouldSaveCustomer2() throws Exception {
 
-        ResultData resultData = objectMapper.readValue(content, ResultData.class);
+        UserSaveRequest userSaveRequest = new UserSaveRequest(
+                "Kaan",
+                "Özüdoğru",
+                "12131463630",
+                "Kaan",
+                LocalDate.of(2007, 1, 1),
+                BigDecimal.valueOf(0.50),
+                BigDecimal.valueOf(0.40)
+        );
 
-        boolean status = resultData.isStatus();
+        String requestAsString = objectMapper.writeValueAsString(userSaveRequest);
+
+
+        MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.post("/api/v1/users/save")
+                        .content(requestAsString)
+                        .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andReturn();
+
+        boolean status = isStatus(mvcResult);
         assertTrue(status);
     }
 
@@ -99,49 +117,35 @@ class UserControllerTest {
     @Test
     void shouldGetUserById() throws Exception {
 
-        MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.get("/api/v1/users/get-by-id/3"))
+        MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.get("/api/v1/users/get-by-id/1"))
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andReturn();
 
-        MockHttpServletResponse response = mvcResult.getResponse();
-        String content = response.getContentAsString();
-
-        ResultData resultData = objectMapper.readValue(content, ResultData.class);
-
-        boolean status = resultData.isStatus();
+        boolean status = isStatus(mvcResult);
         assertTrue(status);
     }
 
     @Test
     void shouldGetUserByTurkishRepublicIdNo() throws Exception {
 
-        MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.get("/api/v1/users/get-by-turkish-republic-id/12131463630"))
+        MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.get("/api/v1/users/get-by-turkish-republic-id/12181780008"))
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andReturn();
 
-        MockHttpServletResponse response = mvcResult.getResponse();
-        String content = response.getContentAsString();
-
-        ResultData resultData = objectMapper.readValue(content, ResultData.class);
-
-        boolean status = resultData.isStatus();
+        boolean status = isStatus(mvcResult);
         assertTrue(status);
     }
 
     @Test
     void shouldGetUserByUsername() throws Exception {
 
-        MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.get("/api/v1/users/get-by-username/asdasd"))
+        MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.get("/api/v1/users/get-by-username/Sinan"))
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andReturn();
 
-        MockHttpServletResponse response = mvcResult.getResponse();
-        String content = response.getContentAsString();
-
-        ResultData resultData = objectMapper.readValue(content, ResultData.class);
-
-        boolean status = resultData.isStatus();
+        boolean status = isStatus(mvcResult);
         assertTrue(status);
+
     }
 
     @Test
@@ -151,33 +155,49 @@ class UserControllerTest {
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andReturn();
 
-        MockHttpServletResponse response = mvcResult.getResponse();
-        String content = response.getContentAsString();
 
-        ResultData resultData = objectMapper.readValue(content, ResultData.class);
+        boolean status = isStatus(mvcResult);
 
-        boolean status = resultData.isStatus();
         assertTrue(status);
     }
+
+
 
     @Test
     void shouldSoftDeleteUserById() throws Exception {
 
-        MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.delete("/api/v1/users/soft-delete-by-id/2"))
+        MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.delete("/api/v1/users/soft-delete-by-id/1"))
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andReturn();
 
-        MockHttpServletResponse response = mvcResult.getResponse();
-
-        String content = response.getContentAsString();
-
-        ResultData resultData = objectMapper.readValue(content, ResultData.class);
-
-        boolean status = resultData.isStatus();
+        boolean status = isStatus(mvcResult);
 
         assertTrue(status);
 
 
+    }
+
+    @Test
+    void shouldUpdateUser() throws Exception {
+
+        UserUpdateRequest userSaveRequest = new UserUpdateRequest(
+                "Sinan2",
+                null,
+                null
+
+
+        );
+
+        String requestAsString = objectMapper.writeValueAsString(userSaveRequest);
+
+        MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.put("/api/v1/users/update/1")
+                .content(requestAsString)
+                .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andReturn();
+
+        boolean status = isStatus(mvcResult);
+        assertTrue(status);
     }
 
 }
