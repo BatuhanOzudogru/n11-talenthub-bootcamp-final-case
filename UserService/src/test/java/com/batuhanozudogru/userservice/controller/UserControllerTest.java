@@ -64,10 +64,10 @@ class UserControllerTest extends BaseControllerTest{
     void shouldSaveCustomer() throws Exception {
 
         UserSaveRequest userSaveRequest = new UserSaveRequest(
-                "Sinan",
-                "Karabulut",
-                "12181780008",
-                "Sinan",
+                "Batuhan",
+                "Özüdoğru",
+                "44218392564",
+                "Batuhan",
                 LocalDate.of(1997, 1, 1),
                 BigDecimal.valueOf(0.50),
                 BigDecimal.valueOf(0.40)
@@ -117,7 +117,7 @@ class UserControllerTest extends BaseControllerTest{
     @Test
     void shouldGetUserById() throws Exception {
 
-        MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.get("/api/v1/users/get-by-id/1"))
+        MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.get("/api/v1/users/get-by-id/100"))
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andReturn();
 
@@ -128,7 +128,7 @@ class UserControllerTest extends BaseControllerTest{
     @Test
     void shouldGetUserByTurkishRepublicIdNo() throws Exception {
 
-        MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.get("/api/v1/users/get-by-turkish-republic-id/12181780008"))
+        MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.get("/api/v1/users/get-by-turkish-republic-id/12345678901"))
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andReturn();
 
@@ -139,7 +139,7 @@ class UserControllerTest extends BaseControllerTest{
     @Test
     void shouldGetUserByUsername() throws Exception {
 
-        MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.get("/api/v1/users/get-by-username/Sinan"))
+        MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.get("/api/v1/users/get-by-username/user1"))
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andReturn();
 
@@ -151,7 +151,7 @@ class UserControllerTest extends BaseControllerTest{
     @Test
     void shouldDeleteUserById() throws Exception {
 
-        MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.delete("/api/v1/users/hard-delete-by-id/2"))
+        MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.delete("/api/v1/users/hard-delete-by-id/200"))
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andReturn();
 
@@ -166,7 +166,7 @@ class UserControllerTest extends BaseControllerTest{
     @Test
     void shouldSoftDeleteUserById() throws Exception {
 
-        MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.delete("/api/v1/users/soft-delete-by-id/1"))
+        MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.delete("/api/v1/users/soft-delete-by-id/300"))
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andReturn();
 
@@ -180,17 +180,17 @@ class UserControllerTest extends BaseControllerTest{
     @Test
     void shouldUpdateUser() throws Exception {
 
-        UserUpdateRequest userSaveRequest = new UserUpdateRequest(
-                "Sinan2",
-                null,
-                null
+        UserUpdateRequest userUpdateRequest = new UserUpdateRequest(
+                "newUsername",
+                BigDecimal.TEN,
+                BigDecimal.TEN
 
 
         );
 
-        String requestAsString = objectMapper.writeValueAsString(userSaveRequest);
+        String requestAsString = objectMapper.writeValueAsString(userUpdateRequest);
 
-        MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.put("/api/v1/users/update/1")
+        MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.put("/api/v1/users//update-user-by-id/400")
                 .content(requestAsString)
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(MockMvcResultMatchers.status().isOk())

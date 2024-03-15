@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="edda31c5-845f-4e52-8455-c5d1261cc89a" name="Changes" comment="Add UserController integration tests">
-      <change afterPath="$PROJECT_DIR$/UserService/src/test/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UserService/src/test/resources/schema.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserService/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/log.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserService/src/test/java/com/batuhanozudogru/userservice/controller/UserControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/src/test/java/com/batuhanozudogru/userservice/controller/UserControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserService/src/test/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/src/test/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserService/src/test/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/src/test/resources/schema.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +58,7 @@
     "JUnit.UserControllerTest.shouldGetUserByUsername.executor": "Run",
     "JUnit.UserControllerTest.shouldGetUsers.executor": "Run",
     "JUnit.UserControllerTest.shouldSaveCustomer.executor": "Run",
+    "JUnit.UserControllerTest.shouldSaveCustomer2.executor": "Run",
     "JUnit.UserControllerTest.shouldSoftDeleteUserById.executor": "Run",
     "JUnit.UserControllerTest.shouldUpdateUser.executor": "Run",
     "JUnit.UserServiceTest.executor": "Run",
@@ -119,7 +118,7 @@
       <recent name="com.batuhanozudogru.userservice.controller.contract.impl" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UserControllerTest.shouldGetUsers">
+  <component name="RunManager" selected="JUnit.UserControllerTest.shouldUpdateUser">
     <configuration name="UserControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="UserService" />
       <extension name="coverage">
@@ -131,22 +130,6 @@
       <option name="PACKAGE_NAME" value="com.batuhanozudogru.userservice.controller" />
       <option name="MAIN_CLASS_NAME" value="com.batuhanozudogru.userservice.controller.UserControllerTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserControllerTest.shouldGetUserByUsername" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="UserService" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.batuhanozudogru.userservice.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.batuhanozudogru.userservice.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.batuhanozudogru.userservice.controller.UserControllerTest" />
-      <option name="METHOD_NAME" value="shouldGetUserByUsername" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -178,6 +161,22 @@
       <option name="PACKAGE_NAME" value="com.batuhanozudogru.userservice.controller" />
       <option name="MAIN_CLASS_NAME" value="com.batuhanozudogru.userservice.controller.UserControllerTest" />
       <option name="METHOD_NAME" value="shouldSaveCustomer" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserControllerTest.shouldSaveCustomer2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="UserService" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.batuhanozudogru.userservice.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.batuhanozudogru.userservice.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.batuhanozudogru.userservice.controller.UserControllerTest" />
+      <option name="METHOD_NAME" value="shouldSaveCustomer2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -216,11 +215,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UserControllerTest.shouldGetUsers" />
-        <item itemvalue="JUnit.UserControllerTest" />
-        <item itemvalue="JUnit.UserControllerTest.shouldSaveCustomer" />
         <item itemvalue="JUnit.UserControllerTest.shouldUpdateUser" />
-        <item itemvalue="JUnit.UserControllerTest.shouldGetUserByUsername" />
+        <item itemvalue="JUnit.UserControllerTest" />
+        <item itemvalue="JUnit.UserControllerTest.shouldGetUsers" />
+        <item itemvalue="JUnit.UserControllerTest.shouldSaveCustomer2" />
+        <item itemvalue="JUnit.UserControllerTest.shouldSaveCustomer" />
       </list>
     </recent_temporary>
   </component>
@@ -251,7 +250,7 @@
       <workItem from="1710362498877" duration="2124000" />
       <workItem from="1710364665765" duration="8288000" />
       <workItem from="1710403868658" duration="43749000" />
-      <workItem from="1710499052471" duration="18780000" />
+      <workItem from="1710499052471" duration="20574000" />
     </task>
     <task id="LOCAL-00001" summary="Add UserController integration tests">
       <option name="closed" value="true" />
