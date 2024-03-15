@@ -1,10 +1,5 @@
 
-g
-java:S1192"LDefine a constant instead of duplicating this literal "' not found" 4 times.(—™”ìşÿÿÿÿ
-U
-java:S1118":Add a private constructor to hide the implicit public one.(¦µıèùÿÿÿÿ
-b	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(šƒÀ)
-h	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(øÂğĞüÿÿÿÿ
-h	java:S100 "NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬ÛÕÜùÿÿÿÿ
-h	java:S100$"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆÈã¬ÿÿÿÿÿ
-h	java:S100("NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(º“µ³øÿÿÿÿ
+
+java:S1192"LDefine a constant instead of duplicating this literal "' not found" 4 times.(—™”ìşÿÿÿÿJ$8b1eec43-fc62-49d0-9625-4de5f2acc395
+{
+java:S1118":Add a private constructor to hide the implicit public one.(¦µıèùÿÿÿÿJ$49f5a012-a62a-4918-821a-7421919b1430

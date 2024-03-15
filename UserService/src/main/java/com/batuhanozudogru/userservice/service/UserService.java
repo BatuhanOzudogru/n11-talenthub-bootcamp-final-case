@@ -58,7 +58,7 @@ public class UserService  {
             throw new UsernameTakenException();
         }
 
-        if (!mernisService.verifyUser(user.getTurkishRepublicIdNumber(), user.getFirstName(), user.getLastName(), String.valueOf(user.getBirthDate().getYear()))) {
+        if (Boolean.FALSE.equals(mernisService.verifyUser(user.getTurkishRepublicIdNumber(), user.getFirstName(), user.getLastName(), String.valueOf(user.getBirthDate().getYear())))) {
             throw new TurkishRepublicIdNoCanNotBeVerifiedException();
         }
 

@@ -1,16 +1,12 @@
 package com.batuhanozudogru.userservice.entity;
 
 import com.batuhanozudogru.userservice.general.enums.ReviewRate;
-import com.batuhanozudogru.userservice.general.enums.Status;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
-
 import java.time.LocalDateTime;
 
 @Entity

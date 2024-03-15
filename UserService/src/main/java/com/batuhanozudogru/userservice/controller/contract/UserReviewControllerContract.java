@@ -3,8 +3,6 @@ package com.batuhanozudogru.userservice.controller.contract;
 import com.batuhanozudogru.userservice.dto.request.UserReviewSaveRequest;
 import com.batuhanozudogru.userservice.dto.request.UserReviewUpdateRequest;
 import com.batuhanozudogru.userservice.dto.response.UserReviewResponse;
-import com.batuhanozudogru.userservice.entity.UserReview;
-
 import java.util.List;
 
 public interface UserReviewControllerContract {

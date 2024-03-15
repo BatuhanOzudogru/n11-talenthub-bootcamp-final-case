@@ -1,17 +1,0 @@
-
-f
-java:S1192?"PDefine a constant instead of duplicating this literal " RestaurantId: " 4 times.(ìÑ”·
-a
-java:S1192?"KDefine a constant instead of duplicating this literal " Comment: " 4 times.(ìÑ”·
-]
-java:S1192?"GDefine a constant instead of duplicating this literal "User: " 4 times.(ìÑ”·
-d
-java:S1192?"NDefine a constant instead of duplicating this literal " Restaurant: " 4 times.(ìÑ”·
-`
-java:S1192?"JDefine a constant instead of duplicating this literal " Rating: " 4 times.(ìÑ”·
-h
-java:S6204("RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹
-}
-java:S1128"bRemove this unused import 'com.batuhanozudogru.restaurantservice.dto.response.RestaurantResponse'.(ÿŠµÙÿÿÿÿÿ
-}
-java:S1128"bRemove this unused import 'com.batuhanozudogru.restaurantservice.general.exception.RateException'.(ÇÈ°èıÿÿÿÿ

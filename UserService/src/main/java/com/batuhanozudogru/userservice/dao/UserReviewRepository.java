@@ -2,7 +2,6 @@ package com.batuhanozudogru.userservice.dao;
 
 import com.batuhanozudogru.userservice.entity.User;
 import com.batuhanozudogru.userservice.entity.UserReview;
-import com.batuhanozudogru.userservice.general.enums.Status;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

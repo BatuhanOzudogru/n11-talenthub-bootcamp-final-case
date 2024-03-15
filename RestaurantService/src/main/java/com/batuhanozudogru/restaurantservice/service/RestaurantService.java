@@ -5,13 +5,12 @@ package com.batuhanozudogru.restaurantservice.service;
 import com.batuhanozudogru.restaurantservice.dao.RestaurantRepository;
 import com.batuhanozudogru.restaurantservice.dto.ReviewDTO;
 import com.batuhanozudogru.restaurantservice.dto.UpdateReviewDTO;
-import com.batuhanozudogru.restaurantservice.dto.response.RestaurantResponse;
 import com.batuhanozudogru.restaurantservice.entity.Restaurant;
 import com.batuhanozudogru.restaurantservice.general.exception.NullException;
-import com.batuhanozudogru.restaurantservice.general.exception.RateException;
 import com.batuhanozudogru.restaurantservice.general.exception.RestaurantNotFoundException;
+import com.batuhanozudogru.restaurantservice.general.message.Message;
+import com.batuhanozudogru.restaurantservice.general.message.PrefixFields;
 import org.springframework.stereotype.Service;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -37,7 +36,7 @@ public class RestaurantService {
     public List<Restaurant> getAllRestaurants() {
 
         return StreamSupport.stream(restaurantRepository.findAll().spliterator(), false)
-                .collect(Collectors.toList());
+                .toList();
     }
     public Restaurant saveRestaurant(Restaurant restaurant) {
 
@@ -60,8 +59,14 @@ public class RestaurantService {
         if(restaurant.getComments() == null) {
             restaurant.setComments(new ArrayList<>());
         }
-        restaurant.getComments().add("User: " + reviewDTO.username() + " Comment: " + reviewDTO.review() + " Rating: " + reviewDTO.rate()+ " Restaurant: " + restaurant.getName() + " RestaurantId: " + restaurant.getId());
 
+        restaurant.getComments().add(
+                PrefixFields.USER + reviewDTO.username() + " " +
+                PrefixFields.COMMENT + reviewDTO.review() + " " +
+                PrefixFields.RATING + reviewDTO.rate() + " " +
+                PrefixFields.RESTAURANT + restaurant.getName() + " " +
+                PrefixFields.RESTAURANT_ID + restaurant.getId()
+        );
         restaurantRepository.save(restaurant);
     }
 
@@ -71,9 +76,20 @@ public class RestaurantService {
 
         List<String> comments = restaurant.getComments();
 
-        comments.remove("User: " + updateReviewDTO.oldReview().username()+ " Comment: " + updateReviewDTO.oldReview().review() + " Rating: " + updateReviewDTO.oldReview().rate() + " Restaurant: " + restaurant.getName() + " RestaurantId: " + restaurant.getId());
+        comments.remove(
+                PrefixFields.USER + updateReviewDTO.oldReview().username() + " " +
+                PrefixFields.COMMENT + updateReviewDTO.oldReview().review() + " " +
+                PrefixFields.RATING + updateReviewDTO.oldReview().rate() + " " +
+                PrefixFields.RESTAURANT + restaurant.getName() + " " +
+                PrefixFields.RESTAURANT_ID + restaurant.getId());
 
-        comments.add("User: " + updateReviewDTO.newReview().username() + " Comment: " + updateReviewDTO.newReview().review() + " Rating: " + updateReviewDTO.newReview().rate() + " Restaurant: " + restaurant.getName() + " RestaurantId: " + restaurant.getId());
+        comments.add(
+                PrefixFields.USER + updateReviewDTO.newReview().username() + " " +
+                PrefixFields.COMMENT + updateReviewDTO.newReview().review() + " " +
+                PrefixFields.RATING + updateReviewDTO.newReview().rate() + " " +
+                PrefixFields.RESTAURANT + restaurant.getName() + " " +
+                PrefixFields.RESTAURANT_ID + restaurant.getId()
+        );
 
         restaurant.setComments(comments);
 

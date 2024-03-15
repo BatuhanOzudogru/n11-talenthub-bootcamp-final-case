@@ -13,10 +13,7 @@ public class MernisService {
 
         KpsPublicSoapService kpsPublicSoapService = new KpsPublicSoapService();
 
-        boolean result = kpsPublicSoapService.verifyTurkishRepublicIdNo(turkishRepublicId, firstName, lastName, birthYear);
-
-
-        return result;
+        return kpsPublicSoapService.verifyTurkishRepublicIdNo(turkishRepublicId, firstName, lastName, birthYear);
     }
 
 

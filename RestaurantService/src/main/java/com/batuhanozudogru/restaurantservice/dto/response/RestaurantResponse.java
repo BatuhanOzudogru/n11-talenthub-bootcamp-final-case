@@ -1,6 +1,5 @@
 package com.batuhanozudogru.restaurantservice.dto.response;
 
-import com.batuhanozudogru.restaurantservice.dto.ReviewDTO;
 
 import java.util.List;
 

@@ -3,11 +3,8 @@ package com.batuhanozudogru.userservice.client;
 import com.batuhanozudogru.userservice.dto.UpdateReviewForRestaurantDTO;
 import com.batuhanozudogru.userservice.dto.request.RestaurantSaveRequest;
 import com.batuhanozudogru.userservice.dto.request.UserReviewForRestaurantRequest;
-import com.batuhanozudogru.userservice.dto.request.UserReviewSaveRequest;
 import com.batuhanozudogru.userservice.dto.response.RestaurantResponse;
-import com.batuhanozudogru.userservice.general.result.Result;
 import com.batuhanozudogru.userservice.general.result.ResultData;
-import jakarta.validation.Valid;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 

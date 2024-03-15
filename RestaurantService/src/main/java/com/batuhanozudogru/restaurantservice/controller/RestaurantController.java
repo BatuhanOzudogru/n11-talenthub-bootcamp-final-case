@@ -6,13 +6,10 @@ import com.batuhanozudogru.restaurantservice.dto.ReviewDTO;
 import com.batuhanozudogru.restaurantservice.dto.UpdateReviewDTO;
 import com.batuhanozudogru.restaurantservice.dto.request.RestaurantRequest;
 import com.batuhanozudogru.restaurantservice.dto.response.RestaurantResponse;
-import com.batuhanozudogru.restaurantservice.general.result.Result;
 import com.batuhanozudogru.restaurantservice.general.result.ResultData;
 import com.batuhanozudogru.restaurantservice.general.result.ResultHelper;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
-import java.util.stream.StreamSupport;
 
 @RestController
 @RequestMapping("api/v1/restaurants")
@@ -53,7 +50,7 @@ public class RestaurantController {
 
         contract.deleteRestaurant(id);
 
-       // return ResultHelper.deleted();
+
     }
 
     @DeleteMapping("/delete-all")
@@ -61,7 +58,7 @@ public class RestaurantController {
 
         contract.deleteAllRestaurants();
 
-      //  return ResultHelper.allDeleted();
+
     }
 
     @PutMapping("/update/{id}")
@@ -75,7 +72,7 @@ public class RestaurantController {
 
         contract.addReviewToRestaurant(reviewDTO);
 
-      //  return ResultHelper.success();
+
     }
 
     @PutMapping("/update-review")
@@ -83,7 +80,7 @@ public class RestaurantController {
 
         contract.updateReviewToRestaurant(reviewDTOS);
 
-       // return ResultHelper.success();
+
     }
 
     @DeleteMapping("/delete-review")
@@ -91,7 +88,7 @@ public class RestaurantController {
 
         contract.deleteReviewToRestaurant(reviewDTO);
 
-      //  return ResultHelper.success();
+
     }
 
     @DeleteMapping("/delete-restaurant/{id}")

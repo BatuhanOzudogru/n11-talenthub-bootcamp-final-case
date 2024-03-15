@@ -175,3 +175,15 @@ D
 UserService/mvnw,2\4\24bd2fd5b5d1a072e7c6c19bc91028b920a05700
 C
 UserService/log.txt,1\b\1b6ef674ecf30e01963818274dfe00082af2967f
+…
+UUserService/src/main/java/com/batuhanozudogru/userservice/general/message/Prefix.java,3\a\3a412a47ab2c804601096c52648017edf5e505c6
+Š
+ZUserService/src/main/java/com/batuhanozudogru/userservice/general/message/PrefixField.java,7\1\71fff0a8e3f1e9adddd033e9bd37529b44035445
+ˆ
+XUserService/src/main/java/com/batuhanozudogru/userservice/general/message/FieldName.java,6\0\60c53045d3ad9238d9389c9cc0cc8a1333c73b32
+Š
+ZUserService/src/main/java/com/batuhanozudogru/userservice/general/message/PrefixNames.java,a\7\a79f2f1179604d8353b8c3a35599f69755aa9472
+‘
+aRestaurantService/src/main/java/com/batuhanozudogru/restaurantservice/general/message/Prefix.java,d\b\dbbe4a3879ab9859a1ad5cfbc043dbf0e38cc840
+—
+gRestaurantService/src/main/java/com/batuhanozudogru/restaurantservice/general/message/PrefixFields.java,4\d\4d04343edb81040e3248045d29adac34b4770b51

@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.stream.Collectors;
-import java.util.stream.StreamSupport;
+
 
 @Service
 public class RestaurantControllerContractImpl implements RestaurantControllerContract {
@@ -37,7 +37,7 @@ public class RestaurantControllerContractImpl implements RestaurantControllerCon
         List<Restaurant> restaurantList = restaurantService.getAllRestaurants();
         return restaurantList.stream()
                 .map(restaurantMapper::convertToRestaurantResponse)
-                .collect(Collectors.toList());
+                .toList();
     }
 
     @Override

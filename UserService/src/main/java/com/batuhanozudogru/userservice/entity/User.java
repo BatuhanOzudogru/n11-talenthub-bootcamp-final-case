@@ -1,7 +1,6 @@
 package com.batuhanozudogru.userservice.entity;
 
 import com.batuhanozudogru.userservice.general.enums.Status;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

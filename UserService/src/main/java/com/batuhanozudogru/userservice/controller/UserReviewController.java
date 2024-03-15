@@ -1,16 +1,12 @@
 package com.batuhanozudogru.userservice.controller;
 
 import com.batuhanozudogru.userservice.controller.contract.UserReviewControllerContract;
-import com.batuhanozudogru.userservice.controller.contract.impl.UserReviewControllerContractImpl;
 import com.batuhanozudogru.userservice.dto.request.UserReviewSaveRequest;
 import com.batuhanozudogru.userservice.dto.request.UserReviewUpdateRequest;
 import com.batuhanozudogru.userservice.dto.response.UserReviewResponse;
-import com.batuhanozudogru.userservice.entity.UserReview;
 import com.batuhanozudogru.userservice.general.result.Result;
 import com.batuhanozudogru.userservice.general.result.ResultData;
 import com.batuhanozudogru.userservice.general.result.ResultHelper;
-import com.batuhanozudogru.userservice.mapper.UserReviewMapper;
-import com.batuhanozudogru.userservice.service.UserReviewService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

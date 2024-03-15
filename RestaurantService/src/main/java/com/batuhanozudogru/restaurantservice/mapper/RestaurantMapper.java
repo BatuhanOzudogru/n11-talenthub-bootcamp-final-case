@@ -1,7 +1,6 @@
 package com.batuhanozudogru.restaurantservice.mapper;
 
 
-import com.batuhanozudogru.restaurantservice.dto.ReviewDTO;
 import com.batuhanozudogru.restaurantservice.dto.request.RestaurantRequest;
 import com.batuhanozudogru.restaurantservice.dto.response.RestaurantResponse;
 import com.batuhanozudogru.restaurantservice.entity.Restaurant;

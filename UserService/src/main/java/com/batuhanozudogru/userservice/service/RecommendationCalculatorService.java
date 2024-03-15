@@ -14,10 +14,8 @@ public class RecommendationCalculatorService {
 
         BigDecimal restaurantDistanceWeight = BigDecimal.valueOf((MAX_RESTAURANT_DISTANCE - restaurantDistance) * 10);
 
-        BigDecimal recommendationScore = BigDecimal.valueOf(RATE_WEIGHT * restaurantRateWeight)
+        return BigDecimal.valueOf(RATE_WEIGHT * restaurantRateWeight)
 
                 .add(BigDecimal.valueOf(DISTANCE_WEIGHT).multiply(restaurantDistanceWeight));
-
-        return recommendationScore;
     }
 }

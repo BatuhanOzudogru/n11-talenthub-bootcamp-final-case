@@ -1,7 +1,6 @@
 package com.batuhanozudogru.restaurantservice.entity;
 
 
-import com.batuhanozudogru.restaurantservice.dto.ReviewDTO;
 import nonapi.io.github.classgraph.json.Id;
 import org.springframework.data.solr.core.mapping.Indexed;
 import org.springframework.data.solr.core.mapping.SolrDocument;

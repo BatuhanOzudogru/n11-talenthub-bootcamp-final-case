@@ -41,7 +41,7 @@ public class RecommendationService {
         List<Map.Entry<String, Long>> sortedEntries = recommendedList.entrySet().stream()
                 .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
                 .limit(3)
-                .collect(Collectors.toList());
+                .toList();
 
         Map<String, Long> top3Recommendations = new LinkedHashMap<>();
         for (Map.Entry<String, Long> entry : sortedEntries) {

@@ -15,6 +15,7 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 @Service
@@ -47,9 +48,7 @@ public class UserMapper {
 
         List<UserReview> reviews = user.getReviewList();
 
-        UserResponse userResponse = new UserResponse( firstName, lastName, turkishRepublicIdNumber, username, birthDate, latitude, longitude, createdAt, updatedAt, reviews );
-
-        return userResponse;
+        return new UserResponse( firstName, lastName, turkishRepublicIdNumber, username, birthDate, latitude, longitude, createdAt, updatedAt, reviews );
     }
 
     public static void updateUser (User user,UserUpdateRequest request){
@@ -65,7 +64,7 @@ public class UserMapper {
 
     public static List<UserResponse> convertToUserResponseList(List<User> users) {
         if ( users == null ) {
-            return null;
+            return Collections.emptyList();
         }
 
         List<UserResponse> list = new ArrayList<>();

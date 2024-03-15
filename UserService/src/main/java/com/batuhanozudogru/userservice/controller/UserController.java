@@ -1,7 +1,6 @@
 package com.batuhanozudogru.userservice.controller;
 
 import com.batuhanozudogru.userservice.controller.contract.UserControllerContract;
-import com.batuhanozudogru.userservice.controller.contract.impl.UserControllerContractImpl;
 import com.batuhanozudogru.userservice.dto.request.UserSaveRequest;
 import com.batuhanozudogru.userservice.dto.request.UserUpdateRequest;
 import com.batuhanozudogru.userservice.dto.response.UserResponse;

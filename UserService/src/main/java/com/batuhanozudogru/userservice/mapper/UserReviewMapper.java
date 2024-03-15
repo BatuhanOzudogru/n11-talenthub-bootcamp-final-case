@@ -6,7 +6,6 @@ import com.batuhanozudogru.userservice.dto.request.UserReviewForRestaurantReques
 import com.batuhanozudogru.userservice.dto.request.UserReviewSaveRequest;
 import com.batuhanozudogru.userservice.dto.request.UserReviewUpdateRequest;
 import com.batuhanozudogru.userservice.dto.response.UserReviewResponse;
-import com.batuhanozudogru.userservice.entity.User;
 import com.batuhanozudogru.userservice.entity.UserReview;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;

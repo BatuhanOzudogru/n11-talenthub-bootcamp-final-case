@@ -14,11 +14,8 @@ import com.batuhanozudogru.userservice.service.RecommendationService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
-import java.util.stream.StreamSupport;
 
 @RestController
 @RequestMapping("/api/v1/restaurants")
@@ -38,7 +35,7 @@ public class RestaurantController {
     }
 
     @GetMapping("recommend-restaurants/{userId}")
-    public ResultData<Map<String, Long>> getRecommendRestaurants(@RequestParam Long userId) {
+    public ResultData<Map<String, Long>> getRecommendRestaurants(@PathVariable Long userId) {
 
         Iterable<RestaurantResponse> restaurants = restaurantClient.getRestaurants().getData();
 
