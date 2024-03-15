@@ -1,0 +1,7 @@
+
+C
+java:S5411="(Use a primitive boolean expression here.(†êÁ”üÿÿÿÿ
+S
+java:S1854{"8Remove this useless assignment to local variable "user".(¬ºûÛùÿÿÿÿ
+D
+java:S1481{")Remove this unused "user" local variable.(¬ºûÛùÿÿÿÿ

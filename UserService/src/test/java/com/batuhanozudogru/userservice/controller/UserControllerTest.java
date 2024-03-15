@@ -200,4 +200,15 @@ class UserControllerTest extends BaseControllerTest{
         assertTrue(status);
     }
 
+    @Test
+    void shouldActiveUserById() throws Exception {
+
+        MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.patch("/api/v1/users/active-user-by-id/500"))
+                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andReturn();
+
+        boolean status = isStatus(mvcResult);
+        assertTrue(status);
+    }
+
 }

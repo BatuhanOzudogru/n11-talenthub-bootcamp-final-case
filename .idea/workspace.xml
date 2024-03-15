@@ -8,7 +8,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserService/src/test/java/com/batuhanozudogru/userservice/controller/UserControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/src/test/java/com/batuhanozudogru/userservice/controller/UserControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserService/src/test/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/src/test/resources/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserService/src/test/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/src/test/resources/schema.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +27,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -96,6 +98,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -118,7 +121,7 @@
       <recent name="com.batuhanozudogru.userservice.controller.contract.impl" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UserControllerTest.shouldUpdateUser">
+  <component name="RunManager" selected="JUnit.UserControllerTest">
     <configuration name="UserControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="UserService" />
       <extension name="coverage">
@@ -215,8 +218,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UserControllerTest.shouldUpdateUser" />
         <item itemvalue="JUnit.UserControllerTest" />
+        <item itemvalue="JUnit.UserControllerTest.shouldUpdateUser" />
         <item itemvalue="JUnit.UserControllerTest.shouldGetUsers" />
         <item itemvalue="JUnit.UserControllerTest.shouldSaveCustomer2" />
         <item itemvalue="JUnit.UserControllerTest.shouldSaveCustomer" />
@@ -250,7 +253,7 @@
       <workItem from="1710362498877" duration="2124000" />
       <workItem from="1710364665765" duration="8288000" />
       <workItem from="1710403868658" duration="43749000" />
-      <workItem from="1710499052471" duration="20574000" />
+      <workItem from="1710499052471" duration="21652000" />
     </task>
     <task id="LOCAL-00001" summary="Add UserController integration tests">
       <option name="closed" value="true" />
@@ -678,6 +681,15 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="208" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/UserService/src/test/java/com/batuhanozudogru/userservice/controller/UserControllerTest.java</url>
+          <line>180</line>
+          <properties class="com.batuhanozudogru.userservice.controller.UserControllerTest" method="shouldUpdateUser">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="217" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
