@@ -5,35 +5,39 @@ import com.batuhanozudogru.userservice.dto.request.RestaurantSaveRequest;
 import com.batuhanozudogru.userservice.dto.request.UserReviewForRestaurantRequest;
 import com.batuhanozudogru.userservice.dto.request.UserReviewSaveRequest;
 import com.batuhanozudogru.userservice.dto.response.RestaurantResponse;
+import com.batuhanozudogru.userservice.general.result.Result;
+import com.batuhanozudogru.userservice.general.result.ResultData;
 import jakarta.validation.Valid;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @FeignClient(value = "restaurant-service", url = "http://localhost:8086/api/v1/restaurants")
 public interface RestaurantClient {
 
     @GetMapping
-    Iterable<RestaurantResponse> getRestaurants();
+    ResultData<List<RestaurantResponse>> getRestaurants();
 
     @DeleteMapping("/deleteAll")
-    void deleteAllRestaurants();
+    Result deleteAllRestaurants();
 
     @PostMapping("/save")
-    RestaurantResponse saveRestaurant(@RequestBody RestaurantSaveRequest restaurant);
+    ResultData<RestaurantResponse> saveRestaurant(@RequestBody RestaurantSaveRequest restaurant);
 
     @PutMapping("/update/{id}")
-    RestaurantResponse updateRestaurant(@PathVariable String id,@RequestBody RestaurantSaveRequest request);
+    ResultData<RestaurantResponse> updateRestaurant(@PathVariable String id,@RequestBody RestaurantSaveRequest request);
 
     @GetMapping("/get-by-id/{id}")
-    RestaurantResponse getRestaurantById(@PathVariable("id") String id);
+    ResultData<RestaurantResponse> getRestaurantById(@PathVariable("id") String id);
 
     @PostMapping("/add-review")
-    void addReviewToRestaurant(@RequestBody UserReviewForRestaurantRequest reviewDTO);
+    Result addReviewToRestaurant(@RequestBody UserReviewForRestaurantRequest reviewDTO);
 
     @PutMapping("/update-review")
-    void updateReviewToRestaurant(@RequestBody UpdateReviewForRestaurantDTO reviewDTOs);
+    Result updateReviewToRestaurant(@RequestBody UpdateReviewForRestaurantDTO reviewDTOs);
 
     @DeleteMapping("/delete-review")
-    void deleteReviewToRestaurant(@RequestBody UserReviewForRestaurantRequest reviewDTO);
+    Result deleteReviewToRestaurant(@RequestBody UserReviewForRestaurantRequest reviewDTO);
 
 }

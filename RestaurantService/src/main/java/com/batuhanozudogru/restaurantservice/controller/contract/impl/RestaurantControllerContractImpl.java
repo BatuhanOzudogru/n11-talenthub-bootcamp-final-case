@@ -12,6 +12,8 @@ import com.batuhanozudogru.restaurantservice.service.RestaurantService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
 
 @Service
 public class RestaurantControllerContractImpl implements RestaurantControllerContract {
@@ -32,18 +34,17 @@ public class RestaurantControllerContractImpl implements RestaurantControllerCon
 
     @Override
     public List<RestaurantResponse> getRestaurants() {
-       Iterable<Restaurant> restaurants = restaurantService.getAllRestaurants();
-
-
-
-        return restaurantMapper.convertToRestaurantResponseList(restaurants);
-
+        List<Restaurant> restaurantList = restaurantService.getAllRestaurants();
+        return restaurantList.stream()
+                .map(restaurantMapper::convertToRestaurantResponse)
+                .collect(Collectors.toList());
     }
 
     @Override
     public RestaurantResponse getRestaurantById(String id) {
 
         Restaurant restaurant = restaurantService.getRestaurantById(id);
+
         return restaurantMapper.convertToRestaurantResponse(restaurant);
     }
 

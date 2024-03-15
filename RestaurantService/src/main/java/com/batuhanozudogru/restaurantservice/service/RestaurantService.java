@@ -5,6 +5,7 @@ package com.batuhanozudogru.restaurantservice.service;
 import com.batuhanozudogru.restaurantservice.dao.RestaurantRepository;
 import com.batuhanozudogru.restaurantservice.dto.ReviewDTO;
 import com.batuhanozudogru.restaurantservice.dto.UpdateReviewDTO;
+import com.batuhanozudogru.restaurantservice.dto.response.RestaurantResponse;
 import com.batuhanozudogru.restaurantservice.entity.Restaurant;
 import com.batuhanozudogru.restaurantservice.general.exception.NullException;
 import com.batuhanozudogru.restaurantservice.general.exception.RateException;
@@ -13,6 +14,8 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
 
 @Service
 
@@ -31,11 +34,10 @@ public class RestaurantService {
     }
 
 
-    public Iterable<Restaurant> getAllRestaurants() {
+    public List<Restaurant> getAllRestaurants() {
 
-        Iterable<Restaurant> all = restaurantRepository.findAll();
-
-        return all;
+        return StreamSupport.stream(restaurantRepository.findAll().spliterator(), false)
+                .collect(Collectors.toList());
     }
     public Restaurant saveRestaurant(Restaurant restaurant) {
 

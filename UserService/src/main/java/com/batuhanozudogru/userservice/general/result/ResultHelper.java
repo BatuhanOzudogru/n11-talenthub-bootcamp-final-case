@@ -16,6 +16,11 @@ public class ResultHelper {
         return new ResultData<>(true, "200", Message.UPDATED, data);
     }
 
+    public static Result allDeleted() {
+        return new Result(true, "200", Message.ALL_DELETED);
+    }
+
+
     public static Result hardDeleted() {
         return new Result(true, "200", Message.HARD_DELETED);
     }

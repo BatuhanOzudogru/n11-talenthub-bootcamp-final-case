@@ -7,10 +7,15 @@
     <list default="true" id="edda31c5-845f-4e52-8455-c5d1261cc89a" name="Changes" comment="Add UserController integration tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RestaurantService/src/main/java/com/batuhanozudogru/restaurantservice/controller/RestaurantController.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantService/src/main/java/com/batuhanozudogru/restaurantservice/controller/RestaurantController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestaurantService/src/main/java/com/batuhanozudogru/restaurantservice/general/message/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantService/src/main/java/com/batuhanozudogru/restaurantservice/general/message/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestaurantService/src/main/java/com/batuhanozudogru/restaurantservice/general/result/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantService/src/main/java/com/batuhanozudogru/restaurantservice/general/result/Result.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestaurantService/src/main/java/com/batuhanozudogru/restaurantservice/general/result/ResultData.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantService/src/main/java/com/batuhanozudogru/restaurantservice/general/result/ResultData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestaurantService/src/main/java/com/batuhanozudogru/restaurantservice/general/result/ResultHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantService/src/main/java/com/batuhanozudogru/restaurantservice/general/result/ResultHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantService/src/main/java/com/batuhanozudogru/restaurantservice/controller/contract/RestaurantControllerContract.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantService/src/main/java/com/batuhanozudogru/restaurantservice/controller/contract/RestaurantControllerContract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantService/src/main/java/com/batuhanozudogru/restaurantservice/controller/contract/impl/RestaurantControllerContractImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantService/src/main/java/com/batuhanozudogru/restaurantservice/controller/contract/impl/RestaurantControllerContractImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantService/src/main/java/com/batuhanozudogru/restaurantservice/mapper/RestaurantMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantService/src/main/java/com/batuhanozudogru/restaurantservice/mapper/RestaurantMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantService/src/main/java/com/batuhanozudogru/restaurantservice/service/RestaurantService.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantService/src/main/java/com/batuhanozudogru/restaurantservice/service/RestaurantService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/client/RestaurantClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/client/RestaurantClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/controller/RestaurantController.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/controller/RestaurantController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/general/message/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/general/message/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/general/result/ResultHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/general/result/ResultHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +119,7 @@
       <recent name="com.batuhanozudogru.userservice.controller.contract.impl" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.UserServiceApplication">
+  <component name="RunManager" selected="Spring Boot.RestaurantServiceApplication">
     <configuration name="UserControllerTest.shouldDeleteUserById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="UserService" />
       <extension name="coverage">
@@ -246,7 +251,8 @@
       <workItem from="1710362294169" duration="182000" />
       <workItem from="1710362498877" duration="2124000" />
       <workItem from="1710364665765" duration="8288000" />
-      <workItem from="1710403868658" duration="39027000" />
+      <workItem from="1710403868658" duration="43749000" />
+      <workItem from="1710499052471" duration="1042000" />
     </task>
     <task id="LOCAL-00001" summary="Add UserController integration tests">
       <option name="closed" value="true" />
@@ -325,11 +331,6 @@
           <option name="timeStamp" value="46" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/dto/response/RestaurantResponse.java</url>
-          <line>10</line>
-          <option name="timeStamp" value="93" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/UserService/target/generated-sources/annotations/com/batuhanozudogru/userservice/mapper/UserReviewMapperImpl.java</url>
           <line>46</line>
           <option name="timeStamp" value="100" />
@@ -383,6 +384,81 @@
           <url>file://$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/controller/UserController.java</url>
           <line>25</line>
           <option name="timeStamp" value="154" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/RestaurantService/src/main/java/com/batuhanozudogru/restaurantservice/mapper/RestaurantMapper.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="166" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/RestaurantService/src/main/java/com/batuhanozudogru/restaurantservice/mapper/RestaurantMapper.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="168" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/RestaurantService/src/main/java/com/batuhanozudogru/restaurantservice/mapper/RestaurantMapper.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="169" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/RestaurantService/src/main/java/com/batuhanozudogru/restaurantservice/mapper/RestaurantMapper.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="170" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/RestaurantService/src/main/java/com/batuhanozudogru/restaurantservice/mapper/RestaurantMapper.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="171" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/controller/RestaurantController.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="173" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/controller/RestaurantController.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="174" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/RestaurantService/src/main/java/com/batuhanozudogru/restaurantservice/service/RestaurantService.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="176" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/RestaurantService/src/main/java/com/batuhanozudogru/restaurantservice/service/RestaurantService.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="177" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/RestaurantService/src/main/java/com/batuhanozudogru/restaurantservice/controller/RestaurantController.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="179" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/RestaurantService/src/main/java/com/batuhanozudogru/restaurantservice/controller/RestaurantController.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="180" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/RestaurantService/src/main/java/com/batuhanozudogru/restaurantservice/controller/contract/impl/RestaurantControllerContractImpl.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="182" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/RestaurantService/src/main/java/com/batuhanozudogru/restaurantservice/controller/contract/impl/RestaurantControllerContractImpl.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="183" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/RestaurantService/src/main/java/com/batuhanozudogru/restaurantservice/controller/contract/impl/RestaurantControllerContractImpl.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="184" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/RestaurantService/src/main/java/com/batuhanozudogru/restaurantservice/controller/contract/impl/RestaurantControllerContractImpl.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="185" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/service/UserReviewService.java</url>
@@ -482,6 +558,60 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="152" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/client/RestaurantClient.java</url>
+          <line>19</line>
+          <properties class="com.batuhanozudogru.userservice.client.RestaurantClient" method="getRestaurants">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="164" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/RestaurantService/src/main/java/com/batuhanozudogru/restaurantservice/mapper/RestaurantMapper.java</url>
+          <line>40</line>
+          <properties class="com.batuhanozudogru.restaurantservice.mapper.RestaurantMapper" method="convertToRestaurantResponseList">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="165" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/controller/RestaurantController.java</url>
+          <line>32</line>
+          <properties class="com.batuhanozudogru.userservice.controller.RestaurantController" method="getRestaurants">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="172" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/RestaurantService/src/main/java/com/batuhanozudogru/restaurantservice/service/RestaurantService.java</url>
+          <line>36</line>
+          <properties class="com.batuhanozudogru.restaurantservice.service.RestaurantService" method="getAllRestaurants">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="175" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/RestaurantService/src/main/java/com/batuhanozudogru/restaurantservice/controller/RestaurantController.java</url>
+          <line>29</line>
+          <properties class="com.batuhanozudogru.restaurantservice.controller.RestaurantController" method="getAllRestaurants">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="178" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/RestaurantService/src/main/java/com/batuhanozudogru/restaurantservice/controller/contract/impl/RestaurantControllerContractImpl.java</url>
+          <line>35</line>
+          <properties class="com.batuhanozudogru.restaurantservice.controller.contract.impl.RestaurantControllerContractImpl" method="getRestaurants">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="181" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

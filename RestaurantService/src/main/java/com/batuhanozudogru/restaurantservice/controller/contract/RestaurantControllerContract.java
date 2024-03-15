@@ -7,11 +7,13 @@ import com.batuhanozudogru.restaurantservice.dto.UpdateReviewDTO;
 import com.batuhanozudogru.restaurantservice.dto.request.RestaurantRequest;
 import com.batuhanozudogru.restaurantservice.dto.response.RestaurantResponse;
 
+import java.util.List;
+
 public interface RestaurantControllerContract {
 
     void deleteAllRestaurants();
 
-    Iterable<RestaurantResponse> getRestaurants();
+    List<RestaurantResponse> getRestaurants();
 
     RestaurantResponse getRestaurantById(String id);
 

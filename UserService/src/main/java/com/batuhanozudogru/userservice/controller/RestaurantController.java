@@ -7,11 +7,18 @@ import com.batuhanozudogru.userservice.dto.response.RestaurantResponse;
 import com.batuhanozudogru.userservice.entity.User;
 import com.batuhanozudogru.userservice.general.exception.UserNotFoundException;
 import com.batuhanozudogru.userservice.general.message.Message;
+import com.batuhanozudogru.userservice.general.result.Result;
+import com.batuhanozudogru.userservice.general.result.ResultData;
+import com.batuhanozudogru.userservice.general.result.ResultHelper;
 import com.batuhanozudogru.userservice.service.RecommendationService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
 
 @RestController
 @RequestMapping("/api/v1/restaurants")
@@ -23,45 +30,55 @@ public class RestaurantController {
     private final UserRepository userRepository;
 
     @GetMapping
-    public Iterable<RestaurantResponse> getRestaurants() {
+    public ResultData<List<RestaurantResponse>> getRestaurants() {
 
-        return restaurantClient.getRestaurants();
+        List<RestaurantResponse> restaurants = restaurantClient.getRestaurants().getData();
+
+        return ResultHelper.success(restaurants);
     }
 
     @GetMapping("recommend-restaurants/{userId}")
-    public Map<String, Long> getRecommendRestaurants(@RequestParam Long userId) {
+    public ResultData<Map<String, Long>> getRecommendRestaurants(@RequestParam Long userId) {
 
-        Iterable<RestaurantResponse> restaurants = restaurantClient.getRestaurants();
+        Iterable<RestaurantResponse> restaurants = restaurantClient.getRestaurants().getData();
 
         User user = userRepository.findById(userId).orElseThrow(()
                 -> new UserNotFoundException(Message.USER_NOT_FOUND_BY_ID(userId)));
 
         Map<String, Long> recommendList = RecommendationService.recommendList(restaurants, user);
 
-        return recommendList;
+        return ResultHelper.success(recommendList);
     }
 
     @DeleteMapping("/delete-all")
-    public void deleteAllRestaurants() {
+    public Result deleteAllRestaurants() {
 
         restaurantClient.deleteAllRestaurants();
+
+        return ResultHelper.allDeleted();
     }
 
     @PostMapping("/save")
-    public RestaurantResponse saveRestaurant(@RequestBody @Valid RestaurantSaveRequest request) {
+    public ResultData<RestaurantResponse> saveRestaurant(@RequestBody @Valid RestaurantSaveRequest request) {
 
-        return restaurantClient.saveRestaurant(request);
+        RestaurantResponse restaurantResponse = restaurantClient.saveRestaurant(request).getData();
+
+        return ResultHelper.created(restaurantResponse);
     }
 
     @PutMapping("/update{id}")
-    public RestaurantResponse updateRestaurant(@PathVariable String id, @RequestBody @Valid RestaurantSaveRequest request) {
+    public ResultData<RestaurantResponse> updateRestaurant(@PathVariable String id, @RequestBody @Valid RestaurantSaveRequest request) {
 
-        return restaurantClient.updateRestaurant(id, request);
+        RestaurantResponse restaurantResponse = restaurantClient.updateRestaurant(id, request).getData();
+
+        return ResultHelper.updated(restaurantResponse);
     }
 
     @GetMapping("/get-by-id/{id}")
-    public RestaurantResponse getById(@PathVariable("id") String id) {
+    public ResultData<RestaurantResponse> getById(@PathVariable("id") String id) {
 
-        return restaurantClient.getRestaurantById(id);
+        RestaurantResponse restaurantResponse = restaurantClient.getRestaurantById(id).getData();
+
+        return ResultHelper.success(restaurantResponse);
     }
 }

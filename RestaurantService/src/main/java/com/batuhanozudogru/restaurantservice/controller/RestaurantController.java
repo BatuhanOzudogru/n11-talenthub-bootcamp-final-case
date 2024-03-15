@@ -11,6 +11,9 @@ import com.batuhanozudogru.restaurantservice.general.result.ResultData;
 import com.batuhanozudogru.restaurantservice.general.result.ResultHelper;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+import java.util.stream.StreamSupport;
+
 @RestController
 @RequestMapping("api/v1/restaurants")
 
@@ -24,9 +27,15 @@ public class RestaurantController {
     }
 
     @GetMapping
-    public ResultData<Iterable<RestaurantResponse>> getAllRestaurants() {
+    public ResultData<List<RestaurantResponse>> getAllRestaurants() {
 
-        return ResultHelper.success(contract.getRestaurants());
+        List<RestaurantResponse> restaurants = contract.getRestaurants();
+
+//        List<RestaurantResponse> result = StreamSupport.stream(restaurants.spliterator(), false)
+//                .toList();
+
+        return ResultHelper.success(restaurants);
+
     }
 
     @PostMapping("/save")

@@ -38,8 +38,8 @@ public class RestaurantMapper {
         );
     }
 
-    public List<RestaurantResponse> convertToRestaurantResponseList(Iterable<Restaurant> restaurants) {
-        List<RestaurantResponse> responseList = new ArrayList<>();
+    public List<RestaurantResponse> convertToRestaurantResponseList(List<Restaurant> restaurants) {
+        List<RestaurantResponse> responseList = new ArrayList<>(restaurants.size());
         for (Restaurant restaurant : restaurants) {
             responseList.add(convertToRestaurantResponse(restaurant));
         }
