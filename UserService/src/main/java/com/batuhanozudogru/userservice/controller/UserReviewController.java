@@ -19,7 +19,7 @@ public class UserReviewController {
 
     private final UserReviewControllerContract userReviewControllerContract;
 
-    @GetMapping("/getById/{id}")
+    @GetMapping("/get-by-id/{id}")
     public ResultData<UserReviewResponse> getUserReviewById(@PathVariable Long id) {
         return ResultHelper.success(userReviewControllerContract.getUserReviewById(id));
     }

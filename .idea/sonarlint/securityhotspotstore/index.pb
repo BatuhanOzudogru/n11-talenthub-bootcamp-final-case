@@ -187,3 +187,5 @@ ZUserService/src/main/java/com/batuhanozudogru/userservice/general/message/Prefi
 aRestaurantService/src/main/java/com/batuhanozudogru/restaurantservice/general/message/Prefix.java,d\b\dbbe4a3879ab9859a1ad5cfbc043dbf0e38cc840
 —
 gRestaurantService/src/main/java/com/batuhanozudogru/restaurantservice/general/message/PrefixFields.java,4\d\4d04343edb81040e3248045d29adac34b4770b51
+’
+bUserService/src/test/java/com/batuhanozudogru/userservice/controller/UserReviewControllerTest.java,8\e\8eec823f5a6101fab3fc79db804e7c2c6c4f6ce3

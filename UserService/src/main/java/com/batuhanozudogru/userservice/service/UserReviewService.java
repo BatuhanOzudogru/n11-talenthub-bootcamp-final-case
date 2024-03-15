@@ -83,8 +83,10 @@ public class UserReviewService {
     }
 
     public List<UserReview> findByRestaurantId(String restaurantId) {
-        return userReviewRepository.findByRestaurantId(restaurantId).stream().toList();
+        List<UserReview> list = userReviewRepository.findByRestaurantId(restaurantId).stream().toList();
+        return list;
     }
+
 
 
     private void checkuser(Long userId) {

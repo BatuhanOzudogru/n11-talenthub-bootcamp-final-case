@@ -17,3 +17,18 @@ CREATE TABLE usr_user (
                           CONSTRAINT usr_user_username_key UNIQUE (username),
                           CONSTRAINT usr_user_status_check CHECK (status::text = ANY (ARRAY['ACTIVE'::character varying, 'PASSIVE'::character varying]::text[]))
     );
+
+DROP TABLE if exists review;
+CREATE SEQUENCE if not exists review_id_seq;
+CREATE SEQUENCE if not exists review_user_id_seq;
+CREATE TABLE review(
+                       created_at timestamp(6),
+                       id bigint NOT NULL DEFAULT nextval('review_id_seq'::regclass),
+                       updated_at timestamp(6),
+                       user_id integer NOT NULL DEFAULT nextval('review_user_id_seq'::regclass),
+                       review character varying(500) ,
+                       rate character varying(255) ,
+                       restaurant_id character varying(255),
+                       CONSTRAINT review_pkey PRIMARY KEY (id),
+                       CONSTRAINT review_rate_check CHECK (rate::text = ANY (ARRAY['ONE'::character varying, 'TWO'::character varying, 'THREE'::character varying, 'FOUR'::character varying, 'FIVE'::character varying]::text[]))
+    );
