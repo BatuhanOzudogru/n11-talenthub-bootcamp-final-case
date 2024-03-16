@@ -5,14 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="edda31c5-845f-4e52-8455-c5d1261cc89a" name="Changes" comment="Add UserController integration tests">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/c/0c7530ebdcd1a1f53286c8e2bf635acbf37deab6" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/c/0c7530ebdcd1a1f53286c8e2bf635acbf37deab6" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/9/f9fab60b491492088d6cfe137f319de166e9d2aa" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/9/f9fab60b491492088d6cfe137f319de166e9d2aa" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/f/ff0abadef13c5f904c9f69490b601d14a6f37312" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/f/ff0abadef13c5f904c9f69490b601d14a6f37312" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/a/3a412a47ab2c804601096c52648017edf5e505c6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/0/60c53045d3ad9238d9389c9cc0cc8a1333c73b32" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/1/71fff0a8e3f1e9adddd033e9bd37529b44035445" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/7/a79f2f1179604d8353b8c3a35599f69755aa9472" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/b/dbbe4a3879ab9859a1ad5cfbc043dbf0e38cc840" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/3/a/3a412a47ab2c804601096c52648017edf5e505c6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/6/0/60c53045d3ad9238d9389c9cc0cc8a1333c73b32" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/7/1/71fff0a8e3f1e9adddd033e9bd37529b44035445" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/a/7/a79f2f1179604d8353b8c3a35599f69755aa9472" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/d/b/dbbe4a3879ab9859a1ad5cfbc043dbf0e38cc840" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/controller/RestaurantController.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/controller/RestaurantController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/controller/UserReviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/controller/UserReviewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +117,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/batuh/OneDrive/Masaüstü/n11-talenthub-bootcamp-final-case/UserService/src/test/resources",
+    "last_opened_file_path": "C:/Users/batuh/OneDrive/Masaüstü/final son yedek/n11-talenthub-bootcamp-final-case",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -277,7 +282,8 @@
       <workItem from="1710364665765" duration="8288000" />
       <workItem from="1710403868658" duration="43749000" />
       <workItem from="1710499052471" duration="21652000" />
-      <workItem from="1710526728685" duration="25526000" />
+      <workItem from="1710526728685" duration="26655000" />
+      <workItem from="1710590955294" duration="22000" />
     </task>
     <task id="LOCAL-00001" summary="Add UserController integration tests">
       <option name="closed" value="true" />
