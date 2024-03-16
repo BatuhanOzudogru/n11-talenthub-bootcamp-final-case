@@ -7,7 +7,7 @@ This project is a system that allows for the management of user registration, us
 ## Features
 - **User Management**:
     - Users can be created, retrieved, updated, and deleted (CRUD operations).
-    - During user registration, validation is performed against the Turkish Republic ID Number (TC) using the MERNIS system.
+    - During user registration, validation is performed against the Turkish Republic ID Number (TC) using the MERNIS system. (It can be turned off by setting the `mernis.isActive` property to `false` in the `application.properties` file.)
 
 
 - **User Review Management**:
