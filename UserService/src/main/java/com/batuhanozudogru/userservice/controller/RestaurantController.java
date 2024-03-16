@@ -11,6 +11,11 @@ import com.batuhanozudogru.userservice.general.result.Result;
 import com.batuhanozudogru.userservice.general.result.ResultData;
 import com.batuhanozudogru.userservice.general.result.ResultHelper;
 import com.batuhanozudogru.userservice.service.RecommendationService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.ExampleObject;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -20,6 +25,7 @@ import java.util.Map;
 @RestController
 @RequestMapping("/api/v1/restaurants")
 @RequiredArgsConstructor
+@Tag(name = "Restaurant Controller", description = "Restaurant Management")
 public class RestaurantController {
 
     private final RestaurantClient restaurantClient;
@@ -27,6 +33,10 @@ public class RestaurantController {
     private final UserRepository userRepository;
 
     @GetMapping
+    @Operation(
+            description = "Get all restaurants",
+            summary = "Get Restaurants"
+    )
     public ResultData<List<RestaurantResponse>> getRestaurants() {
 
         List<RestaurantResponse> restaurants = restaurantClient.getRestaurants().getData();
@@ -35,6 +45,10 @@ public class RestaurantController {
     }
 
     @GetMapping("recommend-restaurants/{userId}")
+    @Operation(
+            description = "Get recommended restaurants for the user based on proximity and rating. Returns a maximum of 3 restaurant recommendations.",
+            summary = "Get Recommended Restaurants"
+    )
     public ResultData<Map<String, Long>> getRecommendRestaurants(@PathVariable Long userId) {
 
         Iterable<RestaurantResponse> restaurants = restaurantClient.getRestaurants().getData();
@@ -48,6 +62,10 @@ public class RestaurantController {
     }
 
     @DeleteMapping("/delete-all")
+    @Operation(
+            description = "Deletes all restaurants",
+            summary = "Delete All Restaurants"
+    )
     public Result deleteAllRestaurants() {
 
         restaurantClient.deleteAllRestaurants();
@@ -56,6 +74,35 @@ public class RestaurantController {
     }
 
     @PostMapping("/save")
+    @Operation(
+            description = "Creates a new restaurant",
+            summary = "Save Restaurant",
+            requestBody = @io.swagger.v3.oas.annotations.parameters.RequestBody(
+                    description = "Restaurant Save Request",
+                    content ={
+                            @Content(
+                                    mediaType = "application/json",
+                                    schema =@Schema(
+                                            implementation = RestaurantSaveRequest.class
+                                    ),
+                                    examples={
+                                            @ExampleObject(
+                                                    name="Example Restaurant Save Request",
+                                                    summary = "You have to send a request like this",
+                                                    value = "{\n" +
+                                                            "  \"name\": \"Restaurant Name\",\n" +
+                                                            "  \"address\": \"Restaurant Address\",\n" +
+                                                            "  \"latitude\": 41.0082,\n" +
+                                                            "  \"longitude\": 28.9784,\n" +
+                                                            "  \"rate\": \"5\"\n" +
+                                                            "}",
+                                                    description = "You have to send a request like this"
+                                            )
+                                    }
+                            )
+                    }
+            )
+    )
     public ResultData<RestaurantResponse> saveRestaurant(@RequestBody @Valid RestaurantSaveRequest request) {
 
         RestaurantResponse restaurantResponse = restaurantClient.saveRestaurant(request).getData();
