@@ -160,7 +160,7 @@ class UserReviewControllerTest extends BaseControllerTest {
     @Test
     void shouldDeleteUserReview() throws Exception {
 
-        MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.delete("/api/v1/user-reviews/delete/2000"))
+        MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.delete("/api/v1/user-reviews/delete/4000"))
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andReturn();
 
