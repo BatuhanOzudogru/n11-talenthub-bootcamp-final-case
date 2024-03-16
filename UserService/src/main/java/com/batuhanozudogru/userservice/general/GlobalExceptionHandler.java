@@ -51,6 +51,13 @@ public class GlobalExceptionHandler {
 
     }
 
+    @ExceptionHandler(RestaurantNotFoundException.class)
+    public ResponseEntity<Result> handleRestaurantNotFoundException() {
+
+        return new ResponseEntity<>(ResultHelper.restaurantNotFound(), HttpStatus.BAD_REQUEST);
+
+    }
+
     @ExceptionHandler(TurkishRepublicIdNoAlreadyExistException.class)
     public ResponseEntity<Result> handleTurkishRepublicIdNoAlreadyExistException() {
 

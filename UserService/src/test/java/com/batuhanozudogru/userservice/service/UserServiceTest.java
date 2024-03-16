@@ -3,10 +3,7 @@ package com.batuhanozudogru.userservice.service;
 import com.batuhanozudogru.userservice.dao.UserRepository;
 import com.batuhanozudogru.userservice.entity.User;
 import com.batuhanozudogru.userservice.general.enums.Status;
-import com.batuhanozudogru.userservice.general.exception.TurkishRepublicIdNoAlreadyExistException;
-import com.batuhanozudogru.userservice.general.exception.TurkishRepublicIdNoCanNotBeVerifiedException;
-import com.batuhanozudogru.userservice.general.exception.UserNotFoundException;
-import com.batuhanozudogru.userservice.general.exception.UsernameTakenException;
+import com.batuhanozudogru.userservice.general.exception.*;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.*;
@@ -56,6 +53,47 @@ class UserServiceTest {
     }
 
     @Test
+    void shouldUpdateUserDetails() {
+        // given
+        User user = new User();
+        user.setId(1L);
+        user.setFirstName("UpdatedFirstName");
+        user.setLastName("UpdatedLastName");
+        user.setTurkishRepublicIdNumber("12345678901");
+        user.setUsername("updatedusername");
+        user.setBirthDate(LocalDate.of(1997, 1, 1));
+        user.setLatitude(BigDecimal.valueOf(0.50));
+        user.setLongitude(BigDecimal.valueOf(0.40));
+        user.setStatus(Status.ACTIVE);
+
+        //when
+        Mockito.when(mernisService.verifyUser(user.getTurkishRepublicIdNumber(),user.getFirstName(),user.getLastName(), String.valueOf(user.getBirthDate().getYear()))).thenReturn(true);
+        Mockito.when(userRepository.save(Mockito.any(User.class))).thenReturn(user);
+
+        User updatedUser = userService.save(user);
+        //then
+        assertEquals("UpdatedFirstName", updatedUser.getFirstName());
+        assertEquals("UpdatedLastName", updatedUser.getLastName());
+        assertEquals("updatedusername", updatedUser.getUsername());
+    }
+
+    @Test
+    void shouldThrowExceptionWhenFieldLengthExceeds() {
+        //given
+        User user = new User();
+        user.setFirstName("ThisIsAVeryLongFirstNameThatExceedsTheMaxLengthAllowed");
+        user.setLastName("ThisIsAVeryLongLastNameThatExceedsTheMaxLengthAllowed");
+        user.setTurkishRepublicIdNumber("12345678901234567890");
+        user.setUsername("ThisIsAVeryLongUsernameThatExceedsTheMaxLengthAllowed");
+        user.setBirthDate(LocalDate.of(1997, 1, 1));
+        user.setLatitude(BigDecimal.valueOf(0.50));
+        user.setLongitude(BigDecimal.valueOf(0.40));
+
+        //then
+        assertThrows(FieldLengthExceededException.class, () -> userService.save(user));
+    }
+
+    @Test
     void shouldNotSaveUserWhenFirstNameIsNull() {
         //given
         User user = new User();
@@ -73,6 +111,24 @@ class UserServiceTest {
 
         assertThrows(TurkishRepublicIdNoCanNotBeVerifiedException.class, () -> userService.save(user));
 
+    }
+
+    @Test
+    void shouldActivateUser() {
+        // given
+        Long userId = 1L;
+        User user = new User();
+        user.setId(userId);
+        user.setStatus(Status.PASSIVE);
+        //when
+        Mockito.when(userRepository.findById(userId)).thenReturn(Optional.of(user));
+        Mockito.when(userRepository.save(Mockito.any(User.class))).thenReturn(user);
+
+
+        userService.activeUser(userId);
+
+        // then
+        assertEquals(Status.ACTIVE, user.getStatus());
     }
 
     @Test

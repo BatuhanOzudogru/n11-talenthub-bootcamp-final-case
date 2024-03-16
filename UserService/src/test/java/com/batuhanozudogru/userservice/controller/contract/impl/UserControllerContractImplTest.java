@@ -161,6 +161,7 @@ class UserControllerContractImplTest {
         assertEquals(savedUser.getLastName(), result.lastName());
     }
 
+
     @Test
     void shouldGetUserByTurkishRepublicIdNo() {
         //given

@@ -42,6 +42,9 @@ public class ResultHelper {
         return new Result(false, "400", Message.USERNAME_TAKEN);
     }
 
+    public static Result restaurantNotFound() {
+        return new Result(false, "400", Message.RESTAURANT_NOT_FOUND);
+    }
     public static Result turkishRepublicIdNoAlreadyExist() {
         return new Result(false, "400", Message.TURKISH_REPUBLIC_ID_NO_ALREADY_EXIST);
     }

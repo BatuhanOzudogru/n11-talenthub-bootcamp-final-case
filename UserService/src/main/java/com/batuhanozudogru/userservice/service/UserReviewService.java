@@ -12,6 +12,7 @@ import com.batuhanozudogru.userservice.entity.UserReview;
 import com.batuhanozudogru.userservice.general.enums.ReviewRate;
 import com.batuhanozudogru.userservice.general.exception.*;
 import com.batuhanozudogru.userservice.general.message.Message;
+import com.batuhanozudogru.userservice.general.result.ResultData;
 import com.batuhanozudogru.userservice.mapper.UserReviewMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -31,6 +32,10 @@ public class UserReviewService {
     private final RestaurantClient restaurantClient;
 
     public UserReview save(UserReview userReview) {
+
+        if(userReview==null){
+            throw new NullFieldException(Message.CAN_NOT_BE_NULL("Request"));
+        }
 
         LocalDateTime now = LocalDateTime.now();
 
@@ -112,7 +117,10 @@ public class UserReviewService {
         }
 
         if(!userReview.getRestaurantId().equals("test")){
-            restaurantClient.getRestaurantById(userReview.getRestaurantId());
+            ResultData<RestaurantResponse> restaurantById = restaurantClient.getRestaurantById(userReview.getRestaurantId());
+            if(restaurantById.getData()==null){
+                throw new RestaurantNotFoundException();
+            }
         }
 
     }

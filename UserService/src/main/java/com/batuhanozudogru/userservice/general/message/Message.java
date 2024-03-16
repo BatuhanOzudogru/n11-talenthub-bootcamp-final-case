@@ -15,6 +15,7 @@ public class Message {
 
     public static final String ALL_DELETED = "All data successfully deleted";
 
+    public static final String RESTAURANT_NOT_FOUND = "Restaurant not found";
     public static final String USERNAME_TAKEN = "This username taken by another user";
     public static final String TURKISH_REPUBLIC_ID_NO_ALREADY_EXIST = "This Turkish Republic ID number already exist";
 

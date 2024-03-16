@@ -7,8 +7,10 @@ import com.batuhanozudogru.userservice.entity.User;
 import com.batuhanozudogru.userservice.entity.UserReview;
 import com.batuhanozudogru.userservice.general.enums.ReviewRate;
 import com.batuhanozudogru.userservice.general.exception.NullFieldException;
+import com.batuhanozudogru.userservice.general.exception.RestaurantNotFoundException;
 import com.batuhanozudogru.userservice.general.exception.UserNotFoundException;
 import com.batuhanozudogru.userservice.general.exception.UserReviewNotFoundException;
+import com.batuhanozudogru.userservice.general.result.ResultData;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -104,6 +106,28 @@ class UserReviewServiceTest {
         assertEquals(userReviews.size(), result.size());
     }
 
+    @Test
+    void shouldThrowExceptionWhenUserReviewIsNull() {
+        assertThrows(NullFieldException.class, () -> userReviewService.save(null));
+    }
+
+    @Test
+    void shouldThrowExceptionWhenInvalidRestaurantId() {
+        //given
+        UserReview userReview = new UserReview();
+        userReview.setReview("Good");
+        userReview.setRate(ReviewRate.FIVE);
+        userReview.setRestaurantId("invalid");
+        userReview.setUser(new User());
+        userReview.setCreatedAt(LocalDateTime.now());
+        userReview.setUpdatedAt(LocalDateTime.now());
+
+        //when
+        Mockito.when(restaurantClient.getRestaurantById("invalid")).thenReturn(new ResultData<>(false, "404", "Restaurant not found",null));
+
+        //then
+        assertThrows(RestaurantNotFoundException.class, () -> userReviewService.save(userReview));
+    }
     @Test
     void shouldNotFindUserReviewWhenReviewIdIsWrong() {
         //given
