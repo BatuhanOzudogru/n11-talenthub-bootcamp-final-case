@@ -189,3 +189,7 @@ aRestaurantService/src/main/java/com/batuhanozudogru/restaurantservice/general/m
 gRestaurantService/src/main/java/com/batuhanozudogru/restaurantservice/general/message/PrefixFields.java,4\d\4d04343edb81040e3248045d29adac34b4770b51
 ’
 bUserService/src/test/java/com/batuhanozudogru/userservice/controller/UserReviewControllerTest.java,8\e\8eec823f5a6101fab3fc79db804e7c2c6c4f6ce3
+Œ
+\UserService/src/test/java/com/batuhanozudogru/userservice/service/UserReviewServiceTest.java,8\e\8ed0810ff21ed7fa4a9b636a7badfee46e8651ae
+“
+cUserService/src/main/java/com/batuhanozudogru/userservice/general/exception/NullFieldException.java,9\2\926669a59787b352353eda354c1e71853971287a

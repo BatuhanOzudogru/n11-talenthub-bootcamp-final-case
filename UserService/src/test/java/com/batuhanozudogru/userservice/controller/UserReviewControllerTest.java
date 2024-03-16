@@ -42,20 +42,6 @@ class UserReviewControllerTest extends BaseControllerTest {
     @Autowired
     private WebApplicationContext context;
 
-    @InjectMocks
-    private UserReviewControllerContractImpl userReviewController;
-
-    @Mock
-    private UserReviewService userReviewService;
-
-    @Mock
-    private UserReviewMapper userReviewMapper;
-
-    @Mock
-    private RestaurantClient restaurantClient;
-
-    @Mock
-    private UserService userService;
 
     private MockMvc mockMvc;
 

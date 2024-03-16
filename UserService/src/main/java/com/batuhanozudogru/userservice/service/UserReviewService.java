@@ -36,12 +36,14 @@ public class UserReviewService {
 
         if(userReview.getCreatedAt() == null) {
 
-            validateUserReview(userReview);
+
 
             checkuser(userReview.getUser().getId());
 
             userReview.setCreatedAt(now);
         }
+
+        validateUserReview(userReview);
 
         userReview.setUpdatedAt(now);
 
@@ -83,8 +85,7 @@ public class UserReviewService {
     }
 
     public List<UserReview> findByRestaurantId(String restaurantId) {
-        List<UserReview> list = userReviewRepository.findByRestaurantId(restaurantId).stream().toList();
-        return list;
+        return userReviewRepository.findByRestaurantId(restaurantId).stream().toList();
     }
 
 
@@ -99,6 +100,17 @@ public class UserReviewService {
     private void validateUserReview(UserReview userReview) {
 
         validateStringLength("Review", userReview.getReview(), 500);
+
+        if (userReview.getRate() == null) {
+            throw new NullFieldException(Message.CAN_NOT_BE_NULL("Rate"));
+        }
+        if(userReview.getUser()==null){
+            throw new NullFieldException(Message.CAN_NOT_BE_NULL("User"));
+        }
+        if(userReview.getRestaurantId()==null){
+            throw new NullFieldException(Message.CAN_NOT_BE_NULL("Restaurant"));
+        }
+
 
         restaurantClient.getRestaurantById(userReview.getRestaurantId());
 

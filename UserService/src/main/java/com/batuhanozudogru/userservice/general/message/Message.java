@@ -41,5 +41,9 @@ public class Message {
         return fieldName + " field length can not exceed " + maxLength + " characters";
     }
 
+    public static final String CAN_NOT_BE_NULL(String fieldName) {
+        return fieldName + " can not be null";
+    }
+
 
 }
