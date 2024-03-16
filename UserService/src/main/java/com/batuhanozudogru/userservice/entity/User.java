@@ -39,10 +39,10 @@ public class User {
     @Column(name = "birth_date", nullable = false)
     private LocalDate birthDate;
 
-    @Column(name = "latitude", nullable = false)
+    @Column(name = "latitude", nullable = false, precision = 10, scale = 4)
     private BigDecimal latitude;
 
-    @Column(name = "longitude", nullable = false)
+    @Column(name = "longitude", nullable = false, precision = 10, scale = 4)
     private BigDecimal longitude;
 
     @Column(name = "created_at", nullable = false, updatable = false)

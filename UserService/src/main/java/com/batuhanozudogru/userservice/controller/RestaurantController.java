@@ -100,7 +100,7 @@ public class RestaurantController {
                                     examples={
                                             @ExampleObject(
                                                     name="Example Restaurant Save Request",
-                                                    summary = "You have to send a request like this",
+                                                    summary = "Please Select a Restaurant",
                                                     value = "{\n" +
                                                             "  \"name\": \"Restaurant Name\",\n" +
                                                             "  \"address\": \"Restaurant Address\",\n" +
