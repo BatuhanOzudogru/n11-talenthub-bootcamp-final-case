@@ -8,12 +8,10 @@ import com.batuhanozudogru.restaurantservice.dto.UpdateReviewDTO;
 import com.batuhanozudogru.restaurantservice.entity.Restaurant;
 import com.batuhanozudogru.restaurantservice.general.exception.NullException;
 import com.batuhanozudogru.restaurantservice.general.exception.RestaurantNotFoundException;
-import com.batuhanozudogru.restaurantservice.general.message.Message;
 import com.batuhanozudogru.restaurantservice.general.message.PrefixFields;
 import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
 @Service
@@ -114,6 +112,15 @@ public class RestaurantService {
     public void deleteRestaurantById(String id) {
 
         restaurantRepository.deleteById(id);
+    }
+
+    public List<Restaurant> getByRestaurantName(String name) {
+
+        List<Restaurant> restaurants = restaurantRepository.findByName(name);
+        if(restaurants.isEmpty()){
+            throw new RestaurantNotFoundException(name);
+        }
+        return restaurants;
     }
 
     public void validateRestaurant(Restaurant restaurant) {

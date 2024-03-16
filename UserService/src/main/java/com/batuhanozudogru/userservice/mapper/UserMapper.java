@@ -57,10 +57,18 @@ public class UserMapper {
         if ( request == null ) {
             return ;
         }
+        if ( request.username() != null ) {
+            user.setUsername( request.username() );
+        }
 
-        user.setUsername( request.username() );
-        user.setLatitude( request.latitude() );
-        user.setLongitude( request.longitude() );
+        if ( request.latitude() != null ) {
+            user.setLatitude( request.latitude() );
+        }
+
+        if ( request.longitude() != null ) {
+            user.setLongitude( request.longitude() );
+        }
+
     }
 
     public static List<UserResponse> convertToUserResponseList(List<User> users) {
@@ -92,7 +100,6 @@ public class UserMapper {
         user.setLatitude( request.latitude() );
         user.setStatus(Status.ACTIVE);
         user.setLongitude( request.longitude() );
-
 
         return user;
 

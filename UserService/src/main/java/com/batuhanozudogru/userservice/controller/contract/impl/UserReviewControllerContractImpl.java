@@ -28,6 +28,7 @@ public class UserReviewControllerContractImpl implements UserReviewControllerCon
 
     @Override
     public List<UserReviewResponse> getAllUserReviews() {
+
         List<UserReview> userReviews = userReviewService.getAllUserReviews();
 
         return userReviewMapper.convertToUserReviewResponseList(userReviews);
@@ -45,8 +46,7 @@ public class UserReviewControllerContractImpl implements UserReviewControllerCon
 
         UserReviewResponse userReviewResponse = userReviewMapper.convertToUserReviewResponse(userReviewService.save(userReview));
 
-        //for test
-        if(!userReviewForRestaurantRequest.restaurantId().equals("f50d76b2-f2cd-4ee9-88ff-d252453b632f")){
+        if(!userReviewForRestaurantRequest.restaurantId().equals("test")){
 
             restaurantClient.addReviewToRestaurant(userReviewForRestaurantRequest);
         }
@@ -77,8 +77,7 @@ public class UserReviewControllerContractImpl implements UserReviewControllerCon
 
        UpdateReviewForRestaurantDTO updateReviewForRestaurantDTO = userReviewMapper.convertToUpdateReviewForRestaurantDTO(oldDTO, newDTO);
 
-       //for test
-        if(!updateReviewForRestaurantDTO.newReview().restaurantId().equals("f50d76b2-f2cd-4ee9-88ff-d252453b632f")){
+        if(!updateReviewForRestaurantDTO.newReview().restaurantId().equals("test")){
             restaurantClient.updateReviewToRestaurant(updateReviewForRestaurantDTO);
         }
 
@@ -96,13 +95,11 @@ public class UserReviewControllerContractImpl implements UserReviewControllerCon
 
         UserReviewForRestaurantRequest userReviewForRestaurantRequest = userReviewMapper.convertToUserReviewForRestaurantRequest(userReview);
 
-        //for test
-        if(!userReviewForRestaurantRequest.restaurantId().equals("f50d76b2-f2cd-4ee9-88ff-d252453b632f")){
+        userReviewService.deleteById(id);
+
+        if(!userReviewForRestaurantRequest.restaurantId().equals("test")){
             restaurantClient.deleteReviewToRestaurant(userReviewForRestaurantRequest);
         }
-
-
-        userReviewService.deleteById(id);
 
     }
 

@@ -21,6 +21,8 @@ public interface RestaurantControllerContract {
 
     RestaurantResponse updateRestaurant(String id, RestaurantRequest request);
 
+    List<RestaurantResponse> getRestaurantsByName(String name);
+
     void deleteById(String id);
 
     void addReviewToRestaurant(ReviewDTO reviewDTO);

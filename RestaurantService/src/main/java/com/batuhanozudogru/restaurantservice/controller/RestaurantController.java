@@ -39,6 +39,12 @@ public class RestaurantController {
         return ResultHelper.created(contract.saveRestaurant(restaurant));
     }
 
+    @GetMapping("/get-by-name/{name}")
+    public ResultData<List<RestaurantResponse>> getRestaurantsByName(@PathVariable String name) {
+
+        return ResultHelper.success(contract.getRestaurantsByName(name));
+    }
+
     @GetMapping("/get-by-id/{id}")
     public ResultData<RestaurantResponse> getRestaurantById(@PathVariable String id) {
 

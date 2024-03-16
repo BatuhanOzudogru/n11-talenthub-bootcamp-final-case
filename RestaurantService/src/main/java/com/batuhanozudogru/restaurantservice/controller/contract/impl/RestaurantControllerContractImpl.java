@@ -72,6 +72,14 @@ public class RestaurantControllerContractImpl implements RestaurantControllerCon
     }
 
     @Override
+    public List<RestaurantResponse> getRestaurantsByName(String name) {
+
+        List<Restaurant> restaurants = restaurantService.getByRestaurantName(name);
+
+        return restaurantMapper.convertToRestaurantResponseList(restaurants);
+    }
+
+    @Override
     public void deleteById(String id) {
 
             restaurantService.getRestaurantById(id);

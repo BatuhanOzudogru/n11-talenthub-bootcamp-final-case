@@ -16,6 +16,9 @@ public interface RestaurantClient {
     @GetMapping
     ResultData<List<RestaurantResponse>> getRestaurants();
 
+    @GetMapping("/get-by-name/{name}")
+    ResultData<List<RestaurantResponse>> getRestaurantsByName(@PathVariable String name);
+
     @DeleteMapping("/delete-all")
     void deleteAllRestaurants();
 

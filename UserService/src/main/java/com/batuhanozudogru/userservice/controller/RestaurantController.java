@@ -44,6 +44,18 @@ public class RestaurantController {
         return ResultHelper.success(restaurants);
     }
 
+    @GetMapping("/get-by-name/{name}")
+    @Operation(
+            description = "Get the restaurants with the given name",
+            summary = "Get Restaurants By Name"
+    )
+    public ResultData<List<RestaurantResponse>> getRestaurantsByName(@PathVariable String name) {
+
+        List<RestaurantResponse> restaurants = restaurantClient.getRestaurantsByName(name).getData();
+
+        return ResultHelper.success(restaurants);
+    }
+
     @GetMapping("recommend-restaurants/{userId}")
     @Operation(
             description = "Get recommended restaurants for the user based on proximity and rating. Returns a maximum of 3 restaurant recommendations.",
