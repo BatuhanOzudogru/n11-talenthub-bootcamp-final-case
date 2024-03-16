@@ -5,22 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="edda31c5-845f-4e52-8455-c5d1261cc89a" name="Changes" comment="Add UserController integration tests">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/c/0c7530ebdcd1a1f53286c8e2bf635acbf37deab6" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/c/0c7530ebdcd1a1f53286c8e2bf635acbf37deab6" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/e/8eec823f5a6101fab3fc79db804e7c2c6c4f6ce3" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/e/8eec823f5a6101fab3fc79db804e7c2c6c4f6ce3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/3/e3e0fc4fe8e1623f042755132af9b7ad33ad83b0" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/3/e3e0fc4fe8e1623f042755132af9b7ad33ad83b0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/e/feb6004243e13d04f3f66c9c45154c28b97c988d" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/e/feb6004243e13d04f3f66c9c45154c28b97c988d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/5/25fb7b711ef457d87789b355489f1874e11d0edf" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/5/25fb7b711ef457d87789b355489f1874e11d0edf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/2/4254fc7e9cc3909889392de222a1998189305dd4" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/2/4254fc7e9cc3909889392de222a1998189305dd4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/9/f9fab60b491492088d6cfe137f319de166e9d2aa" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/9/f9fab60b491492088d6cfe137f319de166e9d2aa" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/f/ff0abadef13c5f904c9f69490b601d14a6f37312" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/f/ff0abadef13c5f904c9f69490b601d14a6f37312" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserService/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/controller/RestaurantController.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/controller/RestaurantController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/controller/contract/impl/UserReviewControllerContractImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/controller/contract/impl/UserReviewControllerContractImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/service/UserReviewService.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/service/UserReviewService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserService/src/main/resources/application.properties_dev" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/src/main/resources/application.properties_dev" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserService/src/test/java/com/batuhanozudogru/userservice/controller/UserReviewControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/src/test/java/com/batuhanozudogru/userservice/controller/UserReviewControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserService/src/test/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/src/test/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/dto/response/UserResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/dto/response/UserResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/dto/response/UserReviewResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/dto/response/UserReviewResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/mapper/UserMapper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -295,7 +287,7 @@
       <workItem from="1710499052471" duration="21652000" />
       <workItem from="1710526728685" duration="26655000" />
       <workItem from="1710590955294" duration="22000" />
-      <workItem from="1710593234226" duration="12022000" />
+      <workItem from="1710593234226" duration="14363000" />
     </task>
     <task id="LOCAL-00001" summary="Add UserController integration tests">
       <option name="closed" value="true" />
@@ -339,23 +331,18 @@
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/controller/UserController.java</url>
-          <line>69</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/mapper/UserMapper.java</url>
-          <line>65</line>
+          <line>66</line>
           <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/mapper/UserMapper.java</url>
-          <line>72</line>
+          <line>73</line>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/mapper/UserMapper.java</url>
-          <line>75</line>
+          <line>76</line>
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -370,43 +357,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/mapper/UserMapper.java</url>
-          <line>41</line>
+          <line>42</line>
           <option name="timeStamp" value="46" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/service/UserService.java</url>
-          <line>50</line>
-          <option name="timeStamp" value="137" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/service/UserService.java</url>
-          <line>52</line>
-          <option name="timeStamp" value="138" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/service/UserService.java</url>
-          <line>48</line>
-          <option name="timeStamp" value="140" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/service/UserService.java</url>
-          <line>56</line>
-          <option name="timeStamp" value="141" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/service/UserService.java</url>
-          <line>23</line>
-          <option name="timeStamp" value="150" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/service/RecommendationCalculatorService.java</url>
           <line>10</line>
           <option name="timeStamp" value="153" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/controller/UserController.java</url>
-          <line>61</line>
-          <option name="timeStamp" value="154" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/RestaurantService/src/main/java/com/batuhanozudogru/restaurantservice/mapper/RestaurantMapper.java</url>
@@ -673,6 +630,16 @@
           <line>43</line>
           <option name="timeStamp" value="285" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/service/UserService.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="288" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/service/UserService.java</url>
+          <line>64</line>
+          <option name="timeStamp" value="289" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/controller/contract/UserControllerContract.java</url>
           <line>10</line>
@@ -684,7 +651,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/mapper/UserMapper.java</url>
-          <line>64</line>
+          <line>65</line>
           <properties class="com.batuhanozudogru.userservice.mapper.UserMapper" method="convertToUserResponseList">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -717,33 +684,6 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="53" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/controller/UserController.java</url>
-          <line>59</line>
-          <properties class="com.batuhanozudogru.userservice.controller.UserController" method="saveUser">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="136" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/service/UserService.java</url>
-          <line>38</line>
-          <properties class="com.batuhanozudogru.userservice.service.UserService" method="validateUser">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="139" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/service/UserService.java</url>
-          <line>21</line>
-          <properties class="com.batuhanozudogru.userservice.service.UserService" method="save">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="149" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/service/RecommendationCalculatorService.java</url>

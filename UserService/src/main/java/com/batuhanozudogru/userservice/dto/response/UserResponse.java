@@ -7,7 +7,8 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 
-public record UserResponse(String firstName,
+public record UserResponse(Long id,
+                           String firstName,
                            String lastName,
                            String turkishRepublicIdNumber,
                            String username,

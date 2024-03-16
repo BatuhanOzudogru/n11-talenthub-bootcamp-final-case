@@ -25,7 +25,7 @@ public class UserMapper {
         if ( user == null ) {
             return null;
         }
-
+        Long id = null;
         String firstName = null;
         String lastName = null;
         String turkishRepublicIdNumber = null;
@@ -36,6 +36,7 @@ public class UserMapper {
         LocalDateTime createdAt = null;
         LocalDateTime updatedAt = null;
 
+        id = user.getId();
         firstName = user.getFirstName();
         lastName = user.getLastName();
         turkishRepublicIdNumber = user.getTurkishRepublicIdNumber();
@@ -48,7 +49,7 @@ public class UserMapper {
 
         List<UserReview> reviews = user.getReviewList();
 
-        return new UserResponse( firstName, lastName, turkishRepublicIdNumber, username, birthDate, latitude, longitude, createdAt, updatedAt, reviews );
+        return new UserResponse(id, firstName, lastName, turkishRepublicIdNumber, username, birthDate, latitude, longitude, createdAt, updatedAt, reviews );
     }
 
     public static void updateUser (User user,UserUpdateRequest request){
