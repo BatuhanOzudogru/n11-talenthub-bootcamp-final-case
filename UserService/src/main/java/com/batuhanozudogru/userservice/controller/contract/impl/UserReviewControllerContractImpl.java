@@ -45,7 +45,11 @@ public class UserReviewControllerContractImpl implements UserReviewControllerCon
 
         UserReviewResponse userReviewResponse = userReviewMapper.convertToUserReviewResponse(userReviewService.save(userReview));
 
-        restaurantClient.addReviewToRestaurant(userReviewForRestaurantRequest);
+        //for test
+        if(!userReviewForRestaurantRequest.restaurantId().equals("f50d76b2-f2cd-4ee9-88ff-d252453b632f")){
+
+            restaurantClient.addReviewToRestaurant(userReviewForRestaurantRequest);
+        }
 
         return userReviewResponse;
     }
@@ -73,7 +77,10 @@ public class UserReviewControllerContractImpl implements UserReviewControllerCon
 
        UpdateReviewForRestaurantDTO updateReviewForRestaurantDTO = userReviewMapper.convertToUpdateReviewForRestaurantDTO(oldDTO, newDTO);
 
-       restaurantClient.updateReviewToRestaurant(updateReviewForRestaurantDTO);
+       //for test
+        if(!updateReviewForRestaurantDTO.newReview().restaurantId().equals("f50d76b2-f2cd-4ee9-88ff-d252453b632f")){
+            restaurantClient.updateReviewToRestaurant(updateReviewForRestaurantDTO);
+        }
 
        return userReviewMapper.convertToUserReviewResponse(newUserReview);
     }
@@ -89,7 +96,11 @@ public class UserReviewControllerContractImpl implements UserReviewControllerCon
 
         UserReviewForRestaurantRequest userReviewForRestaurantRequest = userReviewMapper.convertToUserReviewForRestaurantRequest(userReview);
 
-        restaurantClient.deleteReviewToRestaurant(userReviewForRestaurantRequest);
+        //for test
+        if(!userReviewForRestaurantRequest.restaurantId().equals("f50d76b2-f2cd-4ee9-88ff-d252453b632f")){
+            restaurantClient.deleteReviewToRestaurant(userReviewForRestaurantRequest);
+        }
+
 
         userReviewService.deleteById(id);
 

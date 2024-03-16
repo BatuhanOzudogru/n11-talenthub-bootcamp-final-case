@@ -129,7 +129,6 @@ class UserReviewControllerTest extends BaseControllerTest {
                 ReviewRate.FIVE,
                 new UserForReviewSaveRequest(100L));
 
-
         MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.post("/api/v1/user-reviews/save")
                 .contentType("application/json")
                 .content(objectMapper.writeValueAsString(userReviewSaveRequest)))

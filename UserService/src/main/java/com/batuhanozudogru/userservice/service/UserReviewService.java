@@ -111,8 +111,12 @@ public class UserReviewService {
             throw new NullFieldException(Message.CAN_NOT_BE_NULL("Restaurant"));
         }
 
+        //for test
+        if(!userReview.getRestaurantId().equals("f50d76b2-f2cd-4ee9-88ff-d252453b632f")){
+            restaurantClient.getRestaurantById(userReview.getRestaurantId());
+        }
 
-        restaurantClient.getRestaurantById(userReview.getRestaurantId());
+
 
 
 

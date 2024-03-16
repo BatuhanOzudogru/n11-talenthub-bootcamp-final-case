@@ -185,3 +185,8 @@ bUserService/src/test/java/com/batuhanozudogru/userservice/controller/UserReview
 cUserService/src/main/java/com/batuhanozudogru/userservice/general/exception/NullFieldException.java,9\2\926669a59787b352353eda354c1e71853971287a
 F
 UserService/Dockerfile,1\b\1b59455d1b07a0125fd9fbf2713699b971e10137
+:
+
+Dockerfile,6\6\6651ddff6eb82c840ced7c1dddee15c6e1913dd4
+N
+UserService/docker-compose.yml,b\f\bf77a8dab7713abd8d6e44a5331f4ea7968fedda

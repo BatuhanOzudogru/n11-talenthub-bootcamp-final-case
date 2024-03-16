@@ -97,7 +97,65 @@ public class RestaurantController {
                                                             "  \"rate\": \"5\"\n" +
                                                             "}",
                                                     description = "You have to send a request like this"
+                                            ),
+                                            @ExampleObject(
+                                                    name="Example : Kanlıca Teras",
+                                                    value = "{\n" +
+                                                            "  \"name\": \"Kanlıca Teras\",\n" +
+                                                            "  \"address\": \"Kanlıca Mahallesi/Beykoz\",\n" +
+                                                            "  \"latitude\": 41.1004079,\n" +
+                                                            "  \"longitude\": 29.0667945,\n" +
+                                                            "  \"rate\": \"5\"\n" +
+                                                            "}",
+                                                    description = "Example Restaurant 1"
+                                            ),
+                                            @ExampleObject(
+                                                    name="Example : Beykoz Sosyal Tesisleri",
+                                                    value = "{\n" +
+                                                            "  \"name\": \"Beykoz Sosyal Tesisleri\",\n" +
+                                                            "  \"address\": \"Paşabahçe Mahallesi/Beykoz\",\n" +
+                                                            "  \"latitude\": 41.1128871,\n" +
+                                                            "  \"longitude\": 29.0856309,\n" +
+                                                            "  \"rate\": \"3\"\n" +
+                                                            "}",
+                                                    description = "Example Restaurant 2"
+                                            ),
+                                            @ExampleObject(
+                                                    name="Example : Beykoz Balık Ekmek",
+                                                    value = "{\n" +
+                                                            "  \"name\": \"Beykoz Balık Ekmek\",\n" +
+                                                            "  \"address\": \"Gümüşsuyu Mahallesi / Beykoz\",\n" +
+                                                            "  \"latitude\": 41.1303174,\n" +
+                                                            "  \"longitude\": 29.0934711,\n" +
+                                                            "  \"rate\": \"2\"\n" +
+                                                            "}",
+                                                    description = "Example Restaurant 3"
+                                            ),
+
+                                            @ExampleObject(
+                                                    name="Example : Bayramoğlu Döner",
+                                                    value = "{\n" +
+                                                            "  \"name\": \"Bayramoğlu Döner\",\n" +
+                                                            "  \"address\": \"Kavacık Mahallesi/Beykoz\",\n" +
+                                                            "  \"latitude\": 41.09489,\n" +
+                                                            "  \"longitude\": 29.099538,\n" +
+                                                            "  \"rate\": \"5\"\n" +
+                                                            "}",
+                                                    description = "Example Restaurant 4"
+                                            ),
+
+                                            @ExampleObject(
+                                                    name="Example : Kız Kulesi"
+                                                    ,value = "{\n" +
+                                                    "  \"name\": \"Kız Kulesi\",\n" +
+                                                    "  \"address\": \"Salacak Mahallesi/Üsküdar\",\n" +
+                                                    "  \"latitude\": 41.021111,\n" +
+                                                    "  \"longitude\": 29.004722,\n" +
+                                                    "  \"rate\": \"5\"\n" +
+                                                    "}",
+                                                    description = "Example Restaurant 5"
                                             )
+
                                     }
                             )
                     }
@@ -111,6 +169,34 @@ public class RestaurantController {
     }
 
     @PutMapping("/update{id}")
+    @Operation( description = "Updates the restaurant with the given id",
+            summary = "Update Restaurant",
+            requestBody = @io.swagger.v3.oas.annotations.parameters.RequestBody(
+                    description = "Restaurant Save Request",
+                    content ={
+                            @Content(
+                                    mediaType = "application/json",
+                                    schema =@Schema(
+                                            implementation = RestaurantSaveRequest.class
+                                    ),
+                                    examples={
+                                            @ExampleObject(
+                                                    name="Example Restaurant Save Request",
+                                                    summary = "You have to send a request like this",
+                                                    value = "{\n" +
+                                                            "  \"name\": \"Restaurant Name\",\n" +
+                                                            "  \"address\": \"Restaurant Address\",\n" +
+                                                            "  \"latitude\": 41.0082,\n" +
+                                                            "  \"longitude\": 28.9784,\n" +
+                                                            "  \"rate\": \"5\"\n" +
+                                                            "}",
+                                                    description = "You have to send a request like this"
+                                            )
+                                    }
+                            )
+                    }
+            )
+    )
     public ResultData<RestaurantResponse> updateRestaurant(@PathVariable String id, @RequestBody @Valid RestaurantSaveRequest request) {
 
         RestaurantResponse restaurantResponse = restaurantClient.updateRestaurant(id, request).getData();
@@ -119,6 +205,10 @@ public class RestaurantController {
     }
 
     @GetMapping("/get-by-id/{id}")
+    @Operation(
+            description = "Get the restaurant with the given id",
+            summary = "Get Restaurant By Id"
+    )
     public ResultData<RestaurantResponse> getById(@PathVariable("id") String id) {
 
         RestaurantResponse restaurantResponse = restaurantClient.getRestaurantById(id).getData();
@@ -127,6 +217,10 @@ public class RestaurantController {
     }
 
     @DeleteMapping("/delete-restaurant/{id}")
+    @Operation(
+            description = "Deletes the restaurant with the given id",
+            summary = "Delete Restaurant By Id"
+    )
     public Result deleteById(@PathVariable String id) {
 
         restaurantClient.deleteRestaurant(id);
