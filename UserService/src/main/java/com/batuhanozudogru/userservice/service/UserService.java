@@ -32,6 +32,8 @@ public class UserService  {
 
         user.setUpdatedAt(now);
 
+        log.info("User saved successfully: {}", user.getFirstName()+" "+user.getLastName());
+
         return userRepository.save(user);
     }
 

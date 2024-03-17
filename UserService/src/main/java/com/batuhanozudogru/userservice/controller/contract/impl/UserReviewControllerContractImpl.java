@@ -13,12 +13,14 @@ import com.batuhanozudogru.userservice.mapper.UserReviewMapper;
 import com.batuhanozudogru.userservice.service.UserReviewService;
 import com.batuhanozudogru.userservice.service.UserService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
 @RequiredArgsConstructor
+@Slf4j
 public class UserReviewControllerContractImpl implements UserReviewControllerContract {
 
     private final UserReviewService userReviewService;
@@ -29,12 +31,16 @@ public class UserReviewControllerContractImpl implements UserReviewControllerCon
     @Override
     public List<UserReviewResponse> getAllUserReviews() {
 
+        log.info("Request received to get all user reviews.");
+
         List<UserReview> userReviews = userReviewService.getAllUserReviews();
 
         return userReviewMapper.convertToUserReviewResponseList(userReviews);
     }
     @Override
     public UserReviewResponse saveUserReview(UserReviewSaveRequest userReviewSaveRequest) {
+
+        log.info("Request received to save user review: {}", userReviewSaveRequest);
 
         User user = userService.findById(userReviewSaveRequest.user().id());
 
@@ -57,6 +63,8 @@ public class UserReviewControllerContractImpl implements UserReviewControllerCon
     @Override
     public UserReviewResponse getUserReviewById(Long id) {
 
+        log.info("Request received to get user review by ID: {}", id);
+
         UserReview userReview = userReviewService.findById(id);
 
         return userReviewMapper.convertToUserReviewResponse(userReview);
@@ -64,6 +72,8 @@ public class UserReviewControllerContractImpl implements UserReviewControllerCon
 
     @Override
     public UserReviewResponse updateUserReview(Long id, UserReviewUpdateRequest request) {
+
+       log.info("Request received to update user review with ID: {}", id);
 
        UserReview oldUserReview = userReviewService.findById(id);
 
@@ -87,6 +97,8 @@ public class UserReviewControllerContractImpl implements UserReviewControllerCon
     @Override
     public void deleteUserReview(Long id) {
 
+        log.info("Request received to delete user review with ID: {}", id);
+
         UserReview userReview = userReviewService.findById(id);
 
         User user = userService.findById(userReview.getUser().getId());
@@ -106,6 +118,8 @@ public class UserReviewControllerContractImpl implements UserReviewControllerCon
     @Override
     public List<UserReviewResponse> getUserReviewListByUserId(Long userId) {
 
+        log.info("Request received to get user reviews by user ID: {}", userId);
+
         List<UserReview> userReviews = userReviewService.findByUserId(userId);
 
         return userReviewMapper.convertToUserReviewResponseList(userReviews);
@@ -114,6 +128,8 @@ public class UserReviewControllerContractImpl implements UserReviewControllerCon
     @Override
     public List<UserReviewResponse> getUserReviewByRestaurantId(String restaurantId) {
 
+        log.info("Request received to get user reviews by restaurant ID: {}", restaurantId);
+
         List<UserReview> userReviews = userReviewService.findByRestaurantId(restaurantId);
 
         return userReviewMapper.convertToUserReviewResponseList(userReviews);
@@ -121,6 +137,8 @@ public class UserReviewControllerContractImpl implements UserReviewControllerCon
 
     @Override
     public UserReviewResponse getUserReviewByUserUsername(String username) {
+
+        log.info("Request received to get user review by username: {}", username);
 
         UserReview userReview = userReviewService.findByUserUserName(username);
 

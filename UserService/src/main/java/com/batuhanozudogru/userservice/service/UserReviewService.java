@@ -41,8 +41,6 @@ public class UserReviewService {
 
         if(userReview.getCreatedAt() == null) {
 
-
-
             checkuser(userReview.getUser().getId());
 
             userReview.setCreatedAt(now);
