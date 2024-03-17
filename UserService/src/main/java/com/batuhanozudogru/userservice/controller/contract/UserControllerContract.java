@@ -9,6 +9,9 @@ import java.util.List;
 public interface UserControllerContract {
 
     List<UserResponse> getAllUsers();
+
+    List<UserResponse> getAllPassiveUsers();
+
     UserResponse saveUser(UserSaveRequest userSaveRequest);
 
     UserResponse getUserById(Long id);

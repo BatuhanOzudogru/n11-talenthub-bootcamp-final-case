@@ -70,6 +70,13 @@ public class UserController {
         return ResultHelper.success(userControllerContract.getAllUsers());
     }
 
+    @GetMapping("/passive")
+    @Operation(summary = "Get All Passive Users", description = "Retrieves all passive customers")
+    public ResultData<List<UserResponse>> getAllPassiveUsers() {
+
+        return ResultHelper.success(userControllerContract.getAllPassiveUsers());
+    }
+
     @GetMapping("/get-by-id/{id}")
     @Operation(summary = "Get User By Id", description = "Retrieves a user by id")
     public ResultData<UserResponse> getUserById(@PathVariable Long id) {

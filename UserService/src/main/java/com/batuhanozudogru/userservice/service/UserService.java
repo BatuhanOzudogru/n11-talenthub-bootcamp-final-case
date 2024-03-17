@@ -77,6 +77,10 @@ public class UserService  {
         return userRepository.findByStatus(Status.ACTIVE);
     }
 
+    public List<User> findAllPassiveUsers(){
+        return userRepository.findByStatus(Status.PASSIVE);
+    }
+
     public User findById(Long id) {
         User user = userRepository.findById(id).orElseThrow(
                 () -> {

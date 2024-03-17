@@ -31,6 +31,18 @@ public class UserControllerContractImpl implements UserControllerContract {
     }
 
     @Override
+    public List<UserResponse> getAllPassiveUsers() {
+
+        log.info("Request received to get all passive users.");
+
+        List<User> userList =  userService.findAllPassiveUsers();
+
+        List<UserResponse> userResponseList = UserMapper.convertToUserResponseList(userList);
+
+        return userResponseList;
+    }
+
+    @Override
 
     public UserResponse saveUser(UserSaveRequest userSaveRequest) {
 
