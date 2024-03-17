@@ -39,3 +39,5 @@ fUserService/src/main/java/com/batuhanozudogru/userservice/service/Recommendatio
 \UserService/src/main/java/com/batuhanozudogru/userservice/service/RecommendationService.java,7\d\7da880ad6632a9c0ad360e247c0cef7a0d5b4150
 9
 	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+7
+LICENSE,0\3\0398ccd0f49298b10a3d76a47800d2ebecd49859

@@ -185,3 +185,5 @@ bUserService/src/test/java/com/batuhanozudogru/userservice/controller/UserReview
 cUserService/src/main/java/com/batuhanozudogru/userservice/general/exception/NullFieldException.java,9\2\926669a59787b352353eda354c1e71853971287a
 œ
 lUserService/src/main/java/com/batuhanozudogru/userservice/general/exception/RestaurantNotFoundException.java,e\2\e2d9ca9c1cdb4cfe2bdde139e1c76f32ea70be32
+7
+LICENSE,0\3\0398ccd0f49298b10a3d76a47800d2ebecd49859

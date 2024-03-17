@@ -40,93 +40,93 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Docker.UserService/Dockerfile.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserControllerContractImplTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserControllerContractImplTest.getAllUsers.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserControllerContractImplTest.shouldGetAllUsers.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserControllerContractImplTest.shouldGetUserById.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserControllerContractImplTest.shouldGetUserByTurkishRepublicIdNo.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserControllerContractImplTest.shouldHardDeleteUser.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserControllerContractImplTest.shouldNotSaveUserWhenUsernameIsNull.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserControllerContractImplTest.shouldNotSaveUserWhenUsernameTaken.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserControllerContractImplTest.shouldSaveUser.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserControllerContractImplTest.shouldUpdateUser.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserControllerTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserControllerTest.shouldDeleteUserById.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserControllerTest.shouldGetUserById.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserControllerTest.shouldGetUserByTurkishRepublicIdNo.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserControllerTest.shouldGetUserByUsername.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserControllerTest.shouldGetUsers.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserControllerTest.shouldSaveCustomer.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserControllerTest.shouldSaveCustomer2.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserControllerTest.shouldSoftDeleteUserById.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserControllerTest.shouldUpdateUser.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserReviewControllerTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserReviewControllerTest.getUserReviews.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserReviewControllerTest.shouldDeleteUserReview.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserReviewControllerTest.shouldGetUserReviewById.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserReviewControllerTest.shouldGetUserReviewByRestaurantId.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserReviewControllerTest.shouldGetUserReviewByUserUsername.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserReviewControllerTest.shouldGetUserReviewListByUserId.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserReviewControllerTest.shouldGetUserReviewsByRestaurantId.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.UserReviewControllerTest.shouldGetUserReviewsByUserId.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserReviewControllerTest.shouldGetUserReviewsByUserUsername.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserReviewControllerTest.shouldSaveUserReview.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserReviewServiceTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserReviewServiceTest.shouldDeleteUserReview.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserReviewServiceTest.shouldFindAllUserReviews.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserReviewServiceTest.shouldFindUserReviewById.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserReviewServiceTest.shouldNotFindUserReviewById.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserReviewServiceTest.shouldNotSaveUserReviewWhenUserIsNull.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserReviewServiceTest.shouldNotSaveUserReviewWhenUserNotFound.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserReviewServiceTest.shouldSaveUserReview.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserReviewServiceTest.shouldThrowExceptionWhenInvalidRestaurantId.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserReviewServiceTest.shouldThrowExceptionWhenRequiredFieldsAreNull.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserReviewServiceTest.shouldThrowExceptionWhenUserReviewIsNull.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserServiceTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserServiceTest.shouldActivateUser.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserServiceTest.shouldNotSaveUserWhenFirstNameIsNull.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserServiceTest.shouldNotSaveUserWhenTurkishRepublicIdIsTaken.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserServiceTest.shouldNotSaveUserWhenTurkishRepublicIdNoIsNull.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserServiceTest.shouldNotSaveUserWhenTurkishRepublicIdNoIsWrong.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserServiceTest.shouldNotSaveUserWhenUsernameWasTaken.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserServiceTest.shouldNotUpdateUserWhenUsernameWasTaken.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserServiceTest.shouldSaveUser.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserServiceTest.shouldThrowExceptionWhenFieldLengthExceeds.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserServiceTest.shouldUpdateUser.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserServiceTest.shouldUpdateUserDetails.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.UserService [clean,install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.n11-talenthub-bootcamp-final-case [clean...].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.n11-talenthub-bootcamp-final-case [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.n11-talenthub-bootcamp-final-case [install].executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.RestaurantServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.UserServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/batuh/OneDrive/Masaüstü/n11-talenthub-bootcamp-final-case/UserService/src/main/resources&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Docker.UserService/Dockerfile.executor": "Run",
+    "JUnit.UserControllerContractImplTest.executor": "Run",
+    "JUnit.UserControllerContractImplTest.getAllUsers.executor": "Run",
+    "JUnit.UserControllerContractImplTest.shouldGetAllUsers.executor": "Run",
+    "JUnit.UserControllerContractImplTest.shouldGetUserById.executor": "Run",
+    "JUnit.UserControllerContractImplTest.shouldGetUserByTurkishRepublicIdNo.executor": "Run",
+    "JUnit.UserControllerContractImplTest.shouldHardDeleteUser.executor": "Run",
+    "JUnit.UserControllerContractImplTest.shouldNotSaveUserWhenUsernameIsNull.executor": "Run",
+    "JUnit.UserControllerContractImplTest.shouldNotSaveUserWhenUsernameTaken.executor": "Run",
+    "JUnit.UserControllerContractImplTest.shouldSaveUser.executor": "Run",
+    "JUnit.UserControllerContractImplTest.shouldUpdateUser.executor": "Run",
+    "JUnit.UserControllerTest.executor": "Run",
+    "JUnit.UserControllerTest.shouldDeleteUserById.executor": "Run",
+    "JUnit.UserControllerTest.shouldGetUserById.executor": "Run",
+    "JUnit.UserControllerTest.shouldGetUserByTurkishRepublicIdNo.executor": "Run",
+    "JUnit.UserControllerTest.shouldGetUserByUsername.executor": "Run",
+    "JUnit.UserControllerTest.shouldGetUsers.executor": "Run",
+    "JUnit.UserControllerTest.shouldSaveCustomer.executor": "Run",
+    "JUnit.UserControllerTest.shouldSaveCustomer2.executor": "Run",
+    "JUnit.UserControllerTest.shouldSoftDeleteUserById.executor": "Run",
+    "JUnit.UserControllerTest.shouldUpdateUser.executor": "Run",
+    "JUnit.UserReviewControllerTest.executor": "Run",
+    "JUnit.UserReviewControllerTest.getUserReviews.executor": "Run",
+    "JUnit.UserReviewControllerTest.shouldDeleteUserReview.executor": "Run",
+    "JUnit.UserReviewControllerTest.shouldGetUserReviewById.executor": "Run",
+    "JUnit.UserReviewControllerTest.shouldGetUserReviewByRestaurantId.executor": "Run",
+    "JUnit.UserReviewControllerTest.shouldGetUserReviewByUserUsername.executor": "Run",
+    "JUnit.UserReviewControllerTest.shouldGetUserReviewListByUserId.executor": "Run",
+    "JUnit.UserReviewControllerTest.shouldGetUserReviewsByRestaurantId.executor": "Debug",
+    "JUnit.UserReviewControllerTest.shouldGetUserReviewsByUserId.executor": "Run",
+    "JUnit.UserReviewControllerTest.shouldGetUserReviewsByUserUsername.executor": "Run",
+    "JUnit.UserReviewControllerTest.shouldSaveUserReview.executor": "Run",
+    "JUnit.UserReviewServiceTest.executor": "Run",
+    "JUnit.UserReviewServiceTest.shouldDeleteUserReview.executor": "Run",
+    "JUnit.UserReviewServiceTest.shouldFindAllUserReviews.executor": "Run",
+    "JUnit.UserReviewServiceTest.shouldFindUserReviewById.executor": "Run",
+    "JUnit.UserReviewServiceTest.shouldNotFindUserReviewById.executor": "Run",
+    "JUnit.UserReviewServiceTest.shouldNotSaveUserReviewWhenUserIsNull.executor": "Run",
+    "JUnit.UserReviewServiceTest.shouldNotSaveUserReviewWhenUserNotFound.executor": "Run",
+    "JUnit.UserReviewServiceTest.shouldSaveUserReview.executor": "Run",
+    "JUnit.UserReviewServiceTest.shouldThrowExceptionWhenInvalidRestaurantId.executor": "Run",
+    "JUnit.UserReviewServiceTest.shouldThrowExceptionWhenRequiredFieldsAreNull.executor": "Run",
+    "JUnit.UserReviewServiceTest.shouldThrowExceptionWhenUserReviewIsNull.executor": "Run",
+    "JUnit.UserServiceTest.executor": "Run",
+    "JUnit.UserServiceTest.shouldActivateUser.executor": "Run",
+    "JUnit.UserServiceTest.shouldNotSaveUserWhenFirstNameIsNull.executor": "Run",
+    "JUnit.UserServiceTest.shouldNotSaveUserWhenTurkishRepublicIdIsTaken.executor": "Run",
+    "JUnit.UserServiceTest.shouldNotSaveUserWhenTurkishRepublicIdNoIsNull.executor": "Run",
+    "JUnit.UserServiceTest.shouldNotSaveUserWhenTurkishRepublicIdNoIsWrong.executor": "Run",
+    "JUnit.UserServiceTest.shouldNotSaveUserWhenUsernameWasTaken.executor": "Run",
+    "JUnit.UserServiceTest.shouldNotUpdateUserWhenUsernameWasTaken.executor": "Run",
+    "JUnit.UserServiceTest.shouldSaveUser.executor": "Run",
+    "JUnit.UserServiceTest.shouldThrowExceptionWhenFieldLengthExceeds.executor": "Run",
+    "JUnit.UserServiceTest.shouldUpdateUser.executor": "Run",
+    "JUnit.UserServiceTest.shouldUpdateUserDetails.executor": "Run",
+    "Maven.UserService [clean,install].executor": "Run",
+    "Maven.n11-talenthub-bootcamp-final-case [clean...].executor": "Run",
+    "Maven.n11-talenthub-bootcamp-final-case [clean].executor": "Run",
+    "Maven.n11-talenthub-bootcamp-final-case [install].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.RestaurantServiceApplication.executor": "Run",
+    "Spring Boot.UserServiceApplication.executor": "Run",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/batuh/OneDrive/Masaüstü/n11-talenthub-bootcamp-final-case",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.batuhanozudogru.userservice.controller.contract" />
@@ -294,6 +294,7 @@
       <workItem from="1710677094775" duration="1291000" />
       <workItem from="1710682968083" duration="17000" />
       <workItem from="1710689366939" duration="167000" />
+      <workItem from="1710695276215" duration="134000" />
     </task>
     <task id="LOCAL-00001" summary="Add UserController integration tests">
       <option name="closed" value="true" />
@@ -335,11 +336,6 @@
           <url>file://$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/controller/contract/impl/UserControllerContractImpl.java</url>
           <line>76</line>
           <option name="timeStamp" value="39" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/service/RecommendationCalculatorService.java</url>
-          <line>10</line>
-          <option name="timeStamp" value="153" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/controller/RestaurantController.java</url>
@@ -507,15 +503,6 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="53" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/service/RecommendationCalculatorService.java</url>
-          <line>9</line>
-          <properties class="com.batuhanozudogru.userservice.service.RecommendationCalculatorService" method="calculateRecommendationScore">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="152" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/client/RestaurantClient.java</url>
