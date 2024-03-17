@@ -11,7 +11,7 @@ import static com.batuhanozudogru.userservice.service.CoordinateDistanceCalculat
 
 public class RecommendationService {
 
-    public static Map<RestaurantResponse, Double> asd(Iterable<RestaurantResponse> restaurants, User user) {
+    public static Map<RestaurantResponse, Double> calculateDistances(Iterable<RestaurantResponse> restaurants, User user) {
         Map<RestaurantResponse, Double> distancesMap = new HashMap<>();
 
         restaurants.forEach(restaurantResponse -> {
@@ -26,7 +26,7 @@ public class RecommendationService {
     }
 
     public static Map<String, Long> recommendList(Iterable<RestaurantResponse> restaurants, User user){
-        Map<RestaurantResponse, Double> restaurantDistances = asd(restaurants, user);
+        Map<RestaurantResponse, Double> restaurantDistances = calculateDistances(restaurants, user);
         Map<String, Long> recommendedList = new HashMap<>();
 
         restaurantDistances.forEach((restaurantResponse, distance) -> {
