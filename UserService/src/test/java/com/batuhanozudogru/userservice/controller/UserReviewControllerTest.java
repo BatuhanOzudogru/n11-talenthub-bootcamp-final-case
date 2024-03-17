@@ -125,7 +125,7 @@ class UserReviewControllerTest extends BaseControllerTest {
 
 
         UserReviewSaveRequest userReviewSaveRequest = new UserReviewSaveRequest("review",
-                "f50d76b2-f2cd-4ee9-88ff-d252453b632f",
+                "test",
                 ReviewRate.FIVE,
                 new UserForReviewSaveRequest(100L));
 

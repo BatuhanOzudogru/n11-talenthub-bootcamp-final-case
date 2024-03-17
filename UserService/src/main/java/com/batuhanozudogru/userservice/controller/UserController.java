@@ -43,12 +43,12 @@ public class UserController {
                                                 summary = "You have to send a request like this",
                                                 value = "{\n" +
                                                         "  \"firstName\": \"Batuhan\",\n" +
-                                                        "  \"lastName\": \"Ozudogru\",\n" +
+                                                        "  \"lastName\": \"Özüdoğru\",\n" +
                                                         "  \"turkishRepublicIdNumber\": \"12345678901\",\n" +
                                                         "  \"username\": \"batuhanozudogru\",\n" +
                                                         "  \"birthDate\": \"1996-07-01\",\n" +
-                                                        "  \"latitude\": 41.0082,\n" +
-                                                        "  \"longitude\": 28.9784\n" +
+                                                        "  \"latitude\": 41.1025254,\n" +
+                                                        "  \"longitude\": 29.0702185\n" +
                                                         "}",
                                                 description = "This is an example of a user save request. Ensure that the Turkish Republic ID Number (TC) is correctly provided."
                                         )

@@ -62,14 +62,14 @@ class UserReviewServiceTest {
         UserReview userReview = new UserReview();
         userReview.setReview("Good");
         userReview.setRate(ReviewRate.FIVE);
-        userReview.setRestaurantId("qwe");
+        userReview.setRestaurantId("test");
         userReview.setUser(new User());
         userReview.setCreatedAt(LocalDateTime.now());
         userReview.setUpdatedAt(LocalDateTime.now());
 
         //when
         Mockito.when(userReviewRepository.save(userReview)).thenReturn(userReview);
-        Mockito.when(restaurantClient.getRestaurantById(userReview.getRestaurantId())).thenReturn(null);
+
 
 
         //then

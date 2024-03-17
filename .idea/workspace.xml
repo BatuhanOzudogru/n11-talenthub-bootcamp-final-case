@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="edda31c5-845f-4e52-8455-c5d1261cc89a" name="Changes" comment="Add UserController integration tests">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/d/7da880ad6632a9c0ad360e247c0cef7a0d5b4150" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/d/7da880ad6632a9c0ad360e247c0cef7a0d5b4150" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/0/c037704213a158dfe70bb86a75812ff6390b0d2b" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/0/c037704213a158dfe70bb86a75812ff6390b0d2b" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/a/dae021f629de4ee939885e5ce945623e241257b2" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/a/dae021f629de4ee939885e5ce945623e241257b2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/f/ff0abadef13c5f904c9f69490b601d14a6f37312" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/f/ff0abadef13c5f904c9f69490b601d14a6f37312" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/service/RecommendationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/service/RecommendationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/src/main/java/com/batuhanozudogru/userservice/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserService/src/test/java/com/batuhanozudogru/userservice/controller/UserReviewControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/src/test/java/com/batuhanozudogru/userservice/controller/UserReviewControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserService/src/test/java/com/batuhanozudogru/userservice/service/UserReviewServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/src/test/java/com/batuhanozudogru/userservice/service/UserReviewServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserService/src/test/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/src/test/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +116,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.RestaurantServiceApplication.executor": "Run",
-    "Spring Boot.UserServiceApplication.executor": "Debug",
+    "Spring Boot.UserServiceApplication.executor": "Run",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "main",
@@ -156,8 +156,55 @@
       <recent name="com.batuhanozudogru.userservice.controller.contract.impl" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.UserServiceApplication">
-    <configuration name="UserReviewServiceTest.shouldThrowExceptionWhenInvalidRestaurantId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.UserControllerTest">
+    <configuration name="UserControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="UserService" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.batuhanozudogru.userservice.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.batuhanozudogru.userservice.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.batuhanozudogru.userservice.controller.UserControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserControllerTest.shouldGetUserByUsername" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="UserService" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.batuhanozudogru.userservice.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.batuhanozudogru.userservice.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.batuhanozudogru.userservice.controller.UserControllerTest" />
+      <option name="METHOD_NAME" value="shouldGetUserByUsername" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserControllerTest.shouldGetUsers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="UserService" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.batuhanozudogru.userservice.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.batuhanozudogru.userservice.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.batuhanozudogru.userservice.controller.UserControllerTest" />
+      <option name="METHOD_NAME" value="shouldGetUsers" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserReviewServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="UserService" />
       <extension name="coverage">
         <pattern>
@@ -167,13 +214,12 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.batuhanozudogru.userservice.service" />
       <option name="MAIN_CLASS_NAME" value="com.batuhanozudogru.userservice.service.UserReviewServiceTest" />
-      <option name="METHOD_NAME" value="shouldThrowExceptionWhenInvalidRestaurantId" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserReviewServiceTest.shouldThrowExceptionWhenRequiredFieldsAreNull" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserReviewServiceTest.shouldSaveUserReview" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="UserService" />
       <extension name="coverage">
         <pattern>
@@ -183,55 +229,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.batuhanozudogru.userservice.service" />
       <option name="MAIN_CLASS_NAME" value="com.batuhanozudogru.userservice.service.UserReviewServiceTest" />
-      <option name="METHOD_NAME" value="shouldThrowExceptionWhenRequiredFieldsAreNull" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserReviewServiceTest.shouldThrowExceptionWhenUserReviewIsNull" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="UserService" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.batuhanozudogru.userservice.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.batuhanozudogru.userservice.service" />
-      <option name="MAIN_CLASS_NAME" value="com.batuhanozudogru.userservice.service.UserReviewServiceTest" />
-      <option name="METHOD_NAME" value="shouldThrowExceptionWhenUserReviewIsNull" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserServiceTest.shouldActivateUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="UserService" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.batuhanozudogru.userservice.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.batuhanozudogru.userservice.service" />
-      <option name="MAIN_CLASS_NAME" value="com.batuhanozudogru.userservice.service.UserServiceTest" />
-      <option name="METHOD_NAME" value="shouldActivateUser" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserServiceTest.shouldThrowExceptionWhenFieldLengthExceeds" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="UserService" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.batuhanozudogru.userservice.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.batuhanozudogru.userservice.service" />
-      <option name="MAIN_CLASS_NAME" value="com.batuhanozudogru.userservice.service.UserServiceTest" />
-      <option name="METHOD_NAME" value="shouldThrowExceptionWhenFieldLengthExceeds" />
+      <option name="METHOD_NAME" value="shouldSaveUserReview" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -260,11 +258,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UserReviewServiceTest.shouldThrowExceptionWhenInvalidRestaurantId" />
-        <item itemvalue="JUnit.UserReviewServiceTest.shouldThrowExceptionWhenRequiredFieldsAreNull" />
-        <item itemvalue="JUnit.UserReviewServiceTest.shouldThrowExceptionWhenUserReviewIsNull" />
-        <item itemvalue="JUnit.UserServiceTest.shouldActivateUser" />
-        <item itemvalue="JUnit.UserServiceTest.shouldThrowExceptionWhenFieldLengthExceeds" />
+        <item itemvalue="JUnit.UserControllerTest" />
+        <item itemvalue="JUnit.UserControllerTest.shouldGetUsers" />
+        <item itemvalue="JUnit.UserControllerTest.shouldGetUserByUsername" />
+        <item itemvalue="JUnit.UserReviewServiceTest" />
+        <item itemvalue="JUnit.UserReviewServiceTest.shouldSaveUserReview" />
       </list>
     </recent_temporary>
   </component>
@@ -299,7 +297,7 @@
       <workItem from="1710526728685" duration="26655000" />
       <workItem from="1710590955294" duration="22000" />
       <workItem from="1710593234226" duration="15045000" />
-      <workItem from="1710609493471" duration="23446000" />
+      <workItem from="1710609493471" duration="25596000" />
     </task>
     <task id="LOCAL-00001" summary="Add UserController integration tests">
       <option name="closed" value="true" />
@@ -431,16 +429,6 @@
           <url>file://$PROJECT_DIR$/UserService/src/test/java/com/batuhanozudogru/userservice/controller/UserReviewControllerTest.java</url>
           <line>96</line>
           <option name="timeStamp" value="241" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/UserService/src/test/java/com/batuhanozudogru/userservice/service/UserReviewServiceTest.java</url>
-          <line>28</line>
-          <option name="timeStamp" value="242" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/UserService/src/test/java/com/batuhanozudogru/userservice/service/UserReviewServiceTest.java</url>
-          <line>51</line>
-          <option name="timeStamp" value="243" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/UserService/src/test/java/com/batuhanozudogru/userservice/controller/UserReviewControllerTest.java</url>
@@ -596,24 +584,10 @@
           </properties>
           <option name="timeStamp" value="236" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/UserService/src/test/java/com/batuhanozudogru/userservice/service/UserReviewServiceTest.java</url>
-          <line>41</line>
-          <properties class="com.batuhanozudogru.userservice.service.UserReviewServiceTest" method="shouldNotSaveUserReviewWhenUserIsNull">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="247" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/UserService/src/test/java/com/batuhanozudogru/userservice/service/UserReviewServiceTest.java</url>
-          <line>109</line>
-          <properties class="com.batuhanozudogru.userservice.service.UserReviewServiceTest" method="shouldThrowExceptionWhenUserReviewIsNull">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="292" />
-        </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="com.batuhanozudogru.restaurantservice.general.exception.RestaurantNotFoundException" package="com.batuhanozudogru.restaurantservice.general.exception" />
+          <option name="timeStamp" value="311" />
+        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <pin-to-top-manager>
