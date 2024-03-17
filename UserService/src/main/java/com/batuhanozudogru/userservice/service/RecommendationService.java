@@ -12,24 +12,24 @@ import static com.batuhanozudogru.userservice.service.CoordinateDistanceCalculat
 public class RecommendationService {
 
     public static Map<RestaurantResponse, Double> asd(Iterable<RestaurantResponse> restaurants, User user) {
-        Map<RestaurantResponse, Double> map = new HashMap<>();
+        Map<RestaurantResponse, Double> distancesMap = new HashMap<>();
 
         restaurants.forEach(restaurantResponse -> {
             double distance = calculateDistance(user.getLatitude(), user.getLongitude(), restaurantResponse.latitude(), restaurantResponse.longitude());
             if (distance <= 10.0){
-                map.put(restaurantResponse, distance);
+                distancesMap.put(restaurantResponse, distance);
             }
 
         });
 
-        return map;
+        return distancesMap;
     }
 
     public static Map<String, Long> recommendList(Iterable<RestaurantResponse> restaurants, User user){
-        Map<RestaurantResponse, Double> userlaolanmesafeler = asd(restaurants, user);
+        Map<RestaurantResponse, Double> restaurantDistances = asd(restaurants, user);
         Map<String, Long> recommendedList = new HashMap<>();
 
-        userlaolanmesafeler.forEach((restaurantResponse, distance) -> {
+        restaurantDistances.forEach((restaurantResponse, distance) -> {
             BigDecimal recommendationScore = RecommendationCalculatorService.calculateRecommendationScore(restaurantResponse.rate(), distance);
             recommendedList.put("Restaurant Name " + restaurantResponse.name() +
                             " Address: " + restaurantResponse.address() +

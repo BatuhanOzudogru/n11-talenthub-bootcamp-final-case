@@ -1,11 +1,0 @@
-
-
-java:S1192"LDefine a constant instead of duplicating this literal "' not found" 4 times.(—™”ìşÿÿÿÿJ$42e1f9df-6345-4023-85fd-c92952a7ac36
-{
-java:S1118":Add a private constructor to hide the implicit public one.(¦µıèùÿÿÿÿJ$73f4abe3-c80e-4cbb-a83b-c7bc3aa72494
-	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(šƒÀ)8«½Íä1J$fc1084e4-ebb4-4edd-981e-774b9e7f9e05
-•	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(øÂğĞüÿÿÿÿ8®½Íä1J$b9e9eed8-7b02-4b32-b3ea-e5ca9d56bf4b
-•	java:S100!"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬ÛÕÜùÿÿÿÿ8°½Íä1J$fa34fbcd-76b4-4ae1-9416-ef834cf0f5d0
-•	java:S100%"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆÈã¬ÿÿÿÿÿ8²½Íä1J$c1084d86-5570-47ee-b5a6-d65553ef1566
-•	java:S100)"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(º“µ³øÿÿÿÿ8µ½Íä1J$66af928a-4328-4f02-bd76-6f90a890163e
-•	java:S100-"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒö—ÿúÿÿÿÿ8¶½Íä1J$baaacb3d-70a8-4396-bfe6-f0cc093ce7bd
