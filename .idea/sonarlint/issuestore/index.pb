@@ -37,3 +37,5 @@ fUserService/src/main/java/com/batuhanozudogru/userservice/service/Recommendatio
 ^UserService/src/main/java/com/batuhanozudogru/userservice/controller/RestaurantController.java,0\c\0c7530ebdcd1a1f53286c8e2bf635acbf37deab6
 Œ
 \UserService/src/main/java/com/batuhanozudogru/userservice/service/RecommendationService.java,7\d\7da880ad6632a9c0ad360e247c0cef7a0d5b4150
+9
+	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
